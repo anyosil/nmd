@@ -1,0 +1,18 @@
+/* Ensure the parent container allows absolute positioning */
+#bridge {
+    position: relative;
+}
+
+/* Hide the original text */
+#bridge h1 a {
+    font-size: 0; /* Makes text invisible */
+    text-indent: -9999px; /* Moves text off-screen */
+    display: block;
+    width: 120px; /* Adjust based on logo size */
+    height: 40px; /* Adjust based on logo size */
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    background: url('nuvi-logo.png') no-repeat center;
+    background-size: contain;
+}

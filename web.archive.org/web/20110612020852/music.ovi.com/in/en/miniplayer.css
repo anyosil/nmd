@@ -1,0 +1,43 @@
+#miniPlayer {
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    width: 320px;
+    background: rgba(34, 34, 34, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+#miniPlayer.hidden {
+    display: none;
+}
+
+#miniCover {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#miniInfo {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#miniAudio {
+    width: 100%;
+}
+
+#closeMiniPlayer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

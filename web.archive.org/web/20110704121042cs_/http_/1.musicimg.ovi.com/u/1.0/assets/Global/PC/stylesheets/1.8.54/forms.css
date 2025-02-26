@@ -1,0 +1,183 @@
+textarea,input{border:none;}
+select{height:21px;border:1px solid #c1c1c1;}
+label{color:#666;}
+.rm{position:absolute;left:-999em;}
+input[type="checkbox"],input[type="radio"]{margin-right:5px;vertical-align:middle;}
+.txtbox,.txtbox input,.txtbox button{background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) no-repeat 0 -168px;}
+.txtbox{position:relative;height:21px;margin:3px 0;padding-left:4px;background-position:0 -168px;}
+.txtbox input{position:absolute;width:38px;height:18px;padding:3px 2px 0 0;background-position:100% -168px;}
+.txtbox-pin input{background-position:100% -168px;height:18px;padding:2px 2px 0 0;position:absolute;font-size:16px;font-weight:bold;}
+.pinboxhyphen{color:#666;font-size:16px;font-weight:bolder;position:relative;top:-9px;padding-left:1px;padding-right:1px;}
+.t-l,.t-l input{width:574px;}
+.t-s,.t-s input{width:100px;}
+.t-p,.t-p input{width:65px;display:inline-block;}
+.t-m,.t-m input{width:249px;}
+.t-m select{width:158px;}
+.hint,.hint-inline,.hint-pin{font-style:italic;color:#999;}
+p.hint,p.hint-inline{padding:3px 16px;}
+p.hint-pin{padding-bottom:10px;padding-top:7px;clear:both;}
+div.g-12.last div.box.rightbox p.hint{margin:-8px 0 0 -9px;}
+.cta,.cta span,.btn,.btn span{height:21px;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) no-repeat 0 0;cursor:pointer;}
+.btn span a,.btn span input,.cta span input,.cta span a{display:block;font-weight:bold;}
+.btn span a:hover,.btn span input,.cta span input,.cta span a:hover,.nav-button:hover{cursor:pointer;}
+.cta span input,.cta span a,.cta span a:hover{color:#fff!important;}
+.btn span input,.btn span a,a.btn span{color:#333;}
+a.cta span{color:#fff;font-weight:bold;}
+.btn span a{vertical-align:middle;}
+.action,.play,.unavailable,.share,.share-dimmed{display:block;height:20px;text-indent:-999em;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) 0 0 no-repeat;}
+.credit-btn .btn{float:left;margin-right:10px;}
+.credit-btn{padding-bottom:5px;}
+.actcont,.action{display:none;}
+.action{width:40px;margin-right:4px;}
+.play,.unavailable{width:20px;margin:0 15px 0 9px;background-position:-270px -514px;}
+.loading,.loading:hover{background:transparent url(../../../../../../../../../../20110704121248im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/clipLoad.gif) -21px -21px no-repeat!important;}
+.playing,.playing:hover{background-position:-330px -514px!important;}
+.unavailable,.unavailable:hover{background-position:-390px -514px;cursor:default;}
+div.top-prod a.play,div.srch-detail a.play{margin-right:15px;}
+div.top-prod a.action,div.srch-detail a.action{margin-right:4px;}
+.share{width:40px;height:20px;margin-right:9px;background-position:-389px -327px;}
+.share-dimmed{width:40px;height:20px;margin-right:9px;background-position:-490px -327px;}
+.play-btn-margin{margin-left:32px;}
+.action:hover{background-position:0 -25px;}
+.play:hover{background-position:-300px -514px;}
+.download:hover{background-position:0 -130px;}
+.share:hover{background-position:-439px -327px;}
+.btn{display:inline-block;padding-left:10px;font-weight:bold;}
+.btn span{position:relative;display:block;left:2px;padding-right:10px;padding-top:1px;background-position:100% 0;}
+.cta-btns .btn span{padding-top:0;}
+.btn span input,.cta span input{line-height:1.5em;}
+.cta span input{padding:0 7px;}
+a.btn span{line-height:1.6em;}
+a.btn:hover{text-decoration:none;}
+.btn:hover{background-position:0 -30px;}
+.btn:hover span{background-position:100% -30px;}
+a.cta{padding-left:10px;}
+a.cta span{padding-right:10px;left:2px;}
+.join-btn,.join-btn span{background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) no-repeat 0 0;float:left;width:100%;}
+.join-btn{background-position:0 -394px;padding:0;display:block;margin-top:10px;clear:left;}
+.join-btn span{background-position:100% -394px;color:#fff;height:31px;position:relative;left:2px;outline:none;}
+.join-btn span input{color:#fff;height:31px;width:100%;cursor:pointer;}
+.join-btn-disabled span input{color:#fff;cursor:default;margin-top:-1px;}
+.join-btn:hover{background-position:0 -474px;}
+.join-btn:hover span{background-position:100% -474px;}
+.join-btn-disabled,.join-btn-disabled:hover{background-position:0 -434px;cursor:default;}
+.join-btn-disabled span,.join-btn-disabled:hover span{background-position:100% -434px;cursor:default;}
+.cta{display:inline-block;padding-left:3px;background-position:0 -199px;}
+.extend .cta{padding-left:10px;}
+.extend .cta span{font-weight:bold;padding-right:10px;}
+.cta span{position:relative;display:block;left:1px;background-position:100% -199px;color:#fff;}
+.cta:hover,.cta:focus{background-position:0 -229px;}
+.cta:hover span,.cta:focus span{background-position:100% -229px;}
+.cta.disabled,.cta.disabled:hover,.cta.disabled:focus{background-position:0 0;}
+.cta.disabled span,.cta.disabled:hover span,.cta.disabled:focus span{background-position:100% 0;}
+.cta.disabled,.cta.disabled span,.cta.disabled span input,.cta.disabled span:hover input{color:#ccc!important;cursor:default!important;}
+a.dload-btn,a.dload-btn span,a.dload-btn em{padding:0;margin:0;display:block;position:relative;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) no-repeat 0 0;}
+a.dload-btn{display:none;}
+a.dload-btn span{color:#fff;margin-left:3px;margin-right:-3px;padding:0 .8em .1em .555em;padding-left:15px;height:1.6em;border:none;text-align:center;cursor:pointer;text-indent:-9000px;min-width:15px;}
+a.dload-btn span em{position:absolute;top:0;left:0;margin:3px 0 0 8px;width:21px;height:1.5em;}
+a.dload-btn{background-position:0 -60px;}
+a.dload-btn span{background-position:100% -60px;}
+a.dload-btn:hover,a.dload-btn:focus{background-position:0 -90px;}
+a.dload-btn:hover span,a.dload-btn:focus span{background-position:100% -90px;}
+a.dload-btn em{background-position:-10px -517px;}
+a.na em{background-position:-90px -517px;}
+a.grey em{background-position:-50px -517px;}
+a.load em{background-position:-130px -517px;}
+a.grey,a.grey-alc,a.grey:hover,a.grey-alc:hover,a.grey:focus,a.grey-alc:focus{background-position:0 0;}
+a.grey span,a.grey-alc span,a.grey:hover span,a.grey:focus span,a.grey-alc:hover span,a.grey-alc:focus span{background-position:100% 0;}
+a.grey span{text-indent:-999em;overflow:hidden;cursor:default;}
+a.dload-alc em,a.grey-alc em{display:none;}
+a.grey-alc span{color:#999;}
+a.grey-alc span,a.dload-alc span{text-indent:0;padding:0 8px .1em 5px;font-weight:bold;}
+body.cwm a.cwm-btn,body.alc a.alc-btn{display:block;}
+body.alc a.dload-alc span,body.alc a.grey-alc span{min-width:27px;}
+.credit-btn .btn span{min-width:37px;text-align:center;}
+#cplaylistdownloadall span{text-indent:0;padding-left:2.5em;font-weight:bold;}
+#cplaylistdownloadall em{margin-left:4px;}
+form.srch-music input{color:#333;}
+form.srch-music .txtbox,form.srch-music .txtbox input{float:left;font-size:1.05em;width:272px;}
+form.srch-music .txtbox input{padding-top:2px;}
+form.srch-music .btn{float:left;margin-left:10px;margin-top:3px;}
+div.txtbox input.reset{position:absolute;width:15px;height:15px;top:3px;right:0;padding:0;text-indent:-999em;line-height:50;border:none;background-position:0 -20px;}
+.row{margin-top:9px;}
+.row p{padding-bottom:8px;}
+.required{position:relative;top:5px;font-size:200%;font-weight:bold;vertical-align:bottom;color:#333;}
+span.required{top:0;}
+.requiredWhite{position:relative;font-size:200%;font-weight:bold;vertical-align:bottom;color:#fff;}
+fieldset legend{padding:15px 0 5px;}
+fieldset legend,.jn-optns p,.strong-lbl{font-size:16px;font-weight:bold;color:#333;}
+.pin-care .strong-lbl{font-size:14px;}
+.secondary-lbl{font-size:16px;}
+div.grad-ft div.cta-btns{margin-left:14px;}
+div.cta-btns div,div.confirm-dload .cta-btns div{float:left;margin:9px 8px 0 0;}
+div.confirm-dload .cta-btns div{margin-top:6px;}
+#joinPINForm .leftbox{padding-top:6px;}
+#joinPINForm .rightbox{padding-top:16px;padding-bottom:10px;padding-left:0;}
+#joinPINForm .rightbox h3{padding-bottom:19px;margin-left:10px;}
+#cwmUpgradeSignInForm .box{padding-top:1px;}
+#cwmUpgradeSignInForm div.cta-btns{margin-left:0;}
+#signInForm ul.toggle{margin:22px 0 21px;}
+#signInForm ul.toggle div.sh-hd li{padding-left:0;}
+#signInForm ul.toggle div.sh-hd{margin-top:15px;}
+#cwmUpgradeForm fieldset.options{margin:5px 0 -4px;}
+body.relicense input[type="submit"]{background:transparent;}
+body.relicense{margin:0;display:block;position:relative;}
+body.relicense .box,body.relicense .popup-box{width:488px;}
+.popup-box{padding:0 9px;}
+#RelicenseSignIn div.cta,div#Fail div.cta{float:left;}
+#RelicenseSignIn div.cta a,div#Fail div.cta a{text-decoration:none;padding:0 12px;}
+#RelicenseSignIn div.cta span input[type="submit"]{margin-top:-3px;}
+#RelicenseSignIn div img{padding:4px 0 0 9px;}
+#RelicenseSignIn .row,#RelicenseSignIn .row select{color:#666;}
+#RelicenseSignIn select{margin-top:3px;}
+.relicense-signin.val-msg-error-panel{margin:1px 0 0;padding:9px;}
+.relicense-signin.val-msg-error-panel dt{padding-bottom:9px;}
+.relicense-signin.val-msg-error-panel dd{margin-left:0;}
+.wmp-relicense h2,#RelicenseSignIn h2,.relicense-signin.val-msg-error-panel dt,#Attempt h2,#Fail h2,#Success h2{font-size:16px;font-weight:bold;}
+#RelicenseSignIn h2,#Attempt h2,#Fail h2,#Success h2{padding-top:9px;margin-bottom:12px;}
+#Attempt div{text-align:center;margin-top:100px;}
+.error{font-weight:bold;color:#c00;}
+.val-msg-error,.val-msg-error-panel{font-weight:bold;color:#fff;background-color:#c00;}
+.val-msg-error{margin:-9px -11px 9px -11px;padding:6px 9px;}
+.val-msg-error-panel{margin:0 7px 0 6px;padding:7px 9px 9px 12px;}
+.signin .val-msg-error-panel{background-color:#FFF;color:#C00;padding:4px 9px 16px 0;font-weight:normal;font-size:12px;margin-left:0;}
+.error-arrow{margin:-28px 0 0 340px;max-width:515px;font-weight:bold;line-height:15px;color:#fff;}
+.error-arrow-voucher{margin:-43px 0 0 290px;max-width:515px;font-weight:bold;line-height:15px;color:#fff;}
+.chk .error-arrow{margin:5px 0 0 290px;}
+.chk p{padding-bottom:0;}
+.chk div.spaced-chk{padding-top:4px;padding-bottom:10px;clear:both;}
+.error-arrow span{position:relative;display:inline-block;padding:3px 15px 3px 10px;background-color:#c00;}
+.error-arrow .arrow-t-l,.error-arrow .arrow-t-r,.error-arrow .arrow-b-l,.error-arrow .arrow-b-r{position:absolute;display:block;margin:0;padding:0;overflow:hidden;width:4px;height:4px;background:transparent url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) no-repeat -208px -96px;}
+.error-arrow .arrow-t-l{width:11px;height:15px;top:0;left:-8px;}
+.error-arrow .arrow-t-r{top:0;right:0;background-position:-230px -96px;}
+.error-arrow .arrow-b-l{left:0;bottom:0;background-position:-216px -122px;}
+.error-arrow .arrow-b-r{right:0;bottom:0;background-position:-230px -122px;}
+#requiredText{margin:0 7px 0 6px;padding:9px 9px 7px;}
+p.error-message{color:#C00;font-size:11px;padding-bottom:0;}
+.pr{position:relative;}
+.pad-top{padding-top:15px;}
+p.edit-success-msg{background:transparent url(../../../../../../../../../../20110704121301im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons.gif) 0 -264px no-repeat;}
+p.edit-success-msg span{margin-left:25px;color:#4a3;font-weight:bold;}
+#acct-detail p.row em{display:inline-block;width:200px;}
+#acct-detail p.row span{font-weight:bold;color:#666;}
+
+/*
+     FILE ARCHIVED ON 12:10:42 Jul 04, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:47:06 Feb 21, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.471
+  exclusion.robots: 0.016
+  exclusion.robots.policy: 0.007
+  esindex: 0.009
+  cdx.remote: 6.706
+  LoadShardBlock: 273.998 (3)
+  PetaboxLoader3.datanode: 205.498 (4)
+  PetaboxLoader3.resolve: 360.337 (2)
+  load_resource: 366.23
+*/

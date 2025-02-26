@@ -1,0 +1,1036 @@
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,a,abbr,acronym,address,caption,cite,code,dfn,em,img,strong,label,legend,tbody,tfoot,thead,tr,th,td,hr{margin:0;padding:0;outline:0;font-size:100%;background-color:transparent;}
+body{line-height:1;height:auto;min-height:100%;position:relative;padding:0;outline:0;font-size:100%;width:974px;margin:0 auto;background:#fff;font:75%/1.5em Arial,"Trebuchet MS",sans-serif;}
+html{height:100%;position:relative;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul,dl{list-style:none;}
+caption,th{text-align:left;}
+blockquote,q{quotes:none;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+input,select,textarea{font-size:1em;border:none;}
+input:submit{cursor:pointer;}
+focus{outline:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+a{text-decoration:none;}
+a span{cursor:pointer;}
+#container{width:974px;margin:0 auto;position:relative;padding-bottom:49px;}
+div#content{height:100%;padding-bottom:15px;}
+div#container .nm{margin-top:15px;}
+div.g-1,div.g-2,div.g-3,div.g-4,div.g-5,div.g-6,div.g-7,div.g-8,div.g-9,div.g-10,div.g-11,div.g-12,div.g-13,div.g-14,div.g-15,div.g-16,div.g-17,div.g-18,div.g-19,div.g-20,div.g-21,div.g-22,div.g-23{float:left;margin-right:10px;}
+div.last{margin-right:0;}
+.g-1{width:31px;}
+.g-2{width:72px;}
+.g-3{width:113px;}
+.g-4{width:154px;}
+.g-5{width:195px;}
+.g-6{width:236px;}
+.g-7{width:277px;}
+.g-8{width:318px;}
+.g-9{width:359px;}
+.g-10{width:400px;}
+.g-11{width:441px;}
+.g-12{width:482px;}
+.g-13{width:523px;}
+.g-14{width:564px;}
+.g-15{width:605px;}
+.g-16{width:646px;}
+.g-17{width:687px;}
+.g-18{width:728px;}
+.g-19{width:769px;}
+.g-20{width:810px;}
+.g-21{width:851px;}
+.g-22{width:892px;}
+.g-23{width:933px;}
+.g-24,div.g-24{width:974px;}
+.app-1{padding-right:41px;}
+.app-2{padding-right:82px;}
+.app-3{padding-right:123px;}
+.app-4{padding-right:164px;}
+.app-5{padding-right:205px;}
+.app-6{padding-right:246px;}
+.app-7{padding-right:287px;}
+.app-8{padding-right:328px;}
+.app-9{padding-right:369px;}
+.app-10{padding-right:410px;}
+.app-11{padding-right:451px;}
+.app-12{padding-right:492px;}
+.app-13{padding-right:533px;}
+.app-14{padding-right:574px;}
+.app-15{padding-right:615px;}
+.app-16{padding-right:656px;}
+.app-17{padding-right:697px;}
+.app-18{padding-right:738px;}
+.app-19{padding-right:779px;}
+.app-20{padding-right:820px;}
+.app-21{padding-right:861px;}
+.app-22{padding-right:902px;}
+.app-23{padding-right:943px;}
+.prep-1{padding-left:41px;}
+.prep-2{padding-left:82px;}
+.prep-3{padding-left:123px;}
+.prep-4{padding-left:164px;}
+.prep-5{padding-left:205px;}
+.prep-6{padding-left:246px;}
+.prep-7{padding-left:287px;}
+.prep-8{padding-left:328px;}
+.prep-9{padding-left:369px;}
+.prep-10{padding-left:410px;}
+.prep-11{padding-left:451px;}
+.prep-12{padding-left:492px;}
+.prep-13{padding-left:533px;}
+.prep-14{padding-left:574px;}
+.prep-15{padding-left:615px;}
+.prep-16{padding-left:656px;}
+.prep-17{padding-left:697px;}
+.prep-18{padding-left:738px;}
+.prep-19{padding-left:779px;}
+.prep-20{padding-left:820px;}
+.prep-21{padding-left:861px;}
+.prep-22{padding-left:902px;}
+.prep-23{padding-left:943px;}
+.pull-1,.pull-2,.pull-3,.pull-4,.pull-5,.pull-6,.pull-7,.pull-8,.pull-9,.pull-10,.pull-11,.pull-12,.pull-13,.pull-14,.pull-15,.pull-16,.pull-17,.pull-18,.pull-19,.pull-20,.pull-21,.pull-22,.pull-23,.pull-24{float:left;position:relative;}
+.pull-1{margin-left:-41px;}
+.pull-2{margin-left:-82px;}
+.pull-3{margin-left:-123px;}
+.pull-4{margin-left:-164px;}
+.pull-5{margin-left:-205px;}
+.pull-6{margin-left:-246px;}
+.pull-7{margin-left:-287px;}
+.pull-8{margin-left:-328px;}
+.pull-9{margin-left:-369px;}
+.pull-10{margin-left:-410px;}
+.pull-11{margin-left:-451px;}
+.pull-12{margin-left:-492px;}
+.pull-13{margin-left:-533px;}
+.pull-14{margin-left:-574px;}
+.pull-15{margin-left:-615px;}
+.pull-16{margin-left:-656px;}
+.pull-17{margin-left:-697px;}
+.pull-18{margin-left:-738px;}
+.pull-19{margin-left:-779px;}
+.pull-20{margin-left:-820px;}
+.pull-21{margin-left:-861px;}
+.pull-22{margin-left:-902px;}
+.pull-23{margin-left:-943px;}
+.pull-24{margin-left:-984px;}
+.push-1,.push-2,.push-3,.push-4,.push-5,.push-6,.push-7,.push-8,.push-9,.push-10,.push-11,.push-12,.push-13,.push-14,.push-15,.push-16,.push-17,.push-18,.push-19,.push-20,.push-21,.push-22,.push-23,.push-24{float:right;position:relative;}
+.push-1{margin:0 -41px 1.5em 41px;}
+.push-2{margin:0 -82px 1.5em 82px;}
+.push-3{margin:0 -123px 1.5em 123px;}
+.push-4{margin:0 -164px 1.5em 164px;}
+.push-5{margin:0 -205px 1.5em 205px;}
+.push-6{margin:0 -246px 1.5em 246px;}
+.push-7{margin:0 -287px 1.5em 287px;}
+.push-8{margin:0 -328px 1.5em 328px;}
+.push-9{margin:0 -369px 1.5em 369px;}
+.push-10{margin:0 -410px 1.5em 410px;}
+.push-11{margin:0 -451px 1.5em 451px;}
+.push-12{margin:0 -492px 1.5em 492px;}
+.push-13{margin:0 -533px 1.5em 533px;}
+.push-14{margin:0 -574px 1.5em 574px;}
+.push-15{margin:0 -615px 1.5em 615px;}
+.push-16{margin:0 -656px 1.5em 656px;}
+.push-17{margin:0 -697px 1.5em 697px;}
+.push-18{margin:0 -738px 1.5em 738px;}
+.push-19{margin:0 -779px 1.5em 779px;}
+.push-20{margin:0 -820px 1.5em 820px;}
+.push-21{margin:0 -861px 1.5em 861px;}
+.push-22{margin:0 -902px 1.5em 902px;}
+.push-23{margin:0 -943px 1.5em 943px;}
+.push-24{margin:0 -984px 1.5em 984px;}
+.height180{min-height:76px;}
+.min-panel{min-height:75px;}
+.width750{width:750px;}
+.mx-txt-wdth,.mx-txt-wdth p,div.act-launcher .bd p,div.jn-cwm-sccss p,#joinFail p,.pl-hd p,div.dload-ovrw div.col,.pin-care div.sh-hd p,.pin-care div.sh-hd ul,#joinAccountDetailsForm p{width:72%;}
+.zeroHeight{overflow:hidden;height:0;}
+.clearfix:after,#content:after,#searchContent:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix,.container{display:inline-block;}
+* html .clearfix,* html #container{height:1%;}
+.clearfix,#container{display:block;}
+.clear{clear:both;}
+.left{text-align:left;}
+.right{text-align:right;}
+.fl-left{float:left;}
+body{font:75%/1.5em Arial,"Trebuchet MS",sans-serif;color:#333;}
+hr{height:1px;color:#ccc;border:0;background-color:#ccc;}
+.content-hide,.none{display:none;}
+.content-show{display:block;}
+div#euphoria{padding-top:15px;}
+#bridge{margin-top:0;margin-bottom:26px;background:transparent url(../../../../../../../../../../20110704121536im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/bridge/bridge-bg.png) repeat-x 0 0;height:50px;position:relative;left:-3px;}
+#bridge h1{text-indent:-999em;position:absolute;top:0;left:0;padding:0;margin:0;}
+#bridge h1 a{background:transparent url(../../../../../../../../../../20110704121618im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/bridge/bridgeSprite2.png) no-repeat 0 -136px;display:block;width:93px;height:50px;}
+#bridge h1 a:hover{background-position:-110px -136px;}
+#bridge ul#icons{margin-left:93px;}
+#bridge ul#icons li{float:left;}
+#bridge ul#icons li a{display:block;float:left;width:57px;height:42px;background-image:url(../../../../../../../../../../20110704121618im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/bridge/bridgeSprite2.png);background-repeat:no-repeat;text-indent:-999em;margin-top:1px;}
+#bridge ul li.ovi_games a{width:58px;}
+#bridge ul li.ovi_contacts a{background-position:0 -84px;}
+#bridge ul li.ovi_calendar a{background-position:-57px -84px;}
+#bridge ul li.ovi_share a{background-position:-114px -84px;}
+#bridge ul li.ovi_mail a{background-position:-171px -84px;}
+#bridge ul li.ovi_store a{background-position:-228px -84px;}
+#bridge ul li.ovi_maps a{background-position:-285px -84px;}
+#bridge ul li.ovi_music a{background-position:-342px -84px;}
+#bridge ul li.ovi_files a{background-position:-399px -84px;}
+#bridge ul li.ovi_contacts a:hover,#bridge ul li.ovi_contacts a:focus{background-position:0 -42px;}
+#bridge ul li.ovi_calendar a:hover,#bridge ul li.ovi_calendar a:focus{background-position:-57px -42px;}
+#bridge ul li.ovi_share a:hover,#bridge ul li.ovi_share a:focus{background-position:-114px -42px;}
+#bridge ul li.ovi_mail a:hover,#bridge ul li.ovi_mail a:focus{background-position:-171px -42px;}
+#bridge ul li.ovi_store a:hover,#bridge ul li.ovi_store a:focus{background-position:-228px -42px;}
+#bridge ul li.ovi_maps a:hover,#bridge ul li.ovi_maps a:focus{background-position:-285px -42px;}
+#bridge ul li.ovi_music a:hover,#bridge ul li.ovi_music a:focus{background-position:-342px -42px;}
+#bridge ul li.ovi_files a:hover,#bridge ul li.ovi_files a:focus{background-position:-399px -42px;}
+#bridge ul li.ovi_contacts a.active,#bridge ul li.ovi_contacts a.active:hover{background-position:0 0;}
+#bridge ul li.ovi_calendar a.active,#bridge ul li.ovi_calendar a.active:hover{background-position:-57px 0;}
+#bridge ul li.ovi_share a.active,#bridge ul li.ovi_share a.active:hover{background-position:-114px 0;}
+#bridge ul li.ovi_mail a.active,#bridge ul li.ovi_mail a.active:hover{background-position:-171px 0;}
+#bridge ul li.ovi_store a.active,#bridge ul li.ovi_store a.active:hover{background-position:-228px 0;}
+#bridge ul li.ovi_maps a.active,#bridge ul li.ovi_maps a.active:hover{background-position:-285px 0;}
+#bridge ul li.ovi_music a.active,#bridge ul li.ovi_music a.active:hover{background-position:-342px 0;}
+#bridge ul li.ovi_files a.active,#bridge ul li.ovi_files a.active:hover{background-position:-399px 0;}
+ul#user-links{float:right;}
+#user-links li{float:left;padding:0 10px 0 8px;background:transparent url(../../../../../../../../../../20110704121515im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/bridge/pipe.gif) no-repeat 100% 4px;}
+#user-links li.last{background:none;padding-right:1px;}
+#user-details{font-weight:bold;color:#666;}
+#bridge #user-details a{color:#4a3;padding:0 0 0 1px;}
+#credit{color:#333;padding-left:5px;}
+.spacing{height:10px;display:block;}
+#bridge div{position:absolute;top:3px;right:1.15em;text-align:right;}
+#bridge div a{padding:0;margin:0;}
+#bridge .crn{background:transparent url(../../../../../../../../../../20110704121618im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/bridge/bridgeSprite2.png) no-repeat -224px -136px;height:50px;width:13px;position:absolute;top:0;right:-2px;}
+.securedBridgeLinks{position:absolute;left:110px;top:13px;}
+.loadingPanel,.loadingPage{display:block;height:50px;background:transparent url(../../../../../../../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif) no-repeat scroll 50% 50%;}
+.loadingPage{left:50%;top:50%;}
+#imgpreload{text-indent:-999em;}
+.loggedin,.loggedout,#navigation .loggedin,#navigation .loggedout{display:none;}
+.cslink{margin:10px 0;}
+#jsDisabledMess a{display:block;border:1px solid #fff;border-bottom:1px solid #bfbfbf;text-align:center;padding:7px 0;margin:0 4px 0 0;background-color:#c00;color:#fff;}
+#searchContent{float:right;margin:5px 16px 0 0;}
+#search-wrap{height:42px;background:url(../../../../../../../../../../20110704121625im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-r.png) no-repeat 100% 0;}
+.ui-autocomplete{border:1px solid #ccc;background-color:#fff;padding-bottom:4px!important;-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;border-top:1px solid #d6d6d6;position:absolute;cursor:default;list-style:none;padding:0 1px 1px 1px;margin:0;display:block;float:left;z-index:100!important;}
+.ui-autocomplete:active{outline:none;}
+* html .ui-autocomplete{width:1px;}
+.ui-autocomplete li{border-top:1px solid #eee;margin:-1px 0 0 0;padding:0;zoom:1;float:left;clear:left;width:269px;}
+.ui-autocomplete li a{color:#333;text-decoration:none;display:block;padding:2px 5px 2px 1px;line-height:1.5;zoom:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.ui-menu .ui-menu-item a.ui-state-hover,.ui-menu .ui-menu-item a.ui-state-active{font-weight:normal;margin:0;background-color:#daedda;border:0;}
+div#subMenu{padding-bottom:6px;position:relative;}
+div#subMenu h2{padding:5px 24px 1px 15px;float:left;font-size:24px;min-height:42px;background:#fff;}
+div#subMenu ul{float:left;padding:0 0 0 7px;background:url(../../../../../../../../../../20110704121625im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-r.png) no-repeat -63px 0;}
+div#subMenu ul li{float:left;padding:8px 18px 0 16px;height:34px;background:url(../../../../../../../../../../20110704121455im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/submenu-pipe.png) no-repeat 100% 1px;}
+div#subMenu ul li a{float:left;display:block;color:#333;font-size:14px;}
+div#subMenu li.active a,div#subMenu a:hover{color:#ba0087;}
+.no-submenu{display:none;}
+#navigation{width:190px;margin-right:15px;}
+#navigation .box{padding:0 14px;}
+#navigation p{color:#666;line-height:14.4px;}
+#navigation a{padding:0 0 0 14px;display:block;background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 2px -314px;line-height:15px;}
+a.expand,a.contract,a.nav-more,#navigation .nav-button span,#navigation .submit input{background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 2px -314px;padding:0 0 0 14px;color:#333;font-weight:bold;}
+#navigation a.expand,#navigation a.contract,.perf-dtls a.expand,.perf-dtls a.contract{background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 4px -68px;}
+#navigation a.contract,.perf-dtls a.contract{background-position:4px -89px;}
+#navigation a.contract,#navigation a.expand,#navigation a.nav-more{margin:-5px 0 20px;}
+#navigation a.nav-promo{padding:0;margin:0 0 5px;line-height:0;background:none;}
+#navigation div.nav-promo img{padding:1px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+#navigation div.nav-promo{margin:0 0 20px;}
+#navigation h3{font-weight:bold;border-top:1px solid #efefef;border-bottom:1px solid #efefef;color:#333;font-size:14px;padding:.7em 0;color:#4a3;}
+#navigation ul{margin:9px 0 18px;}
+#navigation li{margin-top:3px;}
+#navigation .row{margin:1px 0 0;}
+#navigation .txtbox,#navigation .txtbox input{width:156px;}
+#navigation .txtbox input{padding-top:2px;height:18px;}
+#navigation .nav-button,#navigation .submit{padding:1px 10px;margin:7px 0 0;border:1px solid #c8c8c8;background:url(../../../../../../../../../../20110704121839im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/btn-bg.png) repeat-x bottom left;text-align:center;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+#container #content .nav-button{position:relative;}
+#container #content .tl,#container #content .tr,#container #content .bl,#container #content .br{display:none;width:3px;height:3px;padding:0;margin:0;position:absolute;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) -540px -518px no-repeat;line-height:0;font-size:0;}
+#container #content .tl{top:-1px;left:-1px;}
+#container #content .tr{top:-1px;right:-1px;background-position:-543px -518px;}
+#container #content .bl{bottom:-1px;left:-1px;background-position:-540px -521px;}
+#container #content .br{bottom:-1px;right:-1px;background-position:-543px -521px;}
+#navigation form .nav-button,#navigation .submit{margin:10px 0 0;}
+#navigation .submit{padding:0 10px;}
+#navigation .nav-button:hover,#navigation .submit:hover{border-color:#999;}
+#navigation .margin-top{margin-top:18px;}
+div.bd a.nav-more{padding-right:30px;}
+div.res a.nav-more{display:inline;padding-right:5px;color:#333;margin-left:0;}
+.item,.item a{font-weight:bold;color:#333;}
+.exploreStore{padding:15px 0;}
+.box{padding:12px 17px;}
+.end{padding-bottom:30px;}
+.inline{display:inline-block;}
+.box h3,.box h4,.grad-separator h3{font-weight:bold;font-size:14px;color:#333;padding-bottom:10px;}
+.box h4{padding:0;}
+h3.no-pad{font-size:16px;padding-bottom:0;}
+div.res tr,div.shaded,.prod-list td,.srch-detail table tr td,div.pagination,.track-list table tbody tr td,.ps-coll li,.pl-dtl-tbt .pl-hd,.libr-trx td{background:transparent url(../../../../../../../../../../20110704121837im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/row-bg.png) 0 100% repeat-x;}
+.artistprod table td,.libraryContentList table tr .col-1,.libraryContentList table tr .col-2,.libraryContentList table tr .col-3,.libraryContentList table tr .col-4,div.bd table.shaded td,div.acct-changedevice ul.toggle li,.prodTop{background:transparent url(../../../../../../../../../../20110704121435im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/row-lrg-bg.png) 0 100% repeat-x;}
+.panel-plain{padding:10px;margin-top:-10px;}
+.panel-plain p{padding-top:5px;padding-bottom:4px;}
+div.panel{margin-bottom:5px;background:transparent url(../../../../../../../../../../20110704121736im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-l.png) 0 0 repeat-y;}
+div.panel div.ft,div.panel div.hd{background:transparent url(../../../../../../../../../../20110704121625im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-r.png) 100% 100% no-repeat;}
+div.panel div.hd{background-position:100% -52px;}
+div.panel div.hd h2{height:auto;min-height:38px;background:transparent url(../../../../../../../../../../20110704121723im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-l.png) 0 0 no-repeat;}
+div.panel div.hd h2 a{color:#333;}
+div.panel div.bd{background:transparent url(../../../../../../../../../../20110704121458im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-r.png) 100% 0 repeat-y;}
+div.panel div.ft span{display:block;background:transparent url(../../../../../../../../../../20110704121723im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-l.png) 0 100% no-repeat;}
+div.panel .grad-ft,div.panel-over .grad-ft,.tryBrowsing,.pl-dtl-dflt .pl-hd{background:transparent url(../../../../../../../../../../20110704121842im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/ft-bg.png) 0 0 repeat-x;}
+div.panel .grad-ft,div.panel-over .grad-ft{min-height:30px;}
+div.panel .grad-ft{margin:0 7px 0 6px;}
+div.panel-over .grad-ft{margin:0 1px 0 -8px;}
+div.panel-ft{padding:8px 8px 0;}
+div.res div.artistprod .grad-ft{margin-top:-1px;}
+.join .grad-ft{clear:both;}
+div.res .grad-ft{margin:0 1px;}
+.grad-ft p,.join-ft p{padding:10px 0 0 12px;}
+div.panel-sup{margin-bottom:5px;background:transparent url(../../../../../../../../../../20110704121437im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-l.png) 0 0 repeat-y;}
+div.panel-sup div.hd{background:#333 url(../../../../../../../../../../20110704121323im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-crn-r.png) 100% 0 no-repeat;}
+div.panel-sup div.bd{background:transparent url(../../../../../../../../../../20110704121401im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-r.png) 100% 0 repeat-y;}
+div.panel-sup div.bd,#navigation div.panel-sup div.bd{padding-top:6px;}
+div.panel-sup div.hd h2{height:auto;background:transparent url(../../../../../../../../../../20110704121822im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-crn-l.png) 0 0 no-repeat;}
+div.panel-sup div.hd h2 span{border-bottom:3px solid #007;margin:0 4px;background:url(../../../../../../../../../../20110704121421im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sub-border.gif) repeat-x 0 100%;}
+div.panel-sup div.ft{background:transparent url(../../../../../../../../../../20110704121323im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-crn-r.png) 100% 100% no-repeat;}
+div.panel-sup div.ft span{display:block;background:transparent url(../../../../../../../../../../20110704121822im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-sup-crn-l.png) 0 100% no-repeat;}
+.panel-sup ul{padding:0 17px;}
+.panel-sup li a{font-weight:bold;color:#999;font-size:14px;line-height:27px;}
+.panel-sup li a.active{color:#333;}
+.panel-sup li A:hover span{color:#4a3;}
+.panel-sup li a span.child{margin-left:8px;}
+div.strm div.ft,div.strm div.ft span,div.strm div.hd{height:8px;}
+#navigation div.strm div.bd{padding:2px 10px;}
+div.strm div.hd{background:transparent url(../../../../../../../../../../20110704121540im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-brd-crn-r.html) 100% 0 no-repeat;}
+div.strm div.hd div{background:transparent url(../../../../../../../../../../20110704121857im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-brd-crn-l.html) 0 0 no-repeat;}
+#navigation div.strm a.nav-button{margin:0;}
+#navigation div.strm a.nav-button span{background:none;padding:0;}
+.scrollPanel{width:100%;overflow:auto;padding-bottom:1px;padding-top:15px;}
+.scrollPanel li{float:left;width:auto;margin:0;padding:0;display:block;}
+.scrollPanel li li{float:none;overflow:hidden;}
+.scrollPanel li li span,div.panel .scrollPanel li{display:block;}
+div.panel .hasScrollBar{padding-bottom:24px;}
+.productBucket .scrollPanel li li{text-align:center;height:145px;padding-top:3px;padding-bottom:6px;}
+.productBucket .scrollPanel ul ul{width:131px;padding:0 10px;}
+.productBucket .tabs{margin:0 1px;}
+.productBucket .tab-nav{margin:0;}
+.promoBucket .bd ul{margin:0 6px;overflow:hidden;}
+.promoBucket .bd li{float:left;text-align:center;margin-right:9px;overflow:hidden;}
+.promoBucket .bd .cols-2 li{margin-right:10px;}
+.promoBucket .bd li.last{margin-right:0;}
+.promoBucket .bd li img{height:182px;display:inline-block;background:grey;}
+.promoBucket .bd li a:hover img,.promoBucket .bd li a:focus img{filter:alpha(opacity=80);-moz-opacity:.8;opacity:.8;}
+.promoBucket .bd li div{padding:0;margin:1px 3px 7px;}
+.promoBucket .bd li strong{font-weight:bold;display:block;}
+.promoBucket .bd .cols-1 li,.promoBucket .bd .cols-1 li img{width:756px;}
+.promoBucket .bd .cols-2 li,.promoBucket .bd .cols-2 li img{width:373px;}
+.promoBucket .bd .cols-3 li,.promoBucket .bd .cols-3 li img{width:246px;}
+.promoBucket .bd .cols-4 li,.promoBucket .bd .cols-4 li img{width:182px;}
+.promoBucket .bd .cols-4 li.last,.promoBucket .bd .cols-4 li.last img{width:183px;}
+.promoBucket .bd-ft .grad-ft{margin-top:-4px;}
+.oviUpsell{background:transparent url(../../../../../../../../../../20110704121820im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/ovi-upsell-banner.png) 0 100% no-repeat;display:block;height:182px;margin-left:1px;position:relative;}
+.oviUpsell h3{padding:34px 0 10px 11px;font-weight:bolder;font-size:16px;color:#fff;width:335px;}
+.res .oviUpsell p{color:#fff;padding-left:11px;width:360px;}
+.oviUpsell .cta-btns{bottom:20px;left:10px;position:absolute;}
+#lb_overlay{position:fixed;display:block;top:0;left:0;width:100%;height:100%;z-index:90;background-color:#000;}
+#lb_holder{position:fixed;top:0;left:0;width:100%;z-index:91;}
+#lb_container{margin:0 auto;position:relative;}
+#lb_loader{text-align:center;}
+div.panel-over{position:relative;}
+div.panel-over div.hd{background:transparent url(../../../../../../../../../../20110704121703im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-over-crn-r.png) 100% 0 no-repeat;}
+div.panel-over div.hd-content{background-position:100% 0;}
+div.panel-over div.hd-account{background-position:100% -33px;}
+div.panel-over div.hd-organise{background-position:100% -66px;}
+div.panel-over div.hd-nav{background-position:100% -99px;}
+div.panel-over div.hd-info{background-position:100% -132px;}
+div.panel-over div.hd-help{background-position:100% -165px;}
+div.panel-over .top-prod p{padding-bottom:10px;padding-left:5px;}
+div.panel-over .top-prod{padding-bottom:20px;padding-right:10px;}
+div.panel-over div.bd{border-left:1px solid #ccc;border-right:1px solid #ccc;overflow:auto;padding:9px 0 9px 9px;background-color:#fff;}
+div.panel-over div.bd-btns div.cta-btns{position:absolute;margin:0;padding:11px;left:0;bottom:0;}
+div.panel-over div.bd-fp a,div.panel-over div.bd-fp a span{display:block;height:100px;width:100px;overflow:hidden;text-indent:-5000px;background:transparent url(../../../../../../../../../../20110704121537im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/get-flash-player.jpg) 0 0 no-repeat;padding:0;float:left;}
+div.panel-over div.bd-fp p{clear:both;margin:5px 6px;}
+div.panel-over div.bd-fp h3{float:left;margin-left:10px;width:245px;}
+div.panel-over div.ft{height:17px;background:transparent url(../../../../../../../../../../20110704121703im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-over-crn-r.png) 100% 100% no-repeat;}
+div.panel-over div.ft span{display:block;height:17px;background:transparent url(../../../../../../../../../../20110704121321im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-over-crn-l.png) 0 100% no-repeat;}
+div.panel-over div.hd{display:block;height:auto;min-height:23px;}
+div.panel-over div.hd span{display:block;height:auto;min-height:23px;background:transparent url(../../../../../../../../../../20110704121321im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-over-crn-l.png) 0 0 no-repeat;}
+div.panel-over div.hd-content span{background-position:0 0;}
+div.panel-over div.hd-account span{background-position:0 -33px;}
+div.panel-over div.hd-info span{background-position:0 -132px;}
+div.panel-over div.hd-help span{background-position:0 -165px;}
+div.panel-over div.hd-organise span{background-position:0 -66px;}
+div.panel-over div.hd-nav span{background-position:0 -99px;}
+div.panel-over div.hd span a{position:absolute;width:14px;height:14px;top:5px;right:5px;text-indent:-999em;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) -516px -514px no-repeat;filter:alpha(opacity=30);-moz-opacity:.30;opacity:.30;}
+div.panel-over div.hd span a:hover{filter:alpha(opacity=100);-moz-opacity:1;opacity:1;}
+div.share-over h4{margin-bottom:16px;}
+div.share-over h5{font-weight:bold;color:#666;margin-top:20px;}
+div.share-over div.txtbox,div.share-over div.txtbox input{width:343px;font-weight:bold;}
+div.share-over ul li{display:inline;float:left;min-width:125px;margin:10px 0 2px 0;}
+div.share-over li a img{margin-bottom:-4px;}
+div.share-over li a span{margin:0 4px;}
+div.rights-info table{margin-top:15px;width:100%;}
+div.rights-info table td{vertical-align:top;}
+div.rights-info table .col-1{width:40%;text-align:right;padding-right:15px;color:#999;}
+div.rights-info table th,div.rights-info table th.col-1{font-weight:bold;padding-bottom:5px;color:#666;}
+div.rights-info h3{font-weight:bold;font-size:12px;color:#333;}
+#terms .bd{padding-left:0;}
+#terms .tab{padding:0 0 0 10px;height:300px;overflow:auto;}
+#terms .bd-btns{border-top:1px solid #ccc;padding-top:15px;}
+#terms ul.tab-nav{width:99.9%;}
+#terms ul.tab-nav li span{padding-right:20px;}
+div.panel-over h3{margin-bottom:5px;}
+div.panel-over .head{background-color:#fff;}
+div.panel-over .head h2{padding:10px;}
+.terms-pg .tabs{padding:0 5px 0 6px;}
+.terms-pg .tab{height:441px;overflow-y:auto;overflow-x:hide;padding:15px 80px 15px 13px;margin-right:1px;}
+.terms-pg h3,div.install-downloader h3,div.install-downloader h2,div.install-downloader h4{font-weight:bold;font-size:14px;color:#333;}
+.terms-pg .tab h3,#terms.panel-over .bd .tab h2,#terms.panel-over .bd .tab h3{margin:10px 0 3px;}
+.terms-pg .tab ul,#terms.panel-over .bd .tab ul{list-style-type:circle;padding-left:15px;}
+#terms.panel-over .bd .tab{padding-right:9px;}
+#terms.panel-over .bd{padding-bottom:0;}
+#terms.panel-over .bd-btns{padding-bottom:9px;}
+div.confirm-dload div.bd,div.install-downloader div.bd{padding:9px 0 0 9px;}
+div.confirm-dload div.ft,div.install-downloader div.ft{margin-top:-15px;}
+div.confirm-dload .bd span{font-weight:bolder;}
+div.confirm-dload span.downloadArtist{display:block;margin-left:135px;}
+div.dloader-wait,a.musicDownloaderFragment{display:none;}
+div.dloader-wait h2 img{margin:0 10px -5px 0;}
+div.install-downloader h2{font-size:16px;font-family:Arial,"Trebuchet MS",sans-serif;padding-top:9px;}
+div.install-downloader h3,div.install-downloader h4,div.install-downloader div.bd p{padding:10px 50px 10px 0;clear:both;}
+div.install-downloader div.bd p.dloader-lnk{padding-top:10px;}
+div.install-downloader div.bd p.sys-req{padding-top:5px;}
+div.install-downloader em{font-style:italic;}
+div.install-downloader div.grad-ft p{padding:5px 0 5px 9px;}
+div.install-downloader h3.bt{border-top:1px solid #EFEFEF;padding:20px 0 0 8px;margin-left:-8px;}
+div.install-downloader div.dloader-wait p.end{padding:0 50px 30px 0;}
+.hd h2 span{position:relative;}
+.hd h2 span strong{position:absolute;right:11px;}
+a.hide,a.show{background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) -420px -514px no-repeat;display:none;width:14px;height:14px;vertical-align:middle;margin-left:6px;}
+html.js a.hide,html.js a.show{display:inline-block;}
+a.show{background-position:-468px -514px;}
+a.hide:hover,a.hide:focus{background-position:-444px -514px;}
+a.show:hover,a.show:focus{background-position:-492px -514px;}
+#shopWindow .panel{position:relative;}
+#shopWindow .ban{margin-left:0;}
+#shopWindow-bd{background:url(../../../../../../../../../../20110704121557im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/no-flash.jpg) 100% 100% no-repeat;height:168px;width:770px;display:block;}
+#shopWindow .get-fla{position:absolute;left:15px;top:70px;padding-right:15px;}
+#shopWindow .get-fla p,#shopWindow .get-fla em{color:#fff;margin-left:12px;}
+#shopWindow .get-fla p{font-size:21px;}
+#shopWindow .get-fla em a{font-weight:bold;color:#4a3;}
+#shopWindow .get-fla em{clear:both;}
+#shopWindow .get-fla .cta-btns{margin-bottom:15px;}
+.prod-sm,.art-sm,.prod-med,.prod-lrg{background:transparent url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) 0 0 no-repeat;}
+.prod-sm{display:block;width:64px;height:58px;background-position:-244px -68px;}
+.prod-sm img{margin:4px 0 0 10px;}
+.art-sm{display:block;width:58px;height:58px;background-position:-244px 0;}
+.art-sm img{margin:4px 0 0 4px;}
+.srch-detail .prod-sm{margin:0 13px 0 9px;}
+.srch-detail .art-sm{margin:0 13px 0 14px;}
+.prod-med{display:inline-block;height:75px;width:75px;padding:7px 9px 11px 15px;background-position:-135px 0;}
+.prod-lrg{display:inline-block;width:100px;height:100px;padding:7px 9px 15px 16px;background-position:0 0;}
+.ps-coll .prod-lrg,.pl-hd .prod-lrg,.top-prod .prod-lrg{float:left;margin-right:9px;}
+.top-prod-pacblk{float:left;}
+.top-prod-pacblk .prod-lrg{float:none;}
+.prod-padv{display:block;padding:0 0 0 5px;}
+table.alb-list td.col-1{padding-left:17px;}
+table.alb-list td.col-1 a img{float:none;}
+table.alb-list tbody tr td.col-3{padding-right:17px;}
+table.alb-list a.btn{margin-top:4px;}
+.tabs dl,.tabs dt,.tabs dd{float:left;display:inline;margin-top:2px;margin-right:4px;}
+.tabs dt{margin-right:17px;}
+.join-ft .cta-btns{padding-left:15px;}
+.grad-ft .btn,.join-ft .btn,.center{text-align:center;}
+.tab,.alb-list{float:none;clear:both;}
+.sortheader{background:transparent url(../../../../../../../../../../20110704121616im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/sort-hd-bg.png) 0 100% repeat-x;margin:1px;height:29px;font-weight:bold;text-align:right;padding:5px 10px 0 0;}
+.panel .artistprod h2 span{margin:0;}
+hr.artistprod{background-color:#fff;border:0 none;height:1px;}
+div.artistprod{border-top:1px solid #d8d8d8;}
+.artistprod div.tabs{margin-top:-3px;}
+table.artistprod{margin-top:1px;}
+div.artist-tracks table td{padding-top:16px;padding-bottom:17px;}
+.artistprod table td,.libraryContentList table tr .col-1,.libraryContentList table tr .col-2,.libraryContentList table tr .col-3,.libraryContentList table tr .col-4{padding-top:15px;padding-bottom:15px;}
+.artistprod table tr{background:none;}
+.artistprod td.col-1{width:12%;padding-left:10px;}
+.artistprod td.col-4{width:5%;padding:0 15px 0 5px;}
+.artistprod td.col-5{width:5%;}
+.artistprod td.col-6{width:5%;padding:0 20px 0 5px;}
+em.art-share{display:inline-block;margin:0 5px -3px;}
+#artistDetails{padding:8px 11px 3px 10px;border:1px solid #fff;}
+#artistDetails h3{margin-bottom:4px;font-style:italic;color:#999;}
+#artistDetails .mostDownloads{float:left;width:50%;padding-right:5px;}
+#artistDetails .mostDownloads .play{margin-left:0;}
+#artistDetails .mostDownloads div{float:left;margin-left:4px;}
+#artistDetails .mostDownloads .title{overflow:hidden;width:99px;height:95px;}
+#artistDetails .mostDownloads h4{font-weight:bold;font-size:1.1em;}
+#artistDetails .mostDownloads h3{margin-left:6px;}
+#artistDetails .simArtist{float:left;margin:-2px 0 0 5px;padding:2px 0 2px 10px;border-left:1px solid #d8d8d8;}
+#artistDetails .simArtist ul li{display:block;}
+.loadingTracksButton span img{margin:2px 40px -2px 40px;}
+.injected{margin-top:-15px;margin-bottom:-15px;}
+.track-list table tbody tr td{color:#333;}
+.track-list table tbody tr td,.libr-trx td{background-color:#fff;}
+.track-list .tlcol-1{padding:5px 0 5px 17px;}
+.track-list .tlcol-1 span em,.track-list .tlcol-1 a em{width:1.45em;display:inline-block;font:inherit;text-align:right;padding-right:.5em;}
+.track-list .tlcol-2,.track-list .tlcol-3{padding:5px;}
+.track-list .tlcol-2{width:7em;text-align:right;}
+.track-list .tlcol-3{width:171px;padding-right:17px;}
+.alb-tracks{margin:0 1px;border-top:1px solid #efefef;}
+div.track-list td.col-1{width:96%;padding-left:17px;}
+div.track-list td.col-5{padding-right:17px;}
+div.track-list .vars-arts-link{display:block;margin-left:1.95em;}
+div.res .top-prod ul{margin:5px 0;}
+div.top-prod div.top-container{float:left;}
+div.top-prod ul.artist-list li{display:block;}
+div.track-top{border:none;}
+div.track-top h3{margin-right:95px;}
+div.alb-down-top h3,alb-down-top .top-container{margin-right:0;}
+a#rights-info{display:none;}
+.cwm a#rights-info,.alc a#rights-info{display:inline-block;}
+div.track-top a#rights-info,div.alb-top a#rights-info,.alb-top p{margin-top:5px;}
+div.alb-top span.albumActionInfo{display:block;margin-top:53px;}
+div.res .top-prod.track-top ul,div.res .top-prod.alb-top ul{margin:0;}
+div.top-prod h3,div.top-prod h3 a,div.jn-cwm-sccss strong,.combine-error h3{font-weight:bold;font-size:16px;color:#333;padding-bottom:5px;}
+div.top-prod h3 span{display:block;padding-top:5px;}
+div.top-prod h4{font-weight:bold;font-size:14px;color:#999;}
+.prod-dtls-desc{width:590px;}
+#top-prod-dtls{padding:11px 18px 12px 10px;}
+#top-prod-dtls p{margin:12px 0 2px;}
+#top-prod-dtls h3 span{padding-top:7px;font-size:18px;}
+#top-prod-dtls .top-container{padding-bottom:7px;}
+.prod-dtls{float:left;width:287px;padding-right:14px;}
+.perf-dtls{width:269px;float:right;border-left:1px solid #d9d9d9;padding-left:14px;}
+.perf-dtls h5{color:#999;font-style:italic;padding-bottom:6px;}
+.perf-dtls ul li{color:#666;display:block;padding-top:6px;}
+.perf-dtls a span{font-weight:bold;}
+.perf-dtls a.expand,.perf-dtls a.contract{display:block;margin-top:11px;}
+.perf-dtls a.contract{background-position:2px -90px;}
+#top-prod-dtls p,.perf-dtls h5,.perf-dtls ul li,.perf-dtls a.expand,.perf-dtls a.contract{line-height:12px;}
+.scroll{height:300px;overflow-y:scroll;overflow-x:hidden;position:relative;}
+.prod-list tr{width:100%;}
+.prod-list td{height:30px;white-space:nowrap;}
+.prod-list td.col-1{width:35%;padding-left:20px;}
+.prod-list td.col-1 a{font-weight:bold;color:#333;}
+.prod-list td.col-2{width:35%;}
+.prod-list td.col-3{width:4%;}
+.prod-list td.col-4{width:26%;padding-right:15px;}
+.btn-list li{display:inline;}
+.btn-list li a,.btn-list li.duration{float:right;}
+.btn-list .btn{float:left;color:#333;}
+#artistDetails .btn-list{margin:8px 0 0 -8px;}
+#artistDetails .mostDownloads div .btn-list{margin-left:0;}
+#artistDetails .btn-list li a,.panel-over .btn-list li a{float:left;}
+.PageLinks{text-align:center;margin:0;color:#999;font-weight:900;background-color:#e9e9e9;padding:7px 0;border-top:1px solid #d8d8d8;}
+.PageLinks li{display:inline;padding:1px 5px;}
+.PageLinks li a{color:#999;}
+.PageLinks li.rightmost a,.PageLinks li.rightinner a,.PageLinks li.leftmost a,.PageLinks li.leftinner a,.PageLinks li a.PageLinkSelected{color:#333;}
+.PageLinks li.leftinner{border-left:1px solid #999;margin-right:10px;}
+.PageLinks li.rightinner{border-right:1px solid #999;margin-left:10px;}
+#albumsPageLinks{padding-bottom:8px;}
+div.pagination{padding:0 11px 0 14px;line-height:33px;color:#999;border-left:1px solid #fff;border-right:1px solid #fff;}
+div.pagination h3{width:250px;font-size:14px;font-style:italic;color:#999;}
+div.pagination ul li{float:left;margin-right:11px;}
+div.res{position:relative;}
+div .res div.hd h2 span em{font-weight:700;}
+div.res div.bd{padding:0 6px 0 5px;}
+div.bd div.shaded{margin:0 7px 0 6px;}
+div.res table{width:100%;}
+div.res ul li{display:inline;}
+div.res p{color:#666;}
+div.res .btn{clear:right;}
+div ul.expandable li{display:none;}
+div ul.expandable li.showalways,div ul.expandable li.show{display:block;}
+a.contract{display:none;}
+.srch-detail table{border:0 solid #fff;border-collapse:separate;padding:0 1px;}
+.srch-detail table td{padding:10px 0 9px 0;border-top:1px solid #d8d8d8;}
+div.srch-detail td.col-1{width:1%;}
+div.srch-detail td.col-2{width:430px;padding-right:1px;}
+div.srch-detail td.col-3{width:110px;padding-left:1px;}
+div.srch-detail td.col-4{width:200px;}
+div.srch-detail td.col-4 .btn-list{margin-right:18px;}
+div.srch-detail td.col-4 .play{margin-left:0;}
+.srch-detail table tr td .item.artist{display:block;padding:25px 0;}
+.srch-nores p{font-weight:bold;}
+.srch-nores-top{padding:15px 14px 17px;}
+.tryBrowsing{padding:15px 14px 26px;}
+.tryBrowsing h3{margin-bottom:11px;}
+.tryBrowsing ol{margin:0;}
+div#sitemap,.grad-separator{background:transparent url(../../../../../../../../../../20110704121356im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/plain-rev-bg.png) 0 0 repeat-x;}
+div#sitemap{padding-top:23px;border-top:solid 1px #cecfce;font-size:11px;color:#666;width:969px;overflow:hidden;}
+div#sitemap div{float:left;width:20%;}
+div#sitemap dl{margin:0 25px 3px 0;border-bottom:solid 1px #cecfce;}
+div#sitemap dt{font-weight:bold;margin-bottom:2px;}
+div#sitemap dd{line-height:22px;}
+div#sitemap .dropdown dl{border:none;float:left;margin:0 25px 10px 10px;}
+div#sitemap .dropdown select{width:159px;}
+div#sitemap .mac,div#sitemap .win{background:transparent url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) 0 -129px no-repeat;}
+div#sitemap .win{background-position:0 -194px;}
+div#siteinfo{position:absolute;bottom:0;background:transparent url(../../../../../../../../../../20110704121723im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-l.png) 0 0 no-repeat;width:974px;left:50%;margin:0 0 0 -487px;}
+div#siteinfo ul{display:block;height:40px;padding:0 19px;background:transparent url(../../../../../../../../../../20110704121625im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/panel-main-crn-r.png) 100% -52px no-repeat;}
+#siteinfo ul li{float:left;padding:10px 24px 0 0;color:#666;}
+#siteinfo ul li.last-child{float:right;padding-right:0;}
+#siteinfo ul li a:hover{color:#4a3;}
+#end-page{display:none;}
+div.tabs{margin-top:-4px;padding-top:0;}
+.tab-nav{margin-left:1px;margin-top:1px;border-bottom:solid 1px #cecfce;}
+ul.tab-nav li,ul.tab-nav li span{float:left;position:relative;display:block;font-weight:bold;background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) 0 -256px no-repeat;}
+ul.tab-nav li{margin-right:6px;}
+ul.tab-nav li span{left:5px;padding:6px 35px 2px 7px;background-position:100% -256px;}
+ul.tab-nav li.active{background-position:0 -289px;border-bottom:1px solid #fff;z-index:2;margin-bottom:-1px;}
+ul.tab-nav li.active span{background-position:100% -289px;border-bottom:1px solid #fff;z-index:999;margin-bottom:-1px;}
+ul.tab-nav li.active a span,ul.tab-nav li a span{color:#333;cursor:pointer;}
+.tabs div.tab{display:none;}
+.tabs div.active{display:block;}
+.loader{padding:10px;text-align:center;}
+p.join-success{line-height:31px;}
+.join .g-14,.join .g-9{margin-top:10px;margin-bottom:10px;}
+div.join h3{color:#666;}
+div.join .right-border{border-right:solid 1px #d8d8d8;}
+html.js #DeviceConnected,html.js #DeviceConnecting,html.js #DeviceProblem{display:none;}
+.join .leftcol .box div{text-align:center;}
+.join .leftcol .box div p{text-align:left;color:#37822a;font-weight:bold;}
+.join .leftcol .box div img{margin:15px auto;}
+.join .leftcol .box{padding-bottom:20px;}
+#DeviceNotConnected p{font-style:italic;color:#333;font-weight:normal;}
+#DeviceProblem p{color:#c00;}
+.join-fail{padding:12px 17px 30px 19px;}
+#joinFail{min-height:190px;}
+#joinFail img{float:left;margin-right:10px;}
+#joinFail h3{font-size:1.3em;}
+#joinFail p{margin-bottom:25px;}
+.combine-error div p,.pinNotReq{margin-top:20px;}
+.combine-error p{color:#666;font-size:13.5px;}
+.jn-optns{display:inline-block;width:100%;padding:12px 17px 30px;}
+.jn-optns h3{font-size:14px;color:#666;font-weight:bold;}
+.jn-optns p,.jn-optns h3{padding-bottom:20px;}
+.jn-optns div{float:left;width:50%;}
+.jn-optns img{float:left;}
+.jn-optns span{padding-right:80px;display:block;}
+.jn-optns .cta-btns{margin:30px 0 20px;clear:both;width:100%;}
+.jn-optns .cta-btns div{width:auto;}
+.jn-optns .nav-more{display:block;clear:both;line-height:1.2em;}
+div.signin{border-right:solid 1px #D0D0D0;margin-right:0;}
+div.signin-reg,div.signin{float:left;padding-bottom:30px;display:inline-block;}
+#signInForm h2,#siginRegisterForm h2{padding-bottom:3px;font-family:Arial;font-weight:bold;}
+div.signin div.box,div.signin-reg div.box{padding-left:50px;padding-right:50px;}
+div.signin-reg{width:430px;}
+div.signin-reg div.cta{margin-top:0;}
+div.vouchers{display:inline-block;}
+div.vouchers img{float:left;}
+.pin-care div.sh-hd p{margin:0;}
+.pin-care div.sh-hd h3{padding:9px 0 0;}
+.pin-care div.sh-hd ul li,.pin-care div.sh-hd div.inner-tgl p{padding:0;}
+div.inner-tgl{padding-left:22px;display:none;}
+div.subscriptionbanner{padding-left:6px;}
+div.jn-cwm-sccss-bnnr{position:relative;margin-left:6px;font:19px "Nokia Sans",Arial,Trebuchet MS,Sans-Serif;color:#fff;}
+div.jn-cwm-sccss-bnnr div{position:absolute;width:42%;top:70px;left:30px;}
+div.jn-cwm-sccss-bnnr h3{font-size:47px;font-weight:bold;}
+div.enjoymusicbanner{padding-left:1px;}
+.captcha p{margin-bottom:1em;}
+.captcha img{padding-right:10px;}
+div.bd table.shaded th{background-color:#efefef;height:31px;padding:0 9px;font-weight:bold;border-bottom:1px solid #fff;border-left:1px solid #fff;}
+div.bd table.shaded td,div.acct-changedevice ul.toggle li{padding:5px 9px;}
+div.bd table.shaded th.col-1{width:50%;border-left:none;}
+div.bd div.no-btns{height:21px;}
+#subscriptions div.bd td{height:58px;}
+div.acct-changedevice div.top{border-bottom:1px solid #eaeaea;margin:0 1px;}
+div.acct-changedevice div.top p.edit-success-msg{margin:0 12px 12px;}
+div.acct-changedevice div.top h3{padding:12px;font-size:12px;color:#999;font-style:italic;}
+div.acct-changedevice ul.toggle{margin:0 1px -1px;padding:0 6px 0 5px;}
+div.acct-changedevice ul.toggle li{display:block;padding:3px 0 3px 12px;margin-bottom:0;}
+div.acct-changedevice ul.toggle li div.box h3{margin-left:-18px;font-weight:normal;}
+div.acct-changedevice ul.toggle li div.cta-btns{padding-bottom:35px;}
+div.acct-changedevice ul.toggle li p.error{color:#c00;}
+.credit-details div.bd em{font-weight:bold;}
+.credit-details div.box{padding:12px 10px;}
+.credit-details p.row{overflow:hidden;}
+.credit-details p.row em,.credit-details p.row span{text-align:right;width:25%;}
+.credit-details p.row input,.credit-details p.row label{padding-right:7px;}
+.ps-coll p,.pl-tbl,.pl-trx,.pl-hd div,.pl-hd p{color:#666;}
+.ps-coll{padding:0 7px 0 6px;}
+.ps-coll li{display:block;width:50%;float:left;}
+.ps-coll a{margin:11px 9px 9px;display:block;}
+.ps-coll h3,.pl-hd h3 a{font-size:16px;font-weight:bold;display:inline-block;margin:3px 0 8px 0;color:#333;}
+.ps-coll h3{display:inline;}
+.ps-coll a:hover h3,.pl-tbl a:hover .item{color:#4a3;}
+.pl-tbl td{padding:0 11px;}
+.pl-tbl .item{width:37%;display:inline-block;}
+a.in-txt-lnk{color:#4a3;font-weight:bold;}
+a.in-txt-lnk:hover{text-decoration:underline;}
+.ban{margin-left:1px;display:block;}
+.pl-dtl-tbt .ban{border-bottom:1px solid #d8d8d8;}
+.ban img{display:block;padding-bottom:1px;}
+.pl-dtl-dflt .pl-hd{padding:10px 14px 13px;background-position:100% 0;border-bottom:1px solid #efefef;}
+.pl-dtl-tbt .pl-hd{padding:12px 15px 13px 10px;}
+.pl-hd p{float:left;width:100%;}
+.pl-hd p a{font-weight:bold;color:#4A3;}
+.pl-hd .dload-btn{margin-right:4px;}
+.pl-hd .play{margin-right:0;}
+.pl-hd h3 a{margin-bottom:3px;}
+.pl-hd div{font-size:14px;font-weight:bold;margin-bottom:5px;}
+.pl-trx td{color:#999;height:80px;padding:9px 5px;}
+.pl-trx .col-first{width:72%;padding-left:14px;}
+.pl-dtl-dflt .col-first{width:12%;vertical-align:top;}
+.pl-trx .col-last,.chrt-dtl .col-last{padding-right:18px;width:25%;}
+.pl-trx .col-last .play,.chrt-dtl .col-last .play{margin-left:0;}
+.pl-trx div{display:inline-block;font-weight:bold;margin-bottom:5px;}
+.pl-dtl-dflt .pl-trx .item{width:230px;display:inline-block;}
+.chrt-dtl td{color:#666;height:80px;}
+.chrt-dtl .col-first{width:7%;text-align:right;font-size:30px;font-weight:bold;padding-left:14px;}
+.res tr.chrt-hd{background:none;}
+.chrt-hd td{height:149px;padding:0 1px;}
+.chrt-hd table{border-bottom:1px solid #eaeaea;}
+.res .chrt-hd tr{background:none;}
+.chrt-hd,.chrt-tbl td{padding:5px 0;}
+.chrt-hd .col-thir,.chrt-tbl .col-thir,.chrt-tbl .col-four{padding-right:5px;}
+.chrt-hd .col-first{color:#000;padding-left:28px;}
+.chrt-hd .col-sec{width:17%;padding-right:7px;}
+.chrt-tbl .col-sec{width:10%;padding-left:5px;padding-right:11px;}
+.chrt-tbl .col-thir{width:40%;}
+.chrt-dtl div{font-weight:bold;}
+.chrt-hd div{margin-bottom:4px;font-size:16px;}
+.chrt-hd .item{font-size:18px;display:block;margin:0 0 3px;}
+.res-count{padding:5px 15px;font-style:italic;font-size:14px;margin-top:-34px;color:#999;}
+.libraryContentList{margin:1px 1px -1px;}
+.libraryContentList td.col-1{width:12%;padding-left:13px;}
+.libraryContentList .col-2{width:55%;}
+.libraryContentList .col-3,.libr-trx td.tlcol-2{width:17%;}
+.libraryContentList .col-3 p{margin-top:15px;}
+tr.libr-trx{display:none;}
+.libr-trx table{margin-top:-5px;margin-bottom:-5px;}
+.libr-trx td{padding:5px 0;}
+.libraryContentList .col-2,.libraryContentList .col-3,.libr-trx .tlcol-1,.libr-trx .tlcol-2{padding-right:5px;}
+.libraryContentList .col-4,.libr-trx td.tlcol-3{padding-right:17px;}
+.libraryContentList .col-1{vertical-align:top;}
+.libr-trx .tlcol-1{padding-left:15px;width:67%;}
+.libraryContentList p a{font-weight:bold;}
+.libraryContentList .btn-list .btn{margin-top:0;float:right;clear:none;margin-right:10px;}
+#land-bridge div#bridge{margin-bottom:10px;}
+#land-bridge .spacing{display:block;}
+#land-bridge li.last a{font-size:12px;}
+.land-wel-pan{background:transparent url(../../../../../../../../../../20110704121916im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/landingpage.jpg) 100% 15px no-repeat;height:316px;padding-top:15px;}
+.land-ovi-pan{background:transparent url(../../../../../../../../../../20110704121916im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/landingpage.jpg) 100% 100% no-repeat;height:401px;padding-bottom:5px;float:left;}
+.land-wel-pan h2,.land-ovi-pan h2{padding:12px 20px 0;}
+.land-wel-pan h3{padding-bottom:5px;font-size:30px;font-family:"Nokia Sans",Arial,Trebuchet MS,Sans-Serif;}
+.land-wel-pan .dropdown{padding:0;}
+.land-wel-pan option,.land-wel-pan select{color:#333;font-size:12px;}
+.land-wel-pan p,.land-ovi-pan p{padding-bottom:18px;font-size:12px;line-height:1.5em;}
+.land-wel-pan div{color:#fff;}
+.land-ovi-pan h4,div#sitemap h3{font-weight:bold;font-size:14px;}
+.land-wel-pan div,.land-ovi-pan div{padding:30px 38px;width:450px;}
+.land-wel-pan p.less-pad{padding-bottom:6px;}
+.land-ovi-pan p.less-pad{padding-bottom:12px;}
+.land-wel-pan div.dropdown dt label{display:none;}
+.land-ovi-pan a{background:transparent url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) -318px -90px no-repeat;font-size:16px;font-family:"Nokia Sans",Arial,Trebuchet MS,Sans-Serif;width:128px;height:36px;display:block;}
+.land-ovi-pan a span{color:#4a3;padding:10px 0 0 10px;display:block;}
+.land-ovi-pan a:hover span{color:#84e075;}
+.land-pan .bd span{padding:0 7px 0 6px;}
+.land-pan .bd{min-height:180px;}
+.land-pan .end p{padding:5px 11px;font-size:12px;line-height:1.5em;}
+.land-pan .cta-btns a span{font-size:12px;padding-right:18px;}
+.land-last .panel{margin-right:0;}
+div#sitemap h3{color:#000;padding:0 0 20px 15px;}
+#land-sitemap{margin-bottom:18px;}
+div#sitemap .countries{width:58%;padding-left:15px;}
+div#sitemap .countries dl dd{display:inline;}
+div#sitemap .countries dl dd a{width:177px;display:inline-block;}
+div.land-page #siteinfo li{padding-right:2px;}
+div.land-page #siteinfo li a.terms{display:none;}
+.img-shad{padding:10px;background:url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) no-repeat -318px 0;}
+.panel-intro{margin:0 7px 0 6px;padding:10px 10px 20px 11px;background:transparent url(../../../../../../../../../../20110704121452im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/plain-bg.png) repeat-x 0 100%;}
+.panel-intro h3{color:#333;font-size:18px;font-weight:bold;padding-top:5px;padding-bottom:20px;}
+.panel-intro a,.panel-intro a span{display:block;float:left;}
+.panel-intro a{font-size:18px;color:#fff;height:37px;background:url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) no-repeat 0 -136px;padding-left:15px;}
+.panel-intro a span{background:url(../../../../../../../../../../20110704121246im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/backgrounds.png) no-repeat 100% -136px;padding:9px 15px 9px 0;font-family:"Nokia Sans",Arial,Trebuchet MS,Sans-Serif;}
+.panel-intro a:hover span{color:#fff;}
+.cwm-overview .box{clear:both;}
+.img-list li img{float:left;margin:0 13px 0 0;}
+.img-list li{clear:left;}
+.img-list li h4{padding:6px 0 0;}
+.img-list li p strong{display:block;font-size:11px;}
+img.table{margin:0 0 -5px 6px;width:756px;}
+.grad-separator{padding:5px 15px 0;margin:10px 7px 0 6px;}
+.grad-separator h3{padding-top:10px;}
+h3.table-intro{padding-top:20px;}
+div.ul ul{list-style-type:disc;padding-left:15px;}
+.cwm-overview div.ul ul,.cwm-overview .img-list li p,.cwm-overview .grad-separator p,.toggle p,.toggle a,.toggle ul{color:#666;}
+.cwm-overview .grad-separator p{margin:0 0 5px;}
+ul.toggle{margin:0 0 20px;}
+ul.toggle li{padding:0 0 0 20px;margin:0 0 6px;}
+ul.toggle li a{font-weight:bold;}
+ul.toggle li p{margin:8px 0 0;}
+.js ul.toggle li a.sh-hd-icon,.js div.toggle a.sh-hd-icon{display:inline-block;font-weight:bold;background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 0 3px;padding:0 0 0 20px;position:relative;left:-20px;}
+.js ul.toggle li a.sh-hd-icon:hover,.js div.toggle a.sh-hd-icon:hover{background-position:0 -31px;}
+.js ul.toggle li.show a.sh-hd-icon,.js div.toggle div.show a.sh-hd-icon{background-position:0 -14px;}
+.js ul.toggle li.show a.sh-hd-icon:hover,.js div.toggle div.show a.sh-hd-icon:hover{background-position:0 -48px;}
+.js ul.toggle li .sh-hd,.js div.toggle div div.sh-hd{display:none;}
+.js ul.toggle li.show .sh-hd,.js div.toggle div.show div.sh-hd{display:block;}
+.faq h3{padding:4px 0 7px;}
+.faq .box{padding-bottom:1px;}
+html.js .faq .bd,html.js .closed .bd{display:none;}
+div.content{padding-top:3px;}
+.content p{margin:14px 0;}
+.content p.pinhelp{width:52em;}
+.content a{font-weight:bold;color:#4a3;}
+#slide-widget{margin:0 0 30px 30px;}
+.js #slide-widget{margin:0 7px 0 6px;border:1px solid #d8d8d8;border-bottom:none;}
+#slide-widget li{clear:left;}
+.js #slide-widget li{margin:0;clear:none;display:block;}
+.js #slide-widget li .slide-content{display:block;overflow:hidden;width:0;}
+.js #slide-widget li.step-1 .slide-content{width:505px;}
+.js #slide-widget li .slide-content .slide-inner{width:485px;padding:20px;padding-left:0;}
+.js #slide-widget li.step-1 .slide-content .slide-inner{padding-left:215px;width:270px;}
+.js #slide-widget li.step-1 .slide-content .slide-inner img{margin-left:-215px;float:left;}
+#slide-widget li .slide-content{color:#666;font-size:14px;}
+#slide-widget li .slide-content h4{font-weight:bold;font-size:16px;margin:12px 0 2px;}
+#slide-widget li .slide-content .btn{font-size:12px;margin-top:5px;}
+.js #slide-widget li h3,.js #slide-widget li h3 a,.js #slide-widget li .slide-content{float:left;}
+#slide-widget li h3 a{display:block;font-size:25px;font-weight:bold;padding:20px 0 0;outline:none;}
+.js #slide-widget li h3 a{padding:88px 30px 95px;font-size:40px;border-left:1px solid #d8d8d8;background:transparent url(../../../../../../../../../../20110704121742im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/slide-widget-grad.gif) repeat-y 0 0;color:#4a3;}
+.js #slide-widget li.current h3 a{color:#333;}
+.js #slide-widget li:first-child h3 a{border-left:none;}
+.msc-ovrw div.ul{padding-left:30px;width:397px;font-size:16px;}
+.msc-ovrw div.ul li{margin-bottom:5px;line-height:20px;}
+div.dload-ovrw div.col,div.dload-ovrw div.cols{width:50%;float:left;padding-bottom:18px;}
+div.dload-ovrw div.col img,div.dload-ovrw div.cols img{margin-right:9px;float:left;}
+div.dload-ovrw div.col ul{padding-left:15px;}
+div.dload-ovrw div.col ul li,div.dload-ovrw div.cols ul li{color:#666;font-size:12px;margin-top:5px;}
+div.dload-ovrw h4{padding-top:8px;}
+div.dload-ovrw div.ul{display:inline-block;width:60%;}
+.enjy{position:relative;}
+.enjy div.ul{width:450px;}
+.enjy img{position:absolute;right:18px;bottom:8px;}
+div.payment-opt div.shaded{margin:0 1px;}
+div.payment-opt div.ext-mrg{margin-bottom:10px;}
+div.payment-opt h3{padding-bottom:0;}
+.payments h3{font-size:16px;clear:both;padding-bottom:0;}
+.payments .cta{margin-bottom:10px;}
+.prodTop{min-height:100px;}
+.prodTop div{margin-left:4px;}
+.prodTop .title{position:absolute;}
+.prodTop h4{margin-left:105px;padding-top:2px;font-weight:bold;font-size:1.4em;}
+.prodTop p{margin-left:105px;font-weight:bold;font-size:1.2em;padding-bottom:10px;}
+.prodTop span{color:#9f9f9f;margin-left:105px;}
+.subSectionHeader{background-color:#efefef;margin:1px;height:29px;font-weight:bold;margin:8px 1px 0;}
+.subSectionHeader h3{font-size:12px;font-weight:bold;padding:7px 15px 5px;}
+.res .subSectionList li{display:list-item;}
+div.noExtendCWM{display:inline-block;width:80%;padding-bottom:18px;}
+a.closeBtn{z-index:1;}
+div.betaBanner{position:absolute;right:-1px;top:-1px;}
+p.pad{padding-right:50px;}
+.streamPromo img{display:inline;float:left;margin-right:10px;}
+#streamBtn{float:right;}
+.streamPromo p{display:block;float:none;max-width:400px;}
+.streamPromo span{display:inline-block;float:left;}
+#banner-container-h101{background:url("../../../../../../../../../../20110704121718im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/streamingalertbarbg101.png") repeat-x scroll left bottom transparent;color:#fff;font-size:100%;font-weight:bold;left:0;position:fixed;width:100%;z-index:100;top:0;display:none;}
+#banner-container{background:url("../../../../../../../../../../20110704121738im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/streamingalertbarbg.png") repeat-x scroll left bottom transparent;color:#fff;font-size:100%;font-weight:bold;left:0;position:fixed;width:100%;z-index:100;top:0;display:none;}
+#banner-container-h101>div,#banner-container>div{padding:14px 0;width:976px;margin:0 auto;text-align:left;}
+#banner-container-h101>div>div,#banner-container>div>div{float:right;display:inline;text-align:right;}
+#banner-container a,#banner-container .notify-text,#banner-container input,#banner-container label,#banner-container-h101 input,#banner-container-h101 label{margin-right:1em;}
+#banner-container-h101 a{color:#fff;text-decoration:underline;}
+#banner-container-h101 .notify-text{width:750px;display:block;}
+#banner-container-h101 label,#banner-container label{position:relative;top:2px;}
+#banner-container-h101 a.banner-close,#banner-container a.banner-close{background:transparent url(../../../../../../../../../../20110704121304im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/buttons-3.png) no-repeat -516px -514px;display:block;float:right;height:14px;opacity:.3;-moz-opacity:.3;filter:alpha(opacity=30);margin:4px 15px 0 20px;text-indent:-999em;width:14px;z-index:1;overflow:hidden;}
+#banner-container-h101 a.banner-close:hover,#banner-container a.banner-close:hover{filter:alpha(opacity=100);-moz-opacity:1;opacity:1;}
+#banner-container-h101 label,#banner-container label{color:#fff;}
+.nps-overlay-bg{position:fixed!important;}
+.nps-overlay{left:40%!important;}
+a{color:#666;}
+#container a:hover,#container a:focus,ul.tab-nav li a:hover span,ul.tab-nav li a:focus span,#artistDetails .mostDownloads h4 a:hover,#artistDetails .mostDownloads h4 a:focus,ul.pin-care li div.sh-hd a{color:#4a3;}
+.jsDisabled a{font-size:1.2em;color:#fff;font-weight:bold;}
+.panel-plain a,.copy-link a,.didyoumean h3 a,#signInForm ul.toggle a#forgottenPassword,div.subSectionList a{color:#4a3;text-decoration:none;font-weight:bold;}
+.didyoumean h3,.tryBrowsing h3{font-size:1.1em;font-weight:bold;}
+.copy-link a:hover,.panel-plain a:hover{color:#4a3;text-decoration:underline;font-weight:bold;}
+a.inactive-lnk:hover,a.inactive-lnk:focus{color:#666!important;cursor:default;}
+h1{font-size:24px;color:#333;padding:6px 0 14px 3px;}
+h2{font-size:22px;line-height:18px;}
+.storeLocator h3{font-weight:bold;font-size:11px;color:#666;}
+div#subMenu,h2,p.res-count,p#autosignintext,div.pagination h3,div#subMenu ul li a,#shopWindow .get-fla em{font-family:"Nokia Sans",Arial,Trebuchet MS,Sans-Serif;}
+div.panel h2{padding:0 1px;}
+div.panel-sup h2 span{color:#fff;font-size:12px;padding:6px 6px 5px;display:block;}
+.panel-plain h2{line-height:27px;}
+div.panel h2 span,div.type-help h2 span,div.type-organise h2 span,div.type-nav h2 span,div.type-account h2 span,div.type-info h2 span{display:block;margin:0 6px 0 5px;padding:8px 1px 12px 12px;background-repeat:repeat-x;background-position:bottom left;line-height:1.1em;}
+.panel.res.srch-nores .bd .srch-detail h2 span{margin:-10px 0 0;}
+div.panel h2 span{background-image:url(../../../../../../../../../../20110704121835im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-pink.gif);height:1%;}
+div.type-account h2 span{background-image:url(../../../../../../../../../../20110704121306im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-dblue.gif);}
+div.type-organise h2 span{background-image:url(../../../../../../../../../../20110704121554im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-yellow.gif);}
+div.type-nav h2 span{background-image:url(../../../../../../../../../../20110704121646im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-green.gif);}
+div.type-info h2 span{background-image:url(../../../../../../../../../../20110704121859im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-grey.gif);}
+div.type-help h2 span{background-image:url(../../../../../../../../../../20110704121337im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/panels/headings/hd-lblue.gif);}
+form{font-family:Arial,Helvetica;}
+textarea,input{font-family:Arial,"Trebuchet MS",sans-serif;}
+#artistDetails .mostDownloads h4 a{color:#333;}
+#artistDetails .mostDownloads div p{color:#999;}
+.ChangeDeviceText p,p#autosignintext{font-style:italic;color:#999;}
+p#autosignintext{font-size:14px;margin:25% 0 27px;}
+body.autosignin p{text-align:center;}
+.srch-hd{color:#999;}
+div.hd h2 span em{color:#000;}
+.ChangeDeviceText h4{color:#333;font-weight:900;margin-bottom:5px;}
+.combine-error p{margin:3px 0 0;}
+.combine-error h3{padding:10px 0 0;}
+#subMenu ul li a,#subMenu ul li a.active{font-size:1.15em;}
+#subMenu ul li a{color:#333;}
+#subMenu ul li a.active{color:#b08;}
+#subMenu ul li a.strong{color:#666;}
+#siteinfo ul li a,#siteinfo ul li{font-size:11px;}
+select,option{color:#666;}
+.srch-detail strong,.combine-error strong,.terms-pg .tab strong,.terms-pg .tab h4,#terms.panel-over .bd .tab strong,#terms.panel-over .bd .tab h3,#terms.panel-over .bd .tab h4,#joinAccountDetailsForm strong,div.bd table.shaded strong,div.acct-changedevice ul.toggle li div.box h3 strong,.content strong,.js #slide-widget .slide-inner strong,.msc-ovrw div.ul li strong,#signInForm ul.toggle strong{font-weight:bold;}
+.terms-pg .tab em,#terms.panel-over .bd .tab em{font-style:italic;}
+.srch-detail table tr td>a,.srch-detail table tr td>p>a{font-size:1.32em;}
+.srch-detail table tr td p+p a{font-size:1.2em;line-height:16px;}
+.srch-detail table tr td p a.nav-more{font-size:100%;}
+.expired{color:#C00;}
+.infoMessage{color:#999;float:left;font-style:italic;margin-bottom:10px;margin-top:5px;font-size:11px;}
+.pl-body{color:#666;line-height:140%;overflow:hidden;text-overflow:ellipsis;}
+.recent-playlist{padding-top:10px;height:134px;}
+.recent-playlist a{margin:0 9px 9px;color:#333;}
+.recent-playlist div a{color:#333;margin:3px 0;}
+.recent-playlist h3{margin:0;color:#333;}
+.recent-playlist .nav-more{line-height:120%;margin-top:8px;}
+.recent-playlist div p{margin-top:5px;margin-right:5px;overflow:hidden;width:220px;}
+.share-playlist-heading{color:#999;font-style:italic;padding-bottom:33px;}
+.share-playlist-panel{background:url("../../../../../../../../../../20110704121452im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/plain-bg.png") repeat-x scroll 0 100% transparent;padding:5px 10px 20px 11px;}
+.share-playlists-table{text-align:left;}
+div.res .share-playlists-table tr{background:none;}
+.share-playlists-table .steps-title{color:#4A3;font-size:36px;font-weight:bold;padding:0 0 0 20px;}
+.share-playlists-table .steps-content{padding-bottom:4px;font-size:12px;color:#666;}
+.share-playlists-link{padding-left:49px;}
+.ps-coll-sharepl li{display:block;float:left;width:30%;height:80px;}
+.allsharedpl-icon{float:left;margin-right:12px;margin-bottom:33px;}
+.allsharepl-image{height:50px;width:50px;}
+.allshared-name{color:#333;font-weight:bold;white-space:nowrap;}
+.allshared-desc{height:35px;width:145px;overflow:hidden;}
+.allsharedpl-li{margin-top:18px;padding-left:18px;padding-right:7px;background:url("../../../../../../../../../../20110704121837im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/row-bg.png") repeat-x scroll 0 100% transparent;}
+.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-binding:url('https://web.archive.org/web/20110704121107im_/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/stylesheets/1.8.54/ellipsis.xml#ellipsis');}
+#report_content_body{height:217px;}
+.report_content_style{width:98%;}
+.report_content_description{margin-bottom:20px;}
+.report_content_reason{margin-bottom:10px;}
+.report_content_textarea{width:98%;height:75px;overflow-x:hidden;overflow-y:hidden;border:1px solid #999;}
+.report_content_textarea textarea{font-size:12px;color:#333;overflow:hidden;width:100%;}
+.playlist-detail tr.row-info{background-image:none;vertical-align:top;}
+.playlist-detail tr.row-info td.col-info{width:493px;padding:12px 0 9px 9px;border-bottom:1px solid #efefef;}
+.playlist-detail tr.row-info td.col-info div.details{padding-left:10px;padding-top:3px;overflow:hidden;width:355px;}
+.playlist-detail tr.row-info td.col-info div.details h3{font-size:16px;font-weight:bold;color:#333;padding-bottom:8px;}
+.playlist-detail tr.row-info td.col-info div.artwork{float:left;}
+.playlist-detail tr.row-info td.col-info div.details p{margin-top:7px;line-height:16px;}
+.playlist-detail tr.row-info td.col-duration{height:90px;text-align:left;padding:15px 0 5px 15px;}
+.playlist-detail tr.row-info td.delete-btn{padding-right:10px;vertical-align:top;height:42px;border-bottom:1px solid #efefef;}
+.playlist-detail tr.row-info td.delete-btn .btn-right{float:right;}
+.playlist-detail tr.row-track{height:45px;}
+.playlist-detail tr.row-track td.track-name{width:300px;padding:5px 0 5px 25px;color:#333;}
+.playlist-detail tr.row-track td.track-name .item em{width:22px;display:inline-block;font:inherit;text-align:left;}
+.playlist-detail tr.row-track td{background:url("../../../../../../../../../../20110704121837im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/row-bg.png") repeat-x scroll 0 100% transparent;}
+.playlist-detail tr.row-track td.track-artist{padding:5px 0 5px 15px;color:#333;width:162px;}
+.playlist-detail tr.row-track td.track-name div,.playlist-detail tr.row-track td.track-artist div{white-space:nowrap;}
+.playlist-detail tr.row-track td.duration-track{padding:5px 0 5px 15px;text-align:left;width:76px;}
+.playlist-detail tr.row-track td.all-btn{padding:5px 0 5px 0;}
+.playlist-detail tr.row-track td.all-btn li{float:left;}
+.playlist-detail tr.row-track td.all-btn li a.alc-btn{float:left;}
+.link-ft .ft-left{float:left;}
+.link-ft .ft-right{float:right;padding-right:10px;}
+.pl-row-last td{padding-top:9px;}
+.similar{padding:9px 12px 0 15px;}
+.link-ft ul li p{padding:8px 0 0 9px;}
+.static-dload-button{width:42px;}
+.list-left ul li{display:inline-block;}
+.list-left li a,.list-left li span{float:left;}
+.track-list .tlcol-1-min{min-width:470px;}
+.track-list .tlcol-2-min{padding-right:31px;width:auto;}
+.track-list .tlcol-3-min{padding-right:0;width:auto;}
+.nothing-to-see{padding:8px 0 0 10px;height:122px;}
+.nothing-to-see p{line-height:140%;margin-bottom:16px;}
+.playlist-list tbody tr td{vertical-align:top;}
+.playlist-list-img a{margin-top:3px;}
+.playlist-list-date{font-style:italic;}
+#sharing_dialogue_body{position:absolute;margin:0;padding:0;width:513px;height:auto;min-height:0;}
+.sharing_dialogue{margin:0;padding-top:14px;height:285px;width:513px;overflow:hidden;}
+.sharing_widard_content{height:255px;overflow:hidden;}
+.sharing_wizard_button_group{position:absolute;width:99%;top:295px;margin:0;height:16px;background:url("../../../../../../../../../../20110704121842im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/ft-bg.png") repeat-x scroll 0 0 transparent;padding-left:14px;}
+.sharing_wizard_button_group .cta{margin-left:2px;}
+.sharing_wizard_button_group .cta-btns .cta span input{padding-right:6px;padding-left:6px;}
+.sharing_wizard_button_group .finish{float:right;margin-right:24px;}
+.sharing_dialogue .playlist_overlay_heading,.sharing_dialogue .sharing_widard_content{margin-left:14px;}
+.sharing_dialogue form{height:200px;}
+.sharing_wizard_playlist_image_container{width:125px;height:177px;vertical-align:top;padding-right:4px;}
+.sharing_wizard_playlist_information_container{vertical-align:top;}
+.sharing_wizard_playlist_information_container .characters_left{float:right;margin-top:3px;}
+.sharing_wizard_playlist_txtbox,#playlistNameField{width:201px;}
+.sharing_wizard_playlist_info{margin:5px 0 0 7px;}
+.sharing_wizard_playlist_desc_label{margin-top:20px;}
+#sharing_wizard_playlist_information_form .txtbox{width:206px;position:absolute;margin:0;}
+#sharing_wizard_playlist_information_form .txtbox input{padding:1px 2px 0 0;width:206px;position:absolute;margin:0;height:21px;}
+#sharing_wizard_playlist_information_form .dsc{width:347px;height:62px;overflow:hidden;}
+.sharing_wizard_playlist_desc{width:342px;height:59px;overflow-x:hidden;overflow-y:hidden;background:url("../../../../../../../../../../20110704121705im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/forms/sharing-text-area.html");padding:3px 2px 0 3px;}
+.sharing_wizard_playlist_desc textarea{font-size:12px;color:#999;font-style:italic;width:341px;overflow:hidden;}
+#sharing_input_field_nick_name{width:150px;}
+.sharing_inputbox{margin-top:10px;margin-left:8px;margin-bottom:20px;width:150px;}
+.sharing_nick_link p{margin-top:5px;}
+.sharing_error_msg_start{background:url("../../../../../../../../../../20110704121648im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/HelpRedBox_left.html") no-repeat scroll 0 0 transparent;height:21px;width:18px;margin-left:10px;}
+.sharing_error_msg_mid{background:url("../../../../../../../../../../20110704121403im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/HelpRedBox_mid.html") repeat-x scroll 0 0 transparent;height:21px;}
+.sharing_error_msg_mid span{color:#FFF;font-weight:bold;font-size:12px;}
+.sharing_error_msg_end{background:url("../../../../../../../../../../20110704121439im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/HelpRedBox_right.html") no-repeat scroll 0 0 transparent;height:21px;width:9px;}
+.sharing_error_box_nick{display:none;}
+.sharing_terms_error_msg{margin-left:100px;}
+.sharing_error_box_terms{display:none;}
+#sharing_wizard_playlist_shared_ok_container .checkBoxImageContainer{margin-right:12px;}
+#sharing_wizard_playlist_shared_ok_container .sharedOKText{font-size:16px;}
+#sharing_wizard_shared_input_container{margin-left:47px;}
+#sharing_wizard_shared_input_container .txtbox{width:300px;margin:0;}
+#sharing_wizard_shared_input_container .txtbox input{width:300px;padding:1px 2px 1px 0;}
+#sharing_wizard_playlist_shared_ok_container{padding-top:18px;}
+#sharing_wizard_playlist_shared_ok_container input.viewNow{margin-bottom:40px;cursor:pointer;overflow:visible;background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 2px -314px;padding:0 0 0 14px;color:#333;font-weight:bold;}
+#sharing_wizard_shared_input_container .btn.copy{margin-left:10px;margin-top:3px;}
+#sharing_wizard_social_networks_group span input{margin-top:0;margin-right:5px;}
+.share-to-text{height:70px;width:140px;overflow:hidden;}
+.share-to-checkbox{padding-left:15px;padding-right:5px;}
+.share-to-img,.share-to-img-small{padding-right:7px;}
+.share-to-img-small{height:45px;}
+.share_target_title{margin-bottom:20px;}
+.share_always_ovi_title{margin-top:25px;}
+.sharing_spinner_heading{font-size:16px;font-weight:bold;color:#333;text-align:center;margin-bottom:15px;padding-right:9px;}
+.sharing_spinner_graphics{margin-left:auto;margin-right:auto;width:22px;height:22px;padding-right:9px;background:url("../../../../../../../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif") no-repeat scroll 0 0 transparent;}
+.sharing_exclamation_graphics{width:24px;height:24px;margin-left:11px;padding-right:9px;background:url("../../../../../../../../../../20110704121416im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/exclamation.html") no-repeat scroll 0 0 transparent;}
+.sharing_exclamation_text{padding-right:20px;}
+.btn.sharingFailed{margin-top:10px;}
+#publish_overlay_body{padding:9px 0 0 9px;overflow:hidden;height:55px;}
+#publishFailedPane{position:relative;top:-55px;}
+.btn.sharingFailed span{padding-left:10px;padding-right:22px;}
+p.error-message{color:#C00;font-size:11px;padding-bottom:0;}
+.sharing_sign_in{width:400px;}
+.playlist_overlay_heading{font-size:18px;color:#333;font-weight:bold;margin-bottom:12px;}
+.publish_overlay_pane .playlist_overlay_heading{padding-top:9px;}
+.playlist_overlay_heading_2,.no_playlist_found_heading_2{font-size:12px;color:#666;margin-bottom:8px;}
+.playlist_overlay_content{font-size:12px;color:#999;line-height:15px;}
+.playlist_overlay_button_group{background:url("../../../../../../../../../../20110704121842im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/backgrounds/ft-bg.png") repeat-x scroll 0 0 transparent;bottom:0;left:0;margin:0 0 5px 2px;position:absolute;width:99%;}
+.playlist_overlay_button_group .cta-btns{margin-left:12px;}
+.playlist_overlay_button_group .cta-btns div{margin:6px 8px 0 0;}
+.playlist_overlay_button_group .cta-btns .btn span{padding-top:2px;}
+.playlist_overlay_button_group .cta-btns .cta span input{padding-left:7px;}
+div.panel div.hd span span.beta,.beta_icon{color:#4A3;padding:0;position:absolute;top:8px;right:120px;background:none;}
+.playlist_overlay_heading .beta_icon{right:6px;top:14px;}
+.beta_parent{position:relative;}
+a.beta{background:url(../../../../../../../../../../20110704121920im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/icons-1.gif) no-repeat 2px -309px;padding:0 0 0 14px;color:#666;font-size:13px;margin:0 0 5px;right:7px;top:10px;position:absolute;}
+div.panel div.hd h2 a.beta{color:#666;}
+div.panel-over .head-beta-faq{background-color:#fff;border-left:1px solid #CCC;border-right:1px solid #CCC;border-bottom:1px solid #CCC;}
+div.panel-over .head-beta-faq h2{padding:10px;}
+div.faq-description{padding:5px 10px 10px 10px;height:300px;margin-top:-9px;overflow:auto;display:block;}
+div.faq-description span a:hover{color:#4a3;}
+div.playlist_nickname_info{margin-top:12px;}
+.del-dlg-content{height:60px;}
+
+/*
+     FILE ARCHIVED ON 12:11:07 Jul 04, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:47:05 Feb 21, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1.673
+  exclusion.robots: 0.023
+  exclusion.robots.policy: 0.01
+  esindex: 0.014
+  cdx.remote: 7.643
+  LoadShardBlock: 380.6 (3)
+  PetaboxLoader3.datanode: 404.544 (4)
+  load_resource: 163.037
+  PetaboxLoader3.resolve: 91.358
+*/
