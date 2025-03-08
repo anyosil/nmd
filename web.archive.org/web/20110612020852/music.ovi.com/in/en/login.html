@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+<link rel="manifest" href="./images/site.webmanifest">
+        <title>Authuser-Nuvi Services</title>
+        <script src="www.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            body {
+                background: no-repeat center center fixed;
+                background-size: cover;
+                transition: background-image 0.5s ease-in-out;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = [
+                    "./images/img.jpg",
+                    "./images/img2.jpg",
+                    "./images/img3.jpg",
+                    "./images/img4.jpg",
+                    "./images/img5.jpg",
+                    "./images/img6.jpg",
+                ];
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+                document.body.style.backgroundImage = `url('${randomImage}')`;
+            });
+        </script>
+    </head>
+<body class="flex items-center justify-center min-h-screen bg-purple-900">
+<script src="script.js"></script>
+
+    <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-sm w-full">
+        <h2 class="text-2xl font-bold text-white text-center mb-6">Login</h2>
+        <form>
+            <div class="mb-4">
+                
+                <div class="relative">
+                    <input class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-500" type="text" id="username" placeholder="Username">
+                    <i class="fas fa-user absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <div class="mb-4">
+                
+                <div class="relative">
+                    <input class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-500" type="password" id="password" placeholder="Password">
+                    <i class="fas fa-lock absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+                <label class="flex items-center text-white">
+                    <input type="checkbox" class="form-checkbox text-purple-500">
+                    <span class="ml-2">Remember me</span>
+                </label>
+                <a href="#" class="text-white">Forgot Password?</a>
+            </div>
+            <button class="w-full py-3 bg-white text-purple-900 font-bold rounded-lg hover:bg-gray-200 transition duration-300">Login</button>
+        </form>
+        <p class="text-center text-white mt-6">
+            Don't have an account? <a href="#" id="register-btn" class="font-bold text-white">Register</a>
+        </p>
+        
+    </div>
+</body>
+</html>

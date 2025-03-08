@@ -4,16 +4,17 @@ const axios = require("axios");
 
 const GITHUB_REPO_API = "https://api.github.com/repos/anyosil/symmusic.github.io/git/trees/main?recursive=1";
 const OUTPUT_FILE = path.join(__dirname, "songs.json");
+const TARGET_DIRECTORY = "music/M1/"; // Only fetch from this folder
 const RATE_LIMIT_DELAY = 2000; // Initial delay (increases with retries)
 
-// Function to fetch all MP3 files from the entire repository
+// Function to fetch MP3 files **only from the "music/M1/" directory**
 async function fetchGitHubFiles(retryCount = 0) {
     try {
         console.log("🔍 Fetching file list from GitHub...");
         const response = await axios.get(GITHUB_REPO_API, { headers: { "User-Agent": "request" } });
 
         let mp3Files = response.data.tree
-            .filter(file => file.path.endsWith(".mp3"))
+            .filter(file => file.path.startsWith(TARGET_DIRECTORY) && file.path.endsWith(".mp3")) // Filter only from M1 directory
             .map(file => file.path);
 
         return mp3Files;
@@ -71,11 +72,11 @@ async function fetchAllSongs() {
     let totalSongs = files.length;
 
     if (totalSongs === 0) {
-        console.log("❌ No songs found in the repository.");
+        console.log("❌ No songs found in the 'music/M1' directory.");
         return;
     }
 
-    console.log(`🎵 Found ${totalSongs} songs. Fetching metadata...\n`);
+    console.log(`🎵 Found ${totalSongs} songs in 'music/M1'. Fetching metadata...\n`);
     let songs = [];
 
     for (let i = 0; i < totalSongs; i++) {

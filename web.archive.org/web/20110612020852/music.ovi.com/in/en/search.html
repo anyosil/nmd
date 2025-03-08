@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search Results - Nuvi</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../../web-static.archive.org/_static/css/banner-styles3ae1.css?v=p7PEIJWi" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../web-static.archive.org/_static/css/iconochive29a7.css?v=3PDvdIFv" />
+    <script type="text/javascript" src="../../../../../../web-static.archive.org/_static/js/bundle-playback2c8b.js?v=7YQSqjSh" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../../../../web-static.archive.org/_static/js/wombat9b8c.js?v=txqj7nKC" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered Header */
+#header {
+    padding: 10px;
+    text-align: center;
+}
+
+#header img {
+    height: 50px;
+}
+
+/* ✅ Force Tiles in a Row */
+.music-grid {
+    display: flex;  /* ✅ Forces horizontal alignment */
+    flex-wrap: wrap;  /* ✅ Allows wrapping when needed */
+    justify-content: center;  /* ✅ Centers items */
+    gap: 20px;  /* ✅ Adds spacing between songs */
+    padding: 20px;
+    max-width: 100%; /* ✅ Ensures it doesn’t shrink */
+}
+
+/* ✅ Fix Song Tile Sizing */
+.song {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    width: 180px;  /* ✅ Fixed width for alignment */
+    min-width: 180px; /* ✅ Prevents shrinking */
+    flex-grow: 0; /* ✅ Prevents expanding */
+}
+
+.song:hover {
+    transform: scale(1.05);
+}
+
+/* Album Cover */
+.song img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+/* Song Title */
+.song strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Artist Name */
+.song p {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0;
+}
+
+/* Play Button */
+.play-btn {
+    background: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.play-btn i {
+    font-size: 16px;
+}
+
+.play-btn:hover {
+    background: #ff3399;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <a href="pc.html"><img src="./images/nuvi-logo.jpg" alt="Nuvi Logo" style="height: 50px;"/></a>
+    </div>
+
+    <div id="container">
+        <h1>Search Results</h1>
+        <div id="searchResults" class="music-grid">
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Load script.js correctly -->
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <!-- This runs AFTER script.js loads -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Search page loaded...");
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get("query");
+
+            console.log("Query received:", query); // Debugging
+
+            if (query) {
+                handleSearch(query);
+            }
+        });
+    </script>
+<audio id="audioPlayer" controls style="display: none;"></audio>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>
