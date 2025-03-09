@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const forgotPasswordBtn = document.getElementById("for-btn");
     const JSONBIN_ID = "67ca7dcaad19ca34f817f025";
     const API_KEY = "$2a$10$IG0fCGUHCL7iFsZMFQjI4e4ufPung048BrnWjddZBoo5V3UjUQ4ja";
-    const BREVO_API_KEY = "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";
+    const BREVO_API_KEY = "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";
     
     function fadeOutAndReplace(content) {
         loginPane.style.transition = "opacity 0.5s ease-out";
