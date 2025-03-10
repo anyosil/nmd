@@ -4,14 +4,11 @@
 
 <!-- Mirrored from web.archive.org/web/20110612020852/music.ovi.com/in/en/pc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2025 16:47:51 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head><script src="../../../../../../archive.org/includes/athena.js" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app219.us.archive.org';v.server_ms=662;archive_analytics.send_pageview({});});</script>
+<head>
+<!--<script src="../../../../../../archive.org/includes/athena.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app219.us.archive.org';v.server_ms=662;archive_analytics.send_pageview({});});</script>-->
 <script type="text/javascript" src="../../../../../../web-static.archive.org/_static/js/bundle-playback2c8b.js?v=7YQSqjSh" charset="utf-8"></script>
 <script type="text/javascript" src="../../../../../../web-static.archive.org/_static/js/wombat9b8c.js?v=txqj7nKC" charset="utf-8"></script>
-<script type="text/javascript">
-    __wm.init("https://web.archive.org/web");
-  __wm.wombat("http://music.ovi.com/in/en/pc?","20110612020852","https://web.archive.org/","web","https://web-static.archive.org/_static/",
-	      "1307844532");
 </script>
 <link rel="stylesheet" type="text/css" href="../../../../../../web-static.archive.org/_static/css/banner-styles3ae1.css?v=p7PEIJWi" />
 <link rel="stylesheet" type="text/css" href="../../../../../../web-static.archive.org/_static/css/iconochive29a7.css?v=3PDvdIFv" />
@@ -20,16 +17,170 @@
 <!-- 1.8.54#115157 -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<style>
+    /* Ensure all song tiles are uniform */
+
+    .scrollPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.scrollPanel ul li {
+    width: 150px;
+    height: 180px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+}
+
+.scrollPanel ul li .song {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.scrollPanel ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ✅ Ensures cover fits properly */
+    border-radius: 10px;
+}
 
 
-    <title>Discover and download new music on Ovi</title>
+    .scrollPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between tiles */
+    padding: 10px;
+    list-style: none; /* Remove default list styles */
+}
+
+/* Style each song tile */
+.scrollPanel ul li {
+    width: 180px; /* ✅ Fixed tile width */
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.scrollPanel ul li:hover {
+    transform: scale(1.05); /* Small zoom effect on hover */
+}
+
+/* 🚨 Force Remove Old Placeholders */
+.scrollPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Properly Styled Music Tiles */
+.music-tile {
+    width: 150px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#login-section {
+    display: block !important;
+}
+
+
+/* Song Card for Cover + Info */
+.song-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Fix Album Cover Sizing */
+.song-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 🚨 HIDE DEFAULT MUSIC ICONS */
+.scrollPanel ul li img[src*="default-placeholder.jpg"],
+.scrollPanel ul li img[src*="music_icon.png"] {
+    display: none !important;
+}
+
+/* Song Info */
+.song-info {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Play Button */
+.play-btn {
+    background: pink;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.play-btn:hover {
+    background: darkred;
+}
+
+
+/* Fix image size */
+.scrollPanel ul li img {
+    width: 150px; /* ✅ Fixed size */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Ensure song title and artist are readable */
+.scrollPanel ul li strong {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.scrollPanel ul li p {
+    font-size: 12px;
+    color: #555;
+    margin: 2px 0;
+}
+
+</style>    
+
+
+
+    <title>Discover and download new music on Nuvi</title>
     <meta name="description" content="ovi-music-india"/>
     <meta name="keywords" content="ovi-music-india"/>
 
 <link rel="shortcut icon" type="image/x-icon" href="https://web.archive.org/web/20110612020852im_/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/favIcon.ico"/>
 <link rel="icon" type="image/png" href="../../../../20110704121150im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/favIcon16.png"/>
 <link rel="apple-touch-icon" type="image/png" href="../../../../20110704121045im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/favIcon32.png"/>
-<link href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Site/OpenSearchDefinition/" rel="search" title="Ovi Music" type="application/opensearchdescription+xml"/>
+<link href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Site/OpenSearchDefinition/" rel="search" title="Nuvi Music" type="application/opensearchdescription+xml"/>
 
 <!-- Logger. --> 
 <script type="text/javascript">var logger={};var origConsole;(function(){if(window&&window.console){origConsole=window.console;}var setFunc=function(func,origFunc){logger[func]=function(msg){if(origConsole&&origConsole[func]){origConsole[func](msg);}else if(logger[origFunc]){logger[origFunc](msg);}};};setFunc('log','null');setFunc('debug','log');setFunc('info','log');})();</script>
@@ -84,9 +235,8 @@ var storeLanguage = "en";
 </style>
 
 
-
   
-<script src="../../../../20110704121047js_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/javascripts/1.8.54/merge.js" type="text/javascript"></script>
+<!--<script src="../../../../20110704121047js_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/javascripts/1.8.54/merge.js" type="text/javascript"></script>-->
     
 <script src="../../../../20110804081630js_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/javascripts/1.8.54/nps_2.2.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -94,7 +244,83 @@ var storeLanguage = "en";
         new NPSurvey({ id: 416, qa_mode: false, texts: { service_name: "Nokia Music Store", display_name: "Ovi Music" }, lang: storeLanguage, render_always: false, debug: false, render_overlay: true, render_submit: 180, render_close: 30, render_abandon: 30, render_interval: 4 });
     }
 </script>
+<style>
+    /* Container styling */
+.container {
+    max-width: 800px;  /* ✅ Prevents it from stretching too wide */
+    margin: 50px auto; /* ✅ Centers the container */
+    background: #fff;  /* ✅ Clean background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 
+/* Style the login button */
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+}
+
+/* Ensure all song tiles are uniform */
+.scrollPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between tiles */
+    padding: 10px;
+    list-style: none; /* Remove default list styles */
+}
+
+/* Style each song tile */
+.scrollPanel ul li {
+    width: 180px; /* ✅ Fixed tile width */
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.scrollPanel ul li:hover {
+    transform: scale(1.05); /* Small zoom effect on hover */
+}
+
+/* Fix image size */
+.scrollPanel ul li img {
+    width: 150px; /* ✅ Fixed size */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Ensure song title and artist are readable */
+.scrollPanel ul li strong {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.scrollPanel ul li p {
+    font-size: 12px;
+    color: #555;
+    margin: 2px 0;
+}
+
+</style>
 
 
 
@@ -132,22 +358,15 @@ var storeLanguage = "en";
         
         };
 
-        embedClipPlayer({
-          allowScriptAccess : 'always',
-          rtmpserver : '://stream.music.ovi.com/a1139/l1/',
-          clipPlayer : 'https://web.archive.org/web/20110612020852/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/flash/RTMPClipPlayer.swf',
-          expressInstall : 'https://web.archive.org/web/20110612020852/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/flash/ExpressInstall.swf'
-        });
         
     </script>   
 </head>
-<body>
- 
+<body> 
 	
 		<noscript>
 			<div id="jsDisabledMess">
 			    <div class="zeroHeight">&nbsp;</div> 
-				<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/site/scriptdisabled/">You need to enable JavaScript for Ovi to work properly. Click here to find out how.</a>
+				<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/site/scriptdisabled/">You need to enable JavaScript for Nuvi to work properly. Turn on JavaScript and Reload.</a>
 			</div>
 		</noscript>
 		<script type="text/javascript">$("#jsDisabledMess").css("display","none");</script>
@@ -157,74 +376,13 @@ var storeLanguage = "en";
     </div>           
     <div id="container">
         <div id="content">
-            
-            
 
 <div id="bridge" class="g-24 last">
 	<h1>
-	    <a href="https://web.archive.org/web/20110612020852/http://www.ovi.com/" title="Ovi">
-	    Ovi
+	    <a href="anyosil.github.io/dashboard" title="Nuvi">
+	    Nuvi
 	    </a>	    
     </h1>
-	
-	<ul id="icons" class="loggedin">
-		<li class="ovi_contacts">
-		    <a href="https://web.archive.org/web/20110612020852/http://www.ovi.com/services/contacts?lid=ContactsBridge" title="Contacts">
-	        Contacts
-	        </a>
-		</li>
-		<li class="ovi_maps">
-		    <a href="https://web.archive.org/web/20110612020852/http://maps.ovi.com/?lid=MapsBridge" title="Maps">
-	        Maps
-	        </a>
-		</li>
-		
-		<li class="ovi_share">
-		    <a href="https://web.archive.org/web/20110612020852/http://share.ovi.com/?utm_source=ovi&amp;utm_medium=banner&amp;utm_content=BridgeLink08&amp;utm_campaign=OviShare&amp;lid=ShareBridge" title="Share">
-	        Share
-	        </a>
-		</li>
-		<li id="ovimusichome" class="ovi_music">
-		    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/" class="active" title="Music">
-	        Music
-	        </a>
-		</li>
-		<li class="ovi_store">
-		    <a href="https://web.archive.org/web/20110612020852/http://store.ovi.com/?lid=storeheader" title="Store">
-	        Store
-	        </a>
-		</li>
-		<li class="ovi_mail">
-		    <a href="https://web.archive.org/web/20110612020852/http://mail.ovi.com/?lid=mailheader" title="Mail">
-	        Mail
-	        </a>
-	    </li>
-		<li class="ovi_calendar">
-		    <a href="https://web.archive.org/web/20110612020852/http://www.ovi.com/services/events?lid=CalendarBridge" title="Calendar">
-	        Calendar
-	        </a>
-		</li>
-		<li class="ovi_files">
-		    <a href="https://web.archive.org/web/20110612020852/https://files.ovi.com/sas/" title="Files">
-	        Files
-	        </a>
-		</li>
-	</ul>
-	
-	<div>
-		<span class="loggedin" id="user-details">
-		    Good to see you 
-		    <a id="bridge-username" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/details/?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc"> </a> 
-		    <span id="credit"> </span>
-		</span>
-		<span class="spacing loggedout">&nbsp;</span>
-		<ul id="user-links">
-			<li class="loggedin"><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/details/?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc">Account</a></li>
-			<li class="loggedin"><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/signout/">Sign out</a></li>
-			<li class="loggedout"><a id="signin" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/workflow/startsignin?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc">Sign in or register</a></li>
-			<li class="last"><a href="https://web.archive.org/web/20110612020852/http://support.ovi.com/">Support</a></li>
-		</ul>
-	</div>	
 	
 	<span class="crn"></span>
 </div><!--end bridge -->
@@ -235,167 +393,87 @@ var storeLanguage = "en";
                     
 
 <ul>
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/">Home</a></li>
-    <li><a href="https://web.archive.org/web/20110612020852/http://nds1.nokia.com/files/support/nseries/phones/software/SetupOviPlayer.exe">Nokia Ovi Player</a></li>
+    <li><a id="lgn-btn"></a></li>
+    <li><a href="dashboard.html" id="dashboard-btn">Dashboard</a></li>
     
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/help/comeswithmusicoverview/">Get unlimited downloads</a></li>
     
 </ul>
 
 
 <div id="searchContent">
-	<form action="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Search/" method="post" class="srch-music" id="searchForm">
-		
-		<div class="txtbox t-l">
-		    <label for="searchCriteria" class="rm">Search</label>
-		    <input id="searchCriteriaDefaultText" name="searchCriteriaDefaultText" type="hidden" value="Search Music"/>
-			<input id="searchCriteria" name="searchCriteria" type="text" value="Search Music"/>
-		</div>
-		<div class="btn">
-			<span><input id="searchSubmit" type="submit" name="submit" value=" Search"/></span>
-		</div>
-	</form>
-</div><!-- end searchContent-->
+    <form id="searchForm">
+        <input id="searchCriteria" type="text" name="query" placeholder="Search Here n Press Enter"/>
+        
+    </form>
+    
+      <script src="script.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("searchForm");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Stop default form submission
+    
+                const query = document.getElementById("searchCriteria").value.trim();
+                if (query.length === 0) return; // Stop if empty search
+    
+                // Redirect to search.html with the correct parameter
+                window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+            });
+        });
+    </script>
+    
+      
+   <!-- <form id="searchForm" class="srch-music">
+      <div class="txtbox t-l">
+        <label for="searchCriteria" class="rm">Search</label>
+        <input id="searchCriteriaDefaultText" name="searchCriteriaDefaultText" type="hidden" value="Search Music"/>
+        <input id="searchCriteria" name="searchCriteria" type="text" value="Search Music"/>
+      </div>
+      <div class="btn">
+        <span>
+          <input id="searchSubmit" type="submit" name="submit" value=" Search"/>
+        </span>
+      </div>
+    </form> -->
+  </div>
+  
+<div id="searchResults"></div>
+  
+  <!-- end searchContent-->
                 </div>
             </div>
             
+    <script src="script.js"></script>  
+    
+    <script>
+        src="script.js"
+        document.addEventListener('DOMContentLoaded', function() {
+          const form = document.getElementById('searchForm');
+          form.addEventListener('submit', function(event) {
+            event.preventDefault(); // stop the normal HTTP post
+            const query = document.getElementById('searchCriteria').value.trim();
             
-            
-            
-            
-<div class="g-5" id="navigation">
-<script type="text/javascript">DynamicallyLoadContent({"loggedOut":"https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/homecwmjoinpanel","loggedInAlc":"https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/homecwmjoinpanel"}, GetUserLoginInContext);</script>   
-                        <h3>Charts</h3>
-                        <ul>
-
-                            <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/Bollywood+Top+20/charttop20bollywood/"> 
-                            Bollywood Top 20 </a></li>
-
-                            <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/International+Top+20/charttop20international/"> 
-                            International Top 20 </a></li>
-
-                            <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/South+Top+20/charttop20south/"> 
-                            South Top 20 </a></li>
-
-                            <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/Non-Film+Top+20/charttop20nonfilm/"> 
-                            Non-Film Top 20 </a></li>
-
-                        </ul>
-
-
-
-
+            // Call a function from script.js that handles the search
+            // Example: if script.js has handleSearch(query), call that:
+            if (typeof handleSearch === 'function') {
+              handleSearch(query);
+            } else {
+              console.warn('No handleSearch() function found in script.js');
+            }
+          });
+        });
+    </script>
                     
 
-
-
-
-<h3>Genres</h3>
-<div id="Genres">
-    <ul class="expandable">
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bollywood/bollywood">Bollywood</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/tamil/tamil">Tamil</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/malayalam/malayalam">Malayalam</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/telugu/telugukannada">Telugu</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/kannada/kannada">Kannada</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/devotional/devotional">Devotional</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/devotional-south/devotionalsouth">Devotional-South</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/hindustani classical/indianclassical">Hindustani Classical</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/carnatic classical/carnaticclassical">Carnatic Classical</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/ghazals sufi/ghazalssufi">Ghazals/Sufi</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/indipop  remix/indipopremix">Indipop &amp; Remix</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/punjabi/punjabi">Punjabi</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bengali/bengali">Bengali</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/gujarati/gujarati">Gujarati</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/marathi/marathi">Marathi</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bhojpuri/bhojpuri">Bhojpuri</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/oriya/oriya">Oriya</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/rajasthani/rajasthani">Rajasthani</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/regional others/regionalothers">Regional/Others</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/rock/rock">Rock</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/pop/pop">Pop</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/rap hip hop/raphiphop">Rap/Hip hop</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/classical/classical">Classical</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/world/world">World</a></li>
-        
-                <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/jazz  blues/jazzblues">Jazz &amp; Blues</a></li>
-        
-    </ul>
-    <a class="expand" href="#" id="genreExpand">show all 25 genres</a>
-    <a class="contract" href="#" style="display: none">hide all 25 genres</a>
-</div>   
-
-
-<h3>Playlists</h3>
-<ul>
-
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Summertime+Hits!/summertime_special/">Summertime Hits!</a></li>
-
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Madhuri+Dixit+Special/2_madhuri_dixit/">Madhuri Dixit Special</a></li>
-
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Vairamuthu+Special!/vairamuthu_pl/">Vairamuthu Special!</a></li>
-
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/IIaiyaraaja+Birthday+Special!/iiaiyaraajatam_pl/">IIaiyaraaja Birthday Special!</a></li>
-
-    <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Rabindra+Sangeet+Special/2_rabindra_special/">Rabindra Sangeet Special</a></li>
-
-</ul>
-<a class="nav-more" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/">More</a>
-
-
-
-
-                    
-
-
-
-
-<div class="panel-sup">
-	<div class="hd">
-		<h2>
-			<span>Vouchers and credit</span>
-		</h2>
-	</div>
-	<div class="bd box">
-		<p>Redeem your Music voucher
-			<a class="nav-button" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/workflow/startpinentry?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc%2fProduct%2fMariah-Carey%2fOne-And-Only%2f1413546">
-				<span class="tl"> </span><span class="tr"> </span>
-				<span>Redeem voucher</span>
-				<span class="bl"> </span><span class="br"> </span>
-			</a>
-		</p>
-		
-	</div>
-    <div class="ft"><span>&nbsp;</span></div>
 </div>           
     
 </div>
             
-            
+<div id="login-section">
+    <!-- This will be populated by script.js -->
+</div>
+       
             
             
     
@@ -405,27 +483,27 @@ var storeLanguage = "en";
         
         
 
-<div id="shopWindow">        
-    <div class="panel">
-        <div class="hd">
-		    <h2><span>Get Flash Player</span></h2>
-	    </div>
-	    <div id="shopWindow-bd">
-		    
-	        <div class="get-fla">
-	            <p>To get the most out of Ovi, you should install Adobe Flash Player</p>
-	            
-	            <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
-	     
-	            <div class="cta-btns">
-                    <a class="btn" href="https://web.archive.org/web/20110612020852/http://www.adobe.com/go/getflashplayer" target="_blank">
-                    <span>Get Adobe Flash Player</span></a>
+        <div id="shopWindow">        
+            <div class="panel">
+                <div class="hd">
+                    <h2><span>Welcome To Nuvi!</span></h2>
                 </div>
-                <em>After installation <a href="#" id="shopWindowReload">refresh this page</a> to see Flash</em>
+                <div id="shopWindow-bd">
+                    
+                    <div class="get-fla">
+                        <p>This is Symphonia! Listen to Music Wherever you go!</p>
+                        
+                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
+                 
+                        <div class="cta-btns">
+                            <a class="btn" href="https://anyosil.github.io/symmusic.github.io" target="_blank">
+                            <span>Go to Mobile Version!</span></a>
+                        </div>
+                        <em>Mobile Version is very much optimised for Mobiles and Relatively smaller screens!</em>
+                    </div>
+                </div>
             </div>
-	    </div>
-    </div>
-</div>
+        </div>
     <script type="text/javascript">     
      (function(){
          var flashPlayerVersion = "9.0.159";
@@ -455,11 +533,12 @@ var storeLanguage = "en";
      })();
 </script>
 
+<script src="script.js"></script>
 
 <div class="panel res productBucket">
-    <div class="hd">
+    <div class="hd"><div id="newreleases"></div>
         <h2>
-            <span>New Releases <strong><a href="#" class="hide" title="Hide or Show">&nbsp;</a></strong></span>
+            <span>Featured Music <strong><a href="#" class="hide" title="Hide or Show">&nbsp;</a></strong></span>
         </h2>
     </div>
     <div class="bd">
@@ -467,1781 +546,82 @@ var storeLanguage = "en";
         <div class="tabs">
             <ul class="tab-nav clearfix">
                 
-                        
-                        <li><a id="NewMusicProductBuckettab0link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_new_albums_tab?rowCount=3#NewMusicProductBuckettab0" onclick="return false;"><span>Bollywood</span></a></li>   
-                    
-                        
-                        <li><a id="NewMusicProductBuckettab1link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_new_tab3?rowCount=3#NewMusicProductBuckettab1" onclick="return false;"><span>International</span></a></li>   
-                    
-                        
-                        <li><a id="NewMusicProductBuckettab2link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_new_singles_tab?rowCount=3#NewMusicProductBuckettab2" onclick="return false;"><span>South</span></a></li>   
-                    
-                        
-                        <li><a id="NewMusicProductBuckettab3link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_new_nonfilm?rowCount=3#NewMusicProductBuckettab3" onclick="return false;"><span>Regional</span></a></li>   
-                    
-                        
-                        <li><a id="NewMusicProductBuckettab4link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_new_tab_5?rowCount=3#NewMusicProductBuckettab4" onclick="return false;"><span>Non-Film</span></a></li>   
-                    
+                <li><a id="NewMusicProductBuckettab0link" href="#" onclick="showTab('top'); return false;"><span>Top</span></a></li>
+                
             </ul> 
             
-                    <div class="tab loaded active" id="NewMusicProductBuckettab0">
+<div class="tab loaded active" id="NewMusicProductBuckettab0">
                                               
                         
-<div class="scrollPanel">
-    <ul>
-               
-    
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Murder-2/17871661" title="Murder 2"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/197553923/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Murder-2/17871661" title="Murder 2">Murder 2</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Bin-Bulaye-Baraati/18003155" title="Bin Bulaye Baraati"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/198161652/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Bin-Bulaye-Baraati/18003155" title="Bin Bulaye Baraati">Bin Bulaye Baraati</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Shaitan/17510329" title="Shaitan"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/197554500/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Shaitan/17510329" title="Shaitan">Shaitan</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Anand-Raj-Anand/Double-Dhamaal/17871717" title="Double Dhamaal"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/197547314/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Anand-Raj-Anand/Double-Dhamaal/17871717" title="Double Dhamaal">Double Dhamaal</a>
-                    </span>
-                    <a href="#" title="Anand Raj Anand" class="inactive-lnk" onclick="return false">Anand Raj Anand</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Always-Kabhi-Kabhi/17510291" title="Always Kabhi Kabhi"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/195867975/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Always-Kabhi-Kabhi/17510291" title="Always Kabhi Kabhi">Always Kabhi Kabhi</a>
-                    </span>
-                    <a href="#" title="Pritam" class="inactive-lnk" onclick="return false">Pritam</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Bheja-Fry-2/17578997" title="Bheja Fry 2"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/196192343/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Bheja-Fry-2/17578997" title="Bheja Fry 2">Bheja Fry 2</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Atif-Aslam-Shoaib-Mansoor-Sajjad-Ali-Baqir-Abbas/Bol/17668814" title="Bol"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/196681301/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Atif-Aslam-Shoaib-Mansoor-Sajjad-Ali-Baqir-Abbas/Bol/17668814" title="Bol">Bol</a>
-                    </span>
-                    <a href="#" title="Atif Aslam, Shoaib Mansoor, Sajjad Ali &amp; Baqir Abbas" class="inactive-lnk" onclick="return false">Atif Aslam, Shoai&hellip;</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Pyaar-Ka-Punchnama/17007740" title="Pyaar Ka Punchnama"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/193384713/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Pyaar-Ka-Punchnama/17007740" title="Pyaar Ka Punchnama">Pyaar Ka Punchnama</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Ragini-MMS/16838778" title="Ragini MMS"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/192507914/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Ragini-MMS/16838778" title="Ragini MMS">Ragini MMS</a>
-                    </span>
-                    <a href="#" title="Various Artists" class="inactive-lnk" onclick="return false">Various Artists</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Ready/17007608" title="Ready"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/193384522/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Ready/17007608" title="Ready">Ready</a>
-                    </span>
-                    <a href="#" title="Pritam" class="inactive-lnk" onclick="return false">Pritam</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Ram-Sampath/Luv-Ka-The-End/16981588" title="Luv Ka The End"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/193216925/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Ram-Sampath/Luv-Ka-The-End/16981588" title="Luv Ka The End">Luv Ka The End</a>
-                    </span>
-                    <a href="#" title="Ram Sampath" class="inactive-lnk" onclick="return false">Ram Sampath</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Sachin-Jigar-Harpreet/Shor-in-the-city/16379073" title="Shor in the city"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/189638986/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Sachin-Jigar-Harpreet/Shor-in-the-city/16379073" title="Shor in the city">Shor in the city</a>
-                    </span>
-                    <a href="#" title="Sachin-Jigar, Harpreet" class="inactive-lnk" onclick="return false">Sachin-Jigar, Har&hellip;</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Kucch-Luv-Jaisaa-Original/17221411" title="Kucch Luv Jaisaa Original"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/194443696/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Kucch-Luv-Jaisaa-Original/17221411" title="Kucch Luv Jaisaa Original">Kucch Luv Jaisaa &hellip;</a>
-                    </span>
-                    <a href="#" title="Pritam" class="inactive-lnk" onclick="return false">Pritam</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Shankar-Ehsaan-Loy/West-Is-West/16432775" title="West Is West"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/190066112/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Shankar-Ehsaan-Loy/West-Is-West/16432775" title="West Is West">West Is West</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Shankar-Ehsaan-Loy/967069" title="Shankar-Ehsaan-Loy">Shankar-Ehsaan-Loy</a>
-               </li>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Dum-Maaro-Dum/15943392" title="Dum Maaro Dum"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/191593710/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pritam/Dum-Maaro-Dum/15943392" title="Dum Maaro Dum">Dum Maaro Dum</a>
-                    </span>
-                    <a href="#" title="Pritam" class="inactive-lnk" onclick="return false">Pritam</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-    </ul>
-</div>
-    
-
-
-                    </div>
-            
-                    <div class="tab" id="NewMusicProductBuckettab1">
-                        
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                            
-                    </div>
-            
-                    <div class="tab" id="NewMusicProductBuckettab2">
-                        
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                            
-                    </div>
-            
-                    <div class="tab" id="NewMusicProductBuckettab3">
-                        
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                            
-                    </div>
-            
-                    <div class="tab" id="NewMusicProductBuckettab4">
-                        
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                            
-                    </div>
-            
-        </div>
+     <div class="scrollPanel" id="top">
+            <ul></ul>
+     </div>
     
 </div>
 
-<div class="ft">
-    <span>&nbsp;</span></div>
-</div>
-<script type="text/javascript">DynamicallyLoadContent({"loggedIn":"https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/dmrpromopanel_loggedin","loggedOutMember":"https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/dmrpromopanel_loggedoutmember","loggedOutNotMember":"https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/dmrpromopanel_loggedoutnotmember"}, GetUserLoginInStatus);</script>
-        
-        
-        
-
-<div class="panel res">
-    <div class="hd">
-        <h2>
-            <span>Regional Bestsellers!!! <strong><a href="#" class="hide" title="Hide or Show">&nbsp;</a></strong></span>
-        </h2>
-    </div>
-    <div class="bd">
-        
-        <div class="tabs">
-            <ul class="tab-nav clearfix">
-                
-                        <li><a id="MostDownloadedPaneltab0link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_2#MostDownloadedPaneltab0"><span>Bengali</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab1link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_3#MostDownloadedPaneltab1"><span>Marathi</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab2link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_4#MostDownloadedPaneltab2"><span>Gujarati</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab3link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_5#MostDownloadedPaneltab3"><span>Punjabi</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab4link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_6#MostDownloadedPaneltab4"><span>Rajasthani</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab5link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_7#MostDownloadedPaneltab5"><span>Bhojpuri</span></a></li>   
-                    
-                        <li><a id="MostDownloadedPaneltab6link" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_md_tab_1#MostDownloadedPaneltab6"><span>Oriya</span></a></li>   
-                    
-            </ul> 
-            
-                    <div class="tab scroll loaded active" id="MostDownloadedPaneltab0">
-                        
-
-<table class="prod-list">
-<thead>
-    <tr class="rm">
-        <th>Artist</th>
-        <th>Product</th>
-        <th>Track Information</th>
-        <th>action buttons</th>
-    </tr>
-</thead>
-
-<tbody id="xc3c539b4-cd65-4ea5-9cc5-134ef61f66f2">
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Sasha/14672" class="item">Sasha</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Sasha/Bela/17198742">Bela</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17198742" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17198742/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17198742" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17198742/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17198742" rel="17198742" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Lopamudra-Mitra/711168" class="item">Lopamudra Mitra</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lopamudra-Mitra/Monfakira/14420736">Monfakira</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum14420736" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/14420736/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum14420736" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/14420736/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/14420736" rel="14420736" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Lopamudra-Mitra/711168" class="item">Lopamudra Mitra</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lopamudra-Mitra/Ananda-The-Ecstasy/12286501">Ananda The Ecstasy</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum12286501" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286501/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum12286501" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286501/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/12286501" rel="12286501" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Dibyendu-Mukherjee/8454518" class="item">Dibyendu Mukherjee</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Dibyendu-Mukherjee/Bindaas-Bangla/13336926">Bindaas Bangla</a></td>
-        <td class="col-3">6 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13336926" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336926/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13336926" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336926/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>6 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13336926" rel="13336926" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Rupankar/213907" class="item">Rupankar</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Rupankar/Mohanay/13336828">Mohanay</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13336828" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336828/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13336828" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336828/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13336828" rel="13336828" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Srabani-Sen/744516" class="item">Srabani Sen</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Srabani-Sen/Utol-Hawa/17198751">Utol Hawa</a></td>
-        <td class="col-3">10 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17198751" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17198751/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17198751" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17198751/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>10 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17198751" rel="17198751" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Bickram-Ghosh/207955" class="item">Bickram Ghosh</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Bickram-Ghosh/Nabo-Durga/13060041">Nabo Durga</a></td>
-        <td class="col-3">24 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13060041" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13060041/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13060041" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13060041/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>24 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13060041" rel="13060041" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Alienz/817753" class="item">Alienz</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Alienz/Swapo-Noe-Alienz-/17299037">Swapo Noe(Alienz)</a></td>
-        <td class="col-3">10 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17299037" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17299037/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17299037" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17299037/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>10 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17299037" rel="17299037" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Usha-Utup/17481159" class="item">Usha Utup</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Usha-Utup/Bengali-Folk-Super-Hit-Songs-Usha-Utup-/17481255">Bengali Folk Super Hit Songs &hellip;</a></td>
-        <td class="col-3">7 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17481255" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481255/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17481255" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481255/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>7 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17481255" rel="17481255" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="#" class="item inactive-lnk" onclick="return false">Various Artists</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Various-Artists/Kaagojer-Bou/15957534">Kaagojer Bou</a></td>
-        <td class="col-3">9 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum15957534" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/15957534/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum15957534" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/15957534/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>9 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/15957534" rel="15957534" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Kuntal-Banerjee/16034904" class="item">Kuntal Banerjee</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Kuntal-Banerjee/Parivartan/16034971">Parivartan</a></td>
-        <td class="col-3">6 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum16034971" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/16034971/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum16034971" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/16034971/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>6 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/16034971" rel="16034971" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Rabindranath-Tagore/100807" class="item">Rabindranath Tagore</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Rabindranath-Tagore/Mati-swar/13336781">Mati'swar</a></td>
-        <td class="col-3">9 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13336781" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336781/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13336781" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336781/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>9 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13336781" rel="13336781" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Snita-Pramanik/13326456" class="item">Snita Pramanik</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Snita-Pramanik/Meghbalika/13336738">Meghbalika</a></td>
-        <td class="col-3">10 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13336738" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336738/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13336738" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336738/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>10 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13336738" rel="13336738" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Arijit-Chakroborty/13326992" class="item">Arijit Chakroborty</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Arijit-Chakroborty/Megher-Madal/13336900">Megher Madal</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum13336900" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336900/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum13336900" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/13336900/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/13336900" rel="13336900" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Rupankar/213907" class="item">Rupankar</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Rupankar/Signature/12286518">Signature</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum12286518" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286518/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum12286518" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286518/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/12286518" rel="12286518" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Rinkie-Ganguly/219425" class="item">Rinkie Ganguly</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Rinkie-Ganguly/Amar-Disha/12286470">Amar Disha</a></td>
-        <td class="col-3">12 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum12286470" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286470/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum12286470" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/12286470/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>12 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/12286470" rel="12286470" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Sandhya-Mukharji/12410697" class="item">Sandhya Mukharji</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Sandhya-Mukharji/Condector-Babu-Samhalye/16432755">Condector Babu Samhalye</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum16432755" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/16432755/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum16432755" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/16432755/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/16432755" rel="16432755" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Chorus/349912" class="item">Chorus</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Chorus/Megher-Kole-Rod/17533950">Megher Kole Rod</a></td>
-        <td class="col-3">33 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17533950" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17533950/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17533950" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17533950/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>33 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17533950" rel="17533950" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Chorus/349912" class="item">Chorus</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Chorus/Sonar-Bangala/17481582">Sonar Bangala</a></td>
-        <td class="col-3">27 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17481582" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481582/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17481582" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481582/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>27 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17481582" rel="17481582" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-    <tr>
-        <td class="col-1"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Ina-Mukherjee/17481400" class="item">Ina Mukherjee</a></td>                   
-        <td class="col-2"><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Ina-Mukherjee/Neel-Digonte/17481461">Neel Digonte</a></td>
-        <td class="col-3">8 tracks</td>
-        <td class="col-4">
-            <ul class="btn-list">
-		        <li>
-        <a id="calbum17481461" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481461/" rel="" class="dload-btn dload cwm-btn" title="Download">
-    
-            <span><em>&nbsp;</em></span>
-        </a>
-        
-    
-        <a id="aalbum17481461" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/product/download/17481461/" rel="" class="dload-btn dload-alc alc-btn" title="Download">
-    
-            <span>8 songs<em>&nbsp;</em></span>
-        </a>
-</li>
-		        <li>
-
-<a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/SocialShareFragment/17481461" rel="17481461" class="share" title="Share this album"> Merchandising.RenderTranslation("ShareButton") </a></li>
-		        <li></li>
-	        </ul>
-		</td>      
-        
-    </tr>
-    
-</tbody>
-</table>       
-
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab1">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab2">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab3">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab4">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab5">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-                    <div class="tab" id="MostDownloadedPaneltab6">
-                                            
-                                <p class="loader"><img src="../../../../20110704121720im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/pageLoad.gif" height="22" width="22" alt="" title=""/></p>
-                        
-                    </div>
-            
-        </div>
-    
-    <div class="grad-ft">&nbsp;</div>
-</div>
-
-<div class="ft">
-    <span>&nbsp;</span></div>
-</div>
-  
-
-
-<div class="panel res productBucket">
-    <div class="hd">
-        <h2>
-            <span>More Must Own Rock Albums! <strong><a href="#" class="hide" title="Hide or Show">&nbsp;</a></strong></span>
-        </h2>
-    </div>
-    <div class="bd">
-        
-        <div class="tabs">
-                                  
-                        
-<div class="scrollPanel">
-    <ul>
-               
-    
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Aerosmith/O-Yeah-Ultimate-Aerosmith-Hits/6026890" title="O, Yeah! Ultimate Aerosmith Hits"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133011028/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Aerosmith/O-Yeah-Ultimate-Aerosmith-Hits/6026890" title="O, Yeah! Ultimate Aerosmith Hits">O, Yeah! Ultimate&hellip;</a>
-                    </span>
-                    <a href="#" title="Aerosmith" class="inactive-lnk" onclick="return false">Aerosmith</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Audioslave/Audioslave/6027878" title="Audioslave"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133006153/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Audioslave/Audioslave/6027878" title="Audioslave">Audioslave</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Audioslave/292739" title="Audioslave">Audioslave</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Avett-Brothers/Live-Volume-3/13080725" title="Live, Volume 3"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/169556525/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Avett-Brothers/Live-Volume-3/13080725" title="Live, Volume 3">Live, Volume 3</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/The-Avett-Brothers/680406" title="The Avett Brothers">The Avett Brothers</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Beady-Eye/Different-Gear-Still-Speeding/15396590" title="Different Gear, Still Speeding"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/183912589/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Beady-Eye/Different-Gear-Still-Speeding/15396590" title="Different Gear, Still Speeding">Different Gear, S&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Beady-Eye/13675466" title="Beady Eye">Beady Eye</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Band-Of-Horses/Infinite-Arms/10321843" title="Infinite Arms"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/154537006/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Band-Of-Horses/Infinite-Arms/10321843" title="Infinite Arms">Infinite Arms</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Band-Of-Horses/393335" title="Band Of Horses">Band Of Horses</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Billy-Joel/Piano-Man-The-Very-Best-of-Billy-Joel/8470213" title="Piano Man: The Very Best of Billy Joel"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/144478113/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Billy-Joel/Piano-Man-The-Very-Best-of-Billy-Joel/8470213" title="Piano Man: The Very Best of Billy Joel">Piano Man: The Ve&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Billy-Joel/605199" title="Billy Joel">Billy Joel</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Bob-Dylan/The-Best-of-Bob-Dylan/6020934" title="The Best of Bob Dylan"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/132928700/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Bob-Dylan/The-Best-of-Bob-Dylan/6020934" title="The Best of Bob Dylan">The Best of Bob D&hellip;</a>
-                    </span>
-                    <a href="#" title="Bob Dylan" class="inactive-lnk" onclick="return false">Bob Dylan</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Broken-Bells/Broken-Bells/8624748" title="Broken Bells"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/155586730/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Broken-Bells/Broken-Bells/8624748" title="Broken Bells">Broken Bells</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Broken-Bells/8019026" title="Broken Bells">Broken Bells</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Bruce-Springsteen/The-Collection/7973887" title="The Collection"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/141373842/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Bruce-Springsteen/The-Collection/7973887" title="The Collection">The Collection</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Bruce-Springsteen/605195" title="Bruce Springsteen">Bruce Springsteen</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Cradle-Of-Filth/Lovecraft-Witch-Hearts/6057737" title="Lovecraft &amp; Witch Hearts"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/119288007/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Cradle-Of-Filth/Lovecraft-Witch-Hearts/6057737" title="Lovecraft &amp; Witch Hearts">Lovecraft &#38; Witch&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Cradle-Of-Filth/293424" title="Cradle Of Filth">Cradle Of Filth</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Dave-Matthews-Band/Crash/15235039" title="Crash"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/177179945/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Dave-Matthews-Band/Crash/15235039" title="Crash">Crash</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Dave-Matthews-Band/289002" title="Dave Matthews Band">Dave Matthews Band</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/David-Gilmour/Live-In-Gdansk/17169975" title="Live In Gdansk"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/146912230/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/David-Gilmour/Live-In-Gdansk/17169975" title="Live In Gdansk">Live In Gdansk</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/David-Gilmour/1122245" title="David Gilmour">David Gilmour</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Soundtrack/Music-For-The-Motion-Picture-Into-The-Wild/14488703" title="Music For The Motion Picture Into The Wild"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/178799768/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Soundtrack/Music-For-The-Motion-Picture-Into-The-Wild/14488703" title="Music For The Motion Picture Into The Wild">Music For The Mot&hellip;</a>
-                    </span>
-                    <a href="#" title="Soundtrack" class="inactive-lnk" onclick="return false">Soundtrack</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Foo-Fighters/Foo-Fighters/9545189" title="Foo Fighters"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/141767342/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Foo-Fighters/Foo-Fighters/9545189" title="Foo Fighters">Foo Fighters</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Foo-Fighters/287777" title="Foo Fighters">Foo Fighters</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Franz-Ferdinand/Franz-Ferdinand/6030928" title="Franz Ferdinand"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133058501/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Franz-Ferdinand/Franz-Ferdinand/6030928" title="Franz Ferdinand">Franz Ferdinand</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Franz-Ferdinand/299854" title="Franz Ferdinand">Franz Ferdinand</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Incubus/Make-Yourself-Tour-Edition/7372260" title="Make Yourself - Tour Edition"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/137701253/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Incubus/Make-Yourself-Tour-Edition/7372260" title="Make Yourself - Tour Edition">Make Yourself - T&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Incubus/287822" title="Incubus">Incubus</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Joe-Satriani/Satriani-Live/6043892" title="Satriani Live"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133220581/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Joe-Satriani/Satriani-Live/6043892" title="Satriani Live">Satriani Live</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Joe-Satriani/302492" title="Joe Satriani">Joe Satriani</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Jimi-Hendrix/Axis-Bold-As-Love/8030591" title="Axis: Bold As Love"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/141956152/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Jimi-Hendrix/Axis-Bold-As-Love/8030591" title="Axis: Bold As Love">Axis: Bold As Love</a>
-                    </span>
-                    <a href="#" title="Jimi Hendrix" class="inactive-lnk" onclick="return false">Jimi Hendrix</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/John-Mayer/Room-For-Squares/7492386" title="Room For Squares"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/138482354/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/John-Mayer/Room-For-Squares/7492386" title="Room For Squares">Room For Squares</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/John-Mayer/293411" title="John Mayer">John Mayer</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Journey/Journey-s-Greatest-Hits/15371495" title="Journey's Greatest Hits"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/148657758/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Journey/Journey-s-Greatest-Hits/15371495" title="Journey's Greatest Hits">Journey's Greates&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Journey/302522" title="Journey">Journey</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Judas-Priest/Screaming-For-Vengeance/9738876" title="Screaming For Vengeance"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/151380307/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Judas-Priest/Screaming-For-Vengeance/9738876" title="Screaming For Vengeance">Screaming For Ven&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Judas-Priest/293405" title="Judas Priest">Judas Priest</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Kings-Of-Leon/Only-By-The-Night/10382166" title="Only By The Night"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/154934969/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Kings-Of-Leon/Only-By-The-Night/10382166" title="Only By The Night">Only By The Night</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Kings-Of-Leon/293868" title="Kings Of Leon">Kings Of Leon</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Korn/Playlist-The-Very-Best-Of-Korn/8977997" title="Playlist: The Very Best Of Korn"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/147594809/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Korn/Playlist-The-Very-Best-Of-Korn/8977997" title="Playlist: The Very Best Of Korn">Playlist: The Ver&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Korn/292750" title="Korn">Korn</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lamb-Of-God/Sacrament/6044125" title="Sacrament"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133217881/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lamb-Of-God/Sacrament/6044125" title="Sacrament">Sacrament</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Lamb-Of-God/298001" title="Lamb Of God">Lamb Of God</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Leonard-Cohen/Death-of-a-ladies-man-Recent-songs-The/7496163" title="Death of a ladies man / Recent songs / The future"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/138549850/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Leonard-Cohen/Death-of-a-ladies-man-Recent-songs-The/7496163" title="Death of a ladies man / Recent songs / The future">Death of a ladies&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Leonard-Cohen/605227" title="Leonard Cohen">Leonard Cohen</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lou-Reed/Transformer-Digipack/8162721" title="Transformer - Digipack"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/142527640/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Lou-Reed/Transformer-Digipack/8162721" title="Transformer - Digipack">Transformer - Dig&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Lou-Reed/1229" title="Lou Reed">Lou Reed</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/MGMT/Oracular-Spectacular/10079285" title="Oracular Spectacular"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/153705914/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/MGMT/Oracular-Spectacular/10079285" title="Oracular Spectacular">Oracular Spectacu&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/MGMT/174114" title="MGMT">MGMT</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Mr-Mister/Welcome-To-The-Real-World/15477161" title="Welcome To The Real World"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/142881927/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Mr-Mister/Welcome-To-The-Real-World/15477161" title="Welcome To The Real World">Welcome To The Re&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Mr-Mister/164884" title="Mr. Mister">Mr. Mister</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Oasis/-What-s-The-Story-Morning-Glory-/6517214" title="(What's The Story) Morning Glory?"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/135586872/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Oasis/-What-s-The-Story-Morning-Glory-/6517214" title="(What's The Story) Morning Glory?">(What's The Story&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Oasis/295220" title="Oasis">Oasis</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Offspring/Americana/8604060" title="Americana"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/145042354/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Offspring/Americana/8604060" title="Americana">Americana</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/The-Offspring/292742" title="The Offspring">The Offspring</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Ozzy-Osbourne/Blizzard-Of-Ozz/6299215" title="Blizzard Of Ozz"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133969495/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Ozzy-Osbourne/Blizzard-Of-Ozz/6299215" title="Blizzard Of Ozz">Blizzard Of Ozz</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Ozzy-Osbourne/605162" title="Ozzy Osbourne">Ozzy Osbourne</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pearl-Jam/Ten/13615850" title="Ten"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/173141731/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Pearl-Jam/Ten/13615850" title="Ten">Ten</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Pearl-Jam/293399" title="Pearl Jam">Pearl Jam</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Primal-Scream/Screamadelica/5754554" title="Screamadelica"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/127716482/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Primal-Scream/Screamadelica/5754554" title="Screamadelica">Screamadelica</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Primal-Scream/292752" title="Primal Scream">Primal Scream</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/REO-Speedwagon/Playlist-The-Very-Best-Of-REO-Speedwagon/8671187" title="Playlist: The Very Best Of REO Speedwagon"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/145877434/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/REO-Speedwagon/Playlist-The-Very-Best-Of-REO-Speedwagon/8671187" title="Playlist: The Very Best Of REO Speedwagon">Playlist: The Ver&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/REO-Speedwagon/172066" title="REO Speedwagon">REO Speedwagon</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Roger-Waters/In-The-Flesh-Live/5916237" title="In The Flesh - Live"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/131354764/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Roger-Waters/In-The-Flesh-Live/5916237" title="In The Flesh - Live">In The Flesh - Li&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Roger-Waters/605165" title="Roger Waters">Roger Waters</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Santana/Supernatural-Legacy-Edition-/10855987" title="Supernatural (Legacy Edition)"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/148040415/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Santana/Supernatural-Legacy-Edition-/10855987" title="Supernatural (Legacy Edition)">Supernatural (Leg&hellip;</a>
-                    </span>
-                    <a href="#" title="Santana" class="inactive-lnk" onclick="return false">Santana</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Slayer/South-Of-Heaven/8968327" title="South Of Heaven"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/147538368/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Slayer/South-Of-Heaven/8968327" title="South Of Heaven">South Of Heaven</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Slayer/348786" title="Slayer">Slayer</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Steve-Vai/Sound-Theories-Vol-I-II/8514538" title="Sound Theories Vol. I &amp; II"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/144819700/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Steve-Vai/Sound-Theories-Vol-I-II/8514538" title="Sound Theories Vol. I &amp; II">Sound Theories Vo&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Steve-Vai/302524" title="Steve Vai">Steve Vai</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/System-Of-A-Down/Toxicity/6019440" title="Toxicity"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/132917655/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/System-Of-A-Down/Toxicity/6019440" title="Toxicity">Toxicity</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/System-Of-A-Down/287827" title="System Of A Down">System Of A Down</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Alan-Parsons-Project/Ammonia-Avenue/8669400" title="Ammonia Avenue"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/145876762/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Alan-Parsons-Project/Ammonia-Avenue/8669400" title="Ammonia Avenue">Ammonia Avenue</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/The-Alan-Parsons-Project/1449" title="The Alan Parsons Project">The Alan Parsons &hellip;</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Script/The-Script/8846739" title="The Script"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/146846348/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Script/The-Script/8846739" title="The Script">The Script</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/The-Script/671820" title="The Script">The Script</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Strokes/First-Impressions-Of-Earth/12195657" title="First Impressions Of Earth"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/133141765/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/The-Strokes/First-Impressions-Of-Earth/12195657" title="First Impressions Of Earth">First Impressions&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/The-Strokes/287747" title="The Strokes">The Strokes</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-        <li>
-            <ul>
-        
-        
-               <li><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Toto/Toto-IV-The-Seventh-OneI-Coffret-2-CD/7651489" title="Toto IV / The Seventh OneI (Coffret 2 CD)"><img src="https://web.archive.org/web/20110612020852im_/http://4.musicimg.ovi.com/u/1.0/image/139340837/?w=75&amp;q=90" alt="" class="prod-med"/></a>
-                   <span class="item">
-                        <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Product/Toto/Toto-IV-The-Seventh-OneI-Coffret-2-CD/7651489" title="Toto IV / The Seventh OneI (Coffret 2 CD)">Toto IV / The Sev&hellip;</a>
-                    </span>
-                    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Artist/Toto/12757474" title="Toto">Toto</a>
-               </li>
-        
-            </ul>
-        </li>
-        
-    </ul>
-</div>
-    
-
-
-        </div>
-    
-</div>
-
-<div class="ft">
-    <span>&nbsp;</span></div>
-</div>
-
-
-<div class="panel promoBucket">
-    <div class="hd">
-		<h2><span>Bollywood's Most Romantic Couples!</span></h2>
-	</div>
-	
-	<div class="bd clearfix">
-	    <ul class="cols-3">
-	    
-	        
-	            <li>
-	                <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Bollywood's-Most-Romantic-Couples-Salman-Preity/jodi_salmanpriety_pl/">
-                        <img alt="Bollywood's Most Romantic Couples: Salman Kahn &amp; Preity Zinta " height="100" src="../../../../20110612020852im_/http_/1.musicimg.ovi.com/u/1.0/assets/in/en/Assets/PC/images/content/sal_preity_jodis_m35b56.html?r=100&amp;q=90" title="Bollywood's Most Romantic Couples: Salman Kahn &amp; Preity Zinta " width="100"/>
-                        
-                        
-                     </a>   
-                </li>
-            
-	            <li>
-	                <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Bollywood's-Most-Romantic-Couples-Saif-Rani/jodi_saifrani_pl/">
-                        <img alt="Bollywood's Most Romantic Couples: Saif Ali Khan &amp; Rani Mukherjee " height="100" src="../../../../20110612020852im_/http_/1.musicimg.ovi.com/u/1.0/assets/in/en/Assets/PC/images/content/saif_rani_jodis_m35b56.html?r=100&amp;q=90" title="Bollywood's Most Romantic Couples: Saif Ali Khan &amp; Rani Mukherjee " width="100"/>
-                        
-                        
-                     </a>   
-                </li>
-            
-	            <li class="last">
-	                <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/Bollywood's-Most-Romantic-Couples-Salman-Priyanka/jodi_salmanpriyanka_pl/">
-                        <img alt="Bollywood's Most Romantic Couples: Salman Kahn &amp; Priyanka Chopra " height="100" src="../../../../20110612020852im_/http_/1.musicimg.ovi.com/u/1.0/assets/in/en/Assets/PC/images/content/priaynka_sallu_jodis_m35b56.html?r=100&amp;q=90" title="Bollywood's Most Romantic Couples: Salman Kahn &amp; Priyanka Chopra " width="100"/>
-                        
-                        
-                     </a>   
-                </li>
-            
-	    </ul>
-	</div>    
-    
-	<div class="bd bd-ft clearfix">
-	    <div class="grad-ft">
-	        <p>
-	            <a class="nav-more" href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/">All Playlists
-	            </a>
-	        </p>
-	    </div>
-    </div>
-    
-    <div class="ft">
-        <span>&nbsp;</span>
-    </div>
-</div>
-
-    </div>
-      
-        </div>
-        
-        
-        
-        
-<div id="sitemap">
-    <div class="dropdown">
-        
-
-<script type="text/javascript">$(function(){$("#storeLocator").change(function(){window.location.href=$("#storeLocator").val();});});</script>
-
-
-<dl>
-    <dt><label for="storeLocator">Store location</label></dt>
-    <dd><select id="storeLocator" name="storeLocator"><option value="http://music.ovi.com/ar?setterritory=1">Argentina</option>
-<option value="http://music.ovi.com/au?setterritory=1">Australia</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Bahrain</option>
-<option value="http://music.ovi.com/br?setterritory=1">Brasil</option>
-<option value="http://music.ovi.com/ar?setterritory=1">Chile</option>
-<option value="http://music.ovi.com/cn?setterritory=1">China</option>
-<option value="http://music.ovi.com/de?setterritory=1">Deutschland</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Egypt</option>
-<option value="http://music.ovi.com/ie?setterritory=1">Eire</option>
-<option value="http://music.ovi.com/es?setterritory=1">Espa&#241;a</option>
-<option value="http://music.ovi.com/fr?setterritory=1">France</option>
-<option selected="selected" value="http://music.ovi.com/in?setterritory=1">India</option>
-<option value="http://music.ovi.com/id?setterritory=1">Indonesia</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Iraq</option>
-<option value="http://music.ovi.com/it?setterritory=1">Italia</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Jordan</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Kuwait</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Lebanon</option>
-<option value="http://music.ovi.com/my?setterritory=1">Malaysia</option>
-<option value="http://music.ovi.com/mx?setterritory=1">M&#233;xico</option>
-<option value="http://music.ovi.com/nl?setterritory=1">Nederland</option>
-<option value="http://music.ovi.com/no?setterritory=1">Norge</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Oman</option>
-<option value="http://music.ovi.com/at?setterritory=1">&#214;sterreich</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Palestinian Territories</option>
-<option value="http://music.ovi.com/pl?setterritory=1">Polska</option>
-<option value="http://music.ovi.com/pt?setterritory=1">Portugal</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Qatar</option>
-<option value="http://music.ovi.com/ru?setterritory=1">Россия</option>
-<option value="http://music.ovi.com/ae?setterritory=1">Saudi Arabia</option>
-<option value="http://music.ovi.com/ch?setterritory=1">Schweiz</option>
-<option value="http://music.ovi.com/sg?setterritory=1">Singapore</option>
-<option value="http://music.ovi.com/za?setterritory=1">South Africa</option>
-<option value="http://music.ovi.com/fi?setterritory=1">Suomi</option>
-<option value="http://music.ovi.com/se?setterritory=1">Sverige</option>
-<option value="http://music.ovi.com/tr?setterritory=1">T&#252;rkiye</option>
-<option value="http://music.ovi.com/ae?setterritory=1">United Arab Emirates</option>
-<option value="http://music.ovi.com/gb?setterritory=1">United Kingdom</option>
-<option value="http://oms.music.ovi.com/us/mc/OviMusic.html?setterritory=1">United States</option>
-</select></dd>
-</dl>
-
-<script type="text/javascript">
-    $(function() {
-        $("#languageSelector").change(function() {
-            $(this).parents("form").submit();
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const miniAudio = new Audio();
+        let currentSongIndex = 0;
+    
+        // Get "top" category songs from database
+        const topSongs = database["top"] || []; 
+    
+        function playSong(index) {
+            if (index < 0 || index >= topSongs.length) return;
+    
+            let songData = topSongs[index];
+            if (!songData) return;
+    
+            miniAudio.src = songData.url;
+            miniAudio.play();
+            currentSongIndex = index;
+    
+            if ("mediaSession" in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: songData.title || "Unknown Title",
+                    artist: songData.artist || "Unknown Artist",
+                    album: "Nuvi Music",
+                    artwork: [{ src: songData.cover || "default-cover.jpg", sizes: "512x512", type: "image/jpeg" }]
+                });
+    
+                navigator.mediaSession.setActionHandler("play", () => miniAudio.play());
+                navigator.mediaSession.setActionHandler("pause", () => miniAudio.pause());
+                navigator.mediaSession.setActionHandler("nexttrack", () => playSong(currentSongIndex + 1));
+                navigator.mediaSession.setActionHandler("previoustrack", () => playSong(currentSongIndex - 1));
+            }
+        }
+    
+        document.querySelectorAll(".song-link").forEach((link, index) => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                playSong(index);
+            });
         });
-
-        $("#languageSelector option[value = " + $("#originalLanguage").val() + "]").attr("selected", "selected");
-        var languageSelectorForm = $("form:has(#languageSelector)");
-        languageSelectorForm.attr("action", languageSelectorForm.attr("action") + "?sourceUrl=" + escape(unescape(location.href)));
+    
+        miniAudio.addEventListener("ended", () => playSong(currentSongIndex + 1));
     });
 </script>
 
-<form action="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/language/dolanguagechangeredirection" method="post" id="changeLanguageForm">
-<dl>
-    <dt><label for="languageSelector">Language selector</label></dt>
-    <dd><select disabled="disabled" id="languageSelector" name="languageSelector"><option selected="selected" value="en">English</option>
-</select></dd>
-</dl>
-<p><input id="originalLanguage" name="originalLanguage" type="hidden" value="en"/></p>
-</form>
-    </div>
-    <div>
-        
 
-<dl>
-    <dt><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/">Home</a></dt>
-</dl>
-<dl>
-    <dt>Charts</dt>
-    
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/bollywood-top-20/charttop20bollywood/"> 
-                    Bollywood Top 20 </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/international-top-20/charttop20international/"> 
-                    International Top 20 </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/south-top-20/charttop20south/"> 
-                    South Top 20 </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/charts/nonfilm-top-20/charttop20nonfilm/"> 
-                    Non-Film Top 20 </a></dd>
-        
-</dl>
 
-<dl>
-    <dt>Playlists</dt>
-    
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/bollywood-young-love/1_bollywood_young_love/"> 
-                    Bollywood Young Love </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/helen/1_helen/"> 
-                    Helen </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/hema-malini/1_hemamalini/"> 
-                    Hema Malini </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/best-of-shaan/1_shaan/"> 
-                    Best of Shaan </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/best-of-sivaji-ganesan/1_sivaji/"> 
-                    Best of Sivaji Ganesan </a></dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/playlists/m-s-vishwanathan/1_msv/"> 
-                    Best of M S Vishwanathan </a></dd>
-        
-</dl>
+<audio id="audioPlayer" style="display: none;"></audio>
+
+
+
 
     </div>
-    <div>
-        
-<dl>
-    <dt>Genres</dt>
-    
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bollywood/bollywood">Bollywood</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/tamil/tamil">Tamil</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/devotional/devotional">Devotional</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/telugu kannada/telugukannada">Telugu/Kannada</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/indian classical/indianclassical">Indian Classical</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/malayalam/malayalam">Malayalam</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/ghazals sufi/ghazalssufi">Ghazals/Sufi</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/indipop  remix/indipopremix">Indipop &amp; Remix</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/punjabi/punjabi">Punjabi</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bengali/bengali">Bengali</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/gujarati/gujarati">Gujarati</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/marathi/marathi">Marathi</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/bhojpuri/bhojpuri">Bhojpuri</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/regional others/regionalothers">Regional/Others</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/rock/rock">Rock</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/pop/pop">Pop</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/rap hip hop/raphiphop">Rap/Hip hop</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/classical/classical">Classical</a> </dd>
-        
-                <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/genre/world/world">World</a> </dd>
-        
-</dl>
-
-    </div>
-    <div>
-        
-<dl>
-    <dt>Account</dt>
-    
-        <dd><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/workflow/startpinentry?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc%2fArtist%2fSonu-Nigam-Asha-Bhosle%2f1238086">
-            Redeem voucher</a></dd>
       
-                
-    <dd><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/details/?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc%2fArtist%2fSonu-Nigam-Asha-Bhosle%2f1238086">
-        Music account </a></dd>                
-    <dd><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/library/">
-        Download history </a>
-    </dd>
-</dl>
-<dl>
-    <dt>Music</dt>
-    <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/help/musicoverview/">
-        Overview </a></dd>
-
-    
-        <dd><a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/help/comeswithmusicoverview/">
-            Ovi Music Unlimited</a>
-        </dd>
-    
-
-    <dd>
-        <a href="#">Compatible Devices</a>
-    </dd>
-    <dd>
-        <a href="https://web.archive.org/web/20110612020852/http://blog.ovi.com/category/music/">Music blog</a>
-    </dd>
-    <dd>
-        <a href="https://web.archive.org/web/20110612020852/http://mea.nokia.com/support/download-software/ovi-music-support">Music support</a>
-    </dd>
-</dl>
-    </div>
-    <div class="player">
+        </div>
         
-<dl>
-    <dt>Download Ovi Player</dt>
-    
-    <dd><a href="https://web.archive.org/web/20110612020852/http://musicstore.nokia.com/download.aspx">
-        Ovi Player for PC </a></dd>
-    <dd><a href="https://web.archive.org/web/20110612020852/http://europe.nokia.com/get-support-and-software/download-software/nokia-multimedia-transfer">
-        Are you a Mac User? </a></dd>
-</dl>
-
-    </div>        
-</div>
-
+        
         
         
 
-    </div>
-
-    
-    
-        <div id="siteinfo">
             
             
 	    
-<ul>
-   <li><a href="https://web.archive.org/web/20110612020852/http://www.nokia.co.in/about-nokia/privacy/services/ovi-service-terms" target="_blank" title="Ovi Service Terms">Ovi Service Terms</a></li>
-   <li><a href="https://web.archive.org/web/20110612020852/http://www.nokia.co.in/privacy-policy" target="_blank" title=" Privacy Policy">Privacy Policy</a></li>
-   <li><a href="https://web.archive.org/web/20110612020852/http://www.nokia.com/" target="_blank" title=" Nokia.com">Nokia.com</a></li>
-   <li class="last-child">Copyright © 2011 Nokia. All rights reserved.</li>
-</ul>
+
 		    
 		   		    
 		    
@@ -2269,27 +649,112 @@ nmStats.territory="in";nmStats.environment="prod";nmStats.language="en";
     nmStats.inspireMe ="inspire me";
 
 }catch(ex){}if(navigator.appVersion.indexOf('MSIE') >= 0){document.write(unescape('%3C') + '\!-' + '-');}</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a").forEach(link => {
+            let originalUrl = link.href;
     
+            if (originalUrl.includes("web.archive.org/web/")) {
+                let cleanedUrl = originalUrl.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+                link.href = cleanedUrl;
+            }
+        });
+    });
+    </script>
+
+<script>document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function (event) {
+        let originalUrl = this.href;
+
+        if (originalUrl.includes("web.archive.org/web/")) {
+            event.preventDefault(); // Stop default navigation
+            let cleanedUrl = originalUrl.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+            window.location.href = cleanedUrl; // Redirect manually
+        }
+    });
+});</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    function fixWaybackLinks() {
+        document.querySelectorAll("a").forEach(link => {
+            if (link.href.includes("web.archive.org/web/")) {
+                link.href = link.href.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+            }
+        });
+    }
+
+    // Run fix on page load
+    fixWaybackLinks();
+
+    // Watch for new elements being added (Wayback reinjects links dynamically)
+    const observer = new MutationObserver(fixWaybackLinks);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Block clicks that still contain Wayback URLs
+    document.addEventListener("click", function (event) {
+        let target = event.target.closest("a");
+        if (target && target.href.includes("web.archive.org/web/")) {
+            event.preventDefault(); // Stop default action
+            let cleanedUrl = target.href.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+            window.location.href = cleanedUrl; // Redirect manually
+        }
+    });
+});
+</script>
+<script>(function () {
+    function cleanWaybackLinks() {
+        document.querySelectorAll("a").forEach(link => {
+            if (link.href.includes("web.archive.org/web/")) {
+                let cleanedUrl = link.href.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+                link.setAttribute("href", cleanedUrl);
+            }
+        });
+    }
+
+    // 1️⃣ Block Wayback at the document level (injected early)
+    Object.defineProperty(document, 'URL', {
+        get: function () {
+            return window.location.href.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+        }
+    });
+
+    // 2️⃣ Override any future changes to links
+    const observer = new MutationObserver(cleanWaybackLinks);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // 3️⃣ Intercept and fix links before navigation happens
+    document.addEventListener("click", function (event) {
+        let target = event.target.closest("a");
+        if (target && target.href.includes("web.archive.org/web/")) {
+            event.preventDefault();
+            let cleanedUrl = target.href.replace(/https:\/\/web\.archive\.org\/web\/\d+\//, "");
+            window.location.href = cleanedUrl;
+        }
+    });
+
+    // Run cleanup immediately
+    cleanWaybackLinks();
+})();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const songUrl = urlParams.get("plays");
+        const songTitle = urlParams.get("title") || "Unknown Title";
+        const songArtist = urlParams.get("artist") || "Unknown Artist";
+        const songCover = urlParams.get("cover") || "default-cover.jpg";
+
+        if (songUrl) {
+            console.log("Playing song from URL:", songUrl);
+            playSong(decodeURIComponent(songUrl), decodeURIComponent(songTitle), decodeURIComponent(songArtist), decodeURIComponent(songCover));
+        }
+    });
+</script>
+
+
 </body>
 
-<!-- Mirrored from web.archive.org/web/20110612020852/music.ovi.com/in/en/pc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2025 16:48:50 GMT -->
-</html><!--
-     FILE ARCHIVED ON 02:08:52 Jun 12, 2011 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 16:47:04 Feb 21, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 0.709
-  exclusion.robots: 0.035
-  exclusion.robots.policy: 0.022
-  esindex: 0.014
-  cdx.remote: 16.387
-  LoadShardBlock: 422.486 (3)
-  PetaboxLoader3.datanode: 333.564 (4)
-  PetaboxLoader3.resolve: 167.736 (2)
-  load_resource: 161.941
--->
+</html>

@@ -287,6 +287,10 @@ let currentSongIndex = 0;
 let currentSection = "top";
 let audioPlayer = new Audio(); // Persistent audio player
 
+
+
+
+
 // 🚀 Populate Featured Music Section
 function populateFeaturedMusic() {
     const featuredSections = ["top", "nice", "m_l", "Other"];
@@ -352,23 +356,133 @@ function playSongHandler(event) {
     playSong(songTitle, songArtist, songCover, songURL);
 }
 
-// 🎵 Play Song with Media Session API
+// 🎵 Play Song function
+
 function playSong(title, artist, cover, url) {
     if (!url) {
         console.error("❌ Error: Song URL missing for:", title);
         return;
     }
 
-    console.log("🎵 Playing:", title);
+    // ✅ Fetch the username from localStorage (Modify if username is stored elsewhere)
+    let username = localStorage.getItem("loggedInUser"); 
+
+    if (!username) {
+        console.error("❌ Error: No username found! Cannot update last played.");
+        return;
+    }
+
+    console.log(`🎵 Song Play Call Initiated for ${username}: ${title}`);
+    
     audioPlayer.src = url;
     audioPlayer.load();
-    audioPlayer.play().then(() => {
-        console.log("✅ Now playing:", title);
-        updateJSONBin(title);
-        updateMediaSession(title, artist, cover);
-    }).catch(err => console.error("❌ Playback error:", err));
+    audioPlayer.play()
+        .then(() => {
+            console.log(`✅ Now playing: ${title}`);
+            updateMediaSession(title, artist, cover);
+            saveAndUpdateLastPlayed(username, title); // ✅ Pass username properly
+        setTimeout(updateLastListenedWidget, 1000); // Fetch updated data after saving
+        })
+        .catch(err => console.error("❌ Playback error:", err));
 
     audioPlayer.onended = () => playNext();
+}
+
+
+// 🔥 Update Last Played Song in JSONBin
+function saveAndUpdateLastPlayed(username, songName) {
+    if (!username) {
+        console.error("❌ Error: No username provided! Skipping update.");
+        return;
+    }
+
+    console.log(`🎵 Saving last played song for ${username}: ${songName}`);
+
+    // Get existing data from localStorage
+    let data = localStorage.getItem("lastPlayedSongs");
+    let parsedData = data ? JSON.parse(data) : { users: {} };
+
+    // Prevent unnecessary updates (avoid infinite loop)
+    if (parsedData.users[username] && parsedData.users[username].lastPlayed === songName) {
+        console.log("🔁 No change detected. Skipping update.");
+        return;
+    }
+
+    // Update user's last played song
+    parsedData.users[username] = { lastPlayed: songName };
+
+    // Save updated data to localStorage
+    localStorage.setItem("lastPlayedSongs", JSON.stringify(parsedData));
+    console.log("✅ Data saved in localStorage:", parsedData);
+
+    // Update JSONBin
+    fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Master-Key": API_KEY
+        },
+        body: JSON.stringify(parsedData)
+    })
+    .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        return response.json();
+    })
+    .then(data => {
+        console.log(`✅ JSONBin update success! Last played for ${username}: ${songName}`);
+    })
+    .catch(error => console.error("❌ JSONBin update failed:", error));
+}
+
+function updateLastListenedWidget() {
+    console.log("🔄 Fetching Last Listened Song from JSONBin...");
+
+    fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+        method: "GET",
+        headers: { "X-Master-Key": API_KEY }
+    })
+    .then(response => response.json())
+    .then(data => {
+        let username = localStorage.getItem("loggedInUser");
+        if (!username || !data.record.users || !data.record.users[username]) {
+            console.log("❌ No last played song found for user.");
+            return;
+        }
+
+        let lastSong = data.record.users[username].lastPlayed;
+        console.log(`✅ Last Played Song: ${lastSong}`);
+
+        // **Flatten the database**
+        let flattenedDatabase = [];
+        Object.values(database).forEach(category => {
+            flattenedDatabase = flattenedDatabase.concat(category);
+        });
+
+        // **Find the matching song in the database**
+        let songData = flattenedDatabase.find(song => song.title?.trim().toLowerCase() === lastSong.trim().toLowerCase());
+
+        // **Get cover from database or fallback to placeholder**
+        let coverUrl = songData ? songData.cover : "placeholder.jpg";
+        console.log(`✅ Cover URL Found: ${coverUrl}`);
+
+        // **Update the Widget UI**
+        let titleElement = document.getElementById("last-listened-title");
+        let coverElement = document.getElementById("last-listened-cover");
+
+        if (!titleElement || !coverElement) {
+            console.error("❌ Widget Elements Not Found! Retrying in 1s...");
+            setTimeout(updateLastListenedWidget, 1000);
+            return;
+        }
+
+        titleElement.textContent = lastSong;
+        coverElement.src = coverUrl;
+        coverElement.style.width = "64px";
+        coverElement.style.height = "64px";
+
+        console.log("✅ Widget Successfully Updated!");
+    })
+    .catch(error => console.error("❌ JSONBin Fetch Failed:", error));
 }
 
 // 🔥 Update Media Session API
@@ -387,6 +501,7 @@ function updateMediaSession(title, artist, cover) {
     }
 }
 
+
 // 🔥 Play Next Song
 function playNext() {
     const songList = database[currentSection] || [];
@@ -403,25 +518,7 @@ function playPrevious() {
     playSong(prevSong.title, prevSong.artist, prevSong.cover, prevSong.url);
 }
 
-// 🔥 Update Last Played Song in JSONBin
-function updateJSONBin(songTitle) {
-    const username = localStorage.getItem("loggedInUser");
-    if (!username) return;
 
-    const userData = { lastPlayed: songTitle };
-
-    fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            "X-Master-Key": API_KEY
-        },
-        body: JSON.stringify(userData)
-    })
-    .then(res => res.json())
-    .then(data => console.log("✅ Updated JSONBin:", data))
-    .catch(err => console.error("❌ Error updating JSONBin:", err));
-}
 
 // 🚀 Initialize Everything on Page Load
 document.addEventListener("DOMContentLoaded", function () {
@@ -1038,6 +1135,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-  
-

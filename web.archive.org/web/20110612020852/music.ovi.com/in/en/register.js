@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const forgotPasswordBtn = document.getElementById("for-btn");
     const JSONBIN_ID = "67ca7dcaad19ca34f817f025";
     const API_KEY = "$2a$10$IG0fCGUHCL7iFsZMFQjI4e4ufPung048BrnWjddZBoo5V3UjUQ4ja";
-    const BEK = "'eGtleXNpYi1iZTIyZTA4NWVmNmNhYzU0ZjE4NmEwNGU0YWJjYTE3NGY4M2VmMjZkMmYyZDg4MzljMzI0NDU1Yzc1NGMwODY1LTZCcG02blV6U21LM2pnZkg='";
+    const BEK = "eGtleXNpYi1iZTIyZTA4NWVmNmNhYzU0ZjE4NmEwNGU0YWJjYTE3NGY4M2VmMjZkMmYyZDg4MzljMzI0NDU1Yzc1NGMwODY1LTZCcG02blV6U21LM2pnZkg=";
     const BREVO_API_KEY = atob(BEK);
     
     function fadeOutAndReplace(content) {

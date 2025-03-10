@@ -320,6 +320,16 @@ var storeLanguage = "en";
     margin: 2px 0;
 }
 
+#centeredImage {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+
 </style>
 
 
@@ -373,77 +383,18 @@ var storeLanguage = "en";
 	
 	<div id="outer-container">
     
+
+
     </div>           
     <div id="container">
         <div id="content">
 
-<div id="bridge" class="g-24 last">
-	<h1>
-	    <a href="anyosil.github.io/dashboard" title="Nuvi">
-            <img src="./images/nuvi-logo.jpg" alt="Nuvi" />
-	    Nuvi
-	    </a>	    
-    </h1>
-	
-	<ul id="icons" class="loggedin">
-		<li class="ovi_contacts">
-		    <a href="https://web.archive.org/web/20110612020852/http://www.ovi.com/services/contacts?lid=ContactsBridge" title="Contacts">
-	        Contacts
-	        </a>
-		</li>
-		<li class="ovi_maps">
-		    <a href="https://web.archive.org/web/20110612020852/http://maps.ovi.com/?lid=MapsBridge" title="Maps">
-	        Maps
-	        </a>
-		</li>
-		
-		<li class="ovi_share">
-		    <a href="https://web.archive.org/web/20110612020852/http://share.ovi.com/?utm_source=ovi&amp;utm_medium=banner&amp;utm_content=BridgeLink08&amp;utm_campaign=OviShare&amp;lid=ShareBridge" title="Share">
-	        Share
-	        </a>
-		</li>
-		<li id="ovimusichome" class="ovi_music">
-		    <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/" class="active" title="Music">
-	        Music
-	        </a>
-		</li>
-		<li class="ovi_store">
-		    <a href="https://web.archive.org/web/20110612020852/http://store.ovi.com/?lid=storeheader" title="Store">
-	        Store
-	        </a>
-		</li>
-		<li class="ovi_mail">
-		    <a href="https://web.archive.org/web/20110612020852/http://mail.ovi.com/?lid=mailheader" title="Mail">
-	        Mail
-	        </a>
-	    </li>
-		<li class="ovi_calendar">
-		    <a href="https://web.archive.org/web/20110612020852/http://www.ovi.com/services/events?lid=CalendarBridge" title="Calendar">
-	        Calendar
-	        </a>
-		</li>
-		<li class="ovi_files">
-		    <a href="https://web.archive.org/web/20110612020852/https://files.ovi.com/sas/" title="Files">
-	        Files
-	        </a>
-		</li>
-	</ul>
-	
-	<div>
-		<span class="loggedin" id="user-details">
-		    Good to see you 
-		    <a id="bridge-username" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/details/?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc"> </a> 
-		    <span id="credit"> </span>
-		</span>
-		<span class="spacing loggedout">&nbsp;</span>
-		<ul id="user-links">
-			<li class="loggedin"><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/details/?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc">Account</a></li>
-			<li class="loggedin"><a href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/account/signout/">Sign out</a></li>
-			<li class="loggedout"><a id="signin" href="https://web.archive.org/web/20110612020852/https://account.music.ovi.com/in/en/pc/workflow/startsignin?returnurl=http%3a%2f%2fmusic.ovi.com%2fin%2fen%2fpc">Sign in or register</a></li>
-			<li class="last"><a href="https://web.archive.org/web/20110612020852/http://support.ovi.com/">Support</a></li>
-		</ul>
-	</div>	
-	
+            <div id="bridge" class="g-24 last">
+                <h1>
+                    <a href="anyosil.github.io/dashboard" title="Nuvi">
+                    Nuvi
+                    </a>	    
+                </h1>
 	<span class="crn"></span>
 </div><!--end bridge -->
             <div class="g-24 last" id="subMenu">
@@ -461,44 +412,45 @@ var storeLanguage = "en";
 
 
 <div id="searchContent">
-    <form id="searchForm">
-        <input id="searchCriteria" type="text" name="query" placeholder="Search Here n Press Enter"/>
-        
+    <form id="searchForm" class="srch-music">
+        <div class="txtbox t-l">
+            <label for="searchCriteria" class="rm">Search</label>
+            <input id="searchCriteriaDefaultText" name="searchCriteriaDefaultText" type="hidden" value="Search Music"/>
+            <input id="searchCriteria" name="query" type="text" value="Search Music"/>
+        </div>
+        <div class="btn">
+            <span><input id="searchSubmit" type="submit" name="submit" value=" Search"/></span>
+        </div>
     </form>
-    
-      <script src="script.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("searchForm");
-    
-            form.addEventListener("submit", function (event) {
-                event.preventDefault(); // Stop default form submission
-    
-                const query = document.getElementById("searchCriteria").value.trim();
-                if (query.length === 0) return; // Stop if empty search
-    
-                // Redirect to search.html with the correct parameter
-                window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-            });
-        });
-    </script>
-    
-      
-   <!-- <form id="searchForm" class="srch-music">
-      <div class="txtbox t-l">
-        <label for="searchCriteria" class="rm">Search</label>
-        <input id="searchCriteriaDefaultText" name="searchCriteriaDefaultText" type="hidden" value="Search Music"/>
-        <input id="searchCriteria" name="searchCriteria" type="text" value="Search Music"/>
-      </div>
-      <div class="btn">
-        <span>
-          <input id="searchSubmit" type="submit" name="submit" value=" Search"/>
-        </span>
-      </div>
-    </form> -->
-  </div>
-  
-<div id="searchResults"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchCriteria");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const query = searchInput.value.trim();
+        if (query.length === 0 || query === "Search Music") return; // Stop if empty or default text
+
+        // Redirect to search.html with the correct parameter
+        window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    });
+
+    // Clear placeholder when clicked
+    searchInput.addEventListener("focus", function () {
+        if (this.value === "Search Music") this.value = "";
+    });
+
+    searchInput.addEventListener("blur", function () {
+        if (this.value.trim() === "") this.value = "Search Music";
+    });
+});
+</script>
+
   
   <!-- end searchContent-->
                 </div>
@@ -534,9 +486,30 @@ var storeLanguage = "en";
     <!-- This will be populated by script.js -->
 </div>
        
+
+
+<div class="panel-sup" id="last-listened-widget">
+    <div class="hd">
+        <h2>
+            <span>Recently Played Song on Symphonia</span>
+        </h2>
+    </div>
+    <div class="bd box">
+        <p id="last-listened-title">No song played</p>
+        <img id="last-listened-cover" src="default-cover.jpg" alt="Now Playing Cover" />
+    </div>
+    <div class="ft"><span>&nbsp;</span></div>
+</div>
             
-            
-    
+<style>
+    #last-listened-cover {
+    width: 64px !important;  /* Set width to 64px */
+    height: 64px !important; /* Set height to 64px */
+    object-fit: cover; /* Ensure it scales properly */
+    border-radius: 5px; /* Slight rounding for a clean look */
+}
+
+</style>  
     <div class="g-19 last">
 
 
@@ -546,12 +519,12 @@ var storeLanguage = "en";
         <div id="shopWindow">        
             <div class="panel">
                 <div class="hd">
-                    <h2><span>Welcome To Nuvi!</span></h2>
+                    <h2><span>Welcome To Symphonia By Nuvi Services!</span></h2>
                 </div>
                 <div id="shopWindow-bd">
                     
                     <div class="get-fla">
-                        <p>This is Symphonia! Listen to Music Wherever you go!</p>
+                        <p>With Symphonia, You can Listen to Music Wherever you go!</p>
                         
                         <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
                  
@@ -817,24 +790,4 @@ nmStats.territory="in";nmStats.environment="prod";nmStats.language="en";
 
 </body>
 
-<!-- Mirrored from web.archive.org/web/20110612020852/music.ovi.com/in/en/pc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2025 16:48:50 GMT -->
-</html><!--
-     FILE ARCHIVED ON 02:08:52 Jun 12, 2011 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 16:47:04 Feb 21, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 0.709
-  exclusion.robots: 0.035
-  exclusion.robots.policy: 0.022
-  esindex: 0.014
-  cdx.remote: 16.387
-  LoadShardBlock: 422.486 (3)
-  PetaboxLoader3.datanode: 333.564 (4)
-  PetaboxLoader3.resolve: 167.736 (2)
-  load_resource: 161.941
--->
+</html>
