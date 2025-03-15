@@ -2,63 +2,75 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const GITHUB_REPO_API = "https://api.github.com/repos/anyosil/symmusic.github.io/git/trees/main?recursive=1";
+const GITHUB_REPO_API = "https://api.github.com/repos/anyosil/nmdmdb/git/trees/main?recursive=1";
 const OUTPUT_FILE = path.join(__dirname, "songs.json");
-const TARGET_DIRECTORY = "music/M1/"; // Only fetch from this folder
-const RATE_LIMIT_DELAY = 2000; // Initial delay (increases with retries)
+const TARGET_DIRECTORY = "music"; // Fetch only from this folder
+let RATE_LIMIT_DELAY = 2000; // Initial delay (dynamically increases)
 
-// Function to fetch MP3 files **only from the "music/M1/" directory**
 async function fetchGitHubFiles(retryCount = 0) {
     try {
         console.log("🔍 Fetching file list from GitHub...");
         const response = await axios.get(GITHUB_REPO_API, { headers: { "User-Agent": "request" } });
-
+        
         let mp3Files = response.data.tree
-            .filter(file => file.path.startsWith(TARGET_DIRECTORY) && file.path.endsWith(".mp3")) // Filter only from M1 directory
+            .filter(file => file.path.startsWith(TARGET_DIRECTORY) && file.path.endsWith(".mp3"))
             .map(file => file.path);
-
+        
         return mp3Files;
     } catch (error) {
-        console.warn(`⚠️ GitHub API rate limit hit. Retrying in ${RATE_LIMIT_DELAY * (retryCount + 1)}ms...`);
-        await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY * (retryCount + 1)));
+        console.warn(`⚠️ GitHub API rate limit hit. Retrying in ${RATE_LIMIT_DELAY}ms...`);
+        await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY));
+        RATE_LIMIT_DELAY *= 2; // Increase delay exponentially
         if (retryCount < 5) return fetchGitHubFiles(retryCount + 1);
         console.error("❌ Failed to fetch songs after multiple attempts.");
         return [];
     }
 }
 
-// Function to clean song names
 function cleanSongName(filename) {
     let name = path.basename(filename, ".mp3");
     return name.replace(/^\d{2}/, "").trim();
 }
 
-// Function to fetch song metadata with rate limit protection
-async function fetchMetadata(songName, retryCount = 0) {
-    try {
-        let searchQuery = encodeURIComponent(songName);
-        let url = `https://musicbrainz.org/ws/2/recording/?query=${searchQuery}&fmt=json`;
-        let response = await axios.get(url);
-        let result = response.data.recordings?.[0];
+async function fetchMetadata(songName) {
+    const metadataSources = [
+        { url: `https://musicbrainz.org/ws/2/recording/?query=${encodeURIComponent(songName)}&fmt=json`, key: "musicbrainz" },
+        { url: `https://itunes.apple.com/search?term=${encodeURIComponent(songName)}&entity=song&limit=1`, key: "itunes" },
+        { url: `https://api.deezer.com/search?q=${encodeURIComponent(songName)}`, key: "deezer" }
+    ];
 
-        if (result) {
-            return {
-                title: result.title || songName,
-                artist: result["artist-credit"]?.[0]?.name || "Unknown Artist",
-                album: result.releases?.[0]?.title || "Unknown Album",
-                language: result.languages?.[0] || "Unknown",
-                cover: `https://coverartarchive.org/release/${result.releases?.[0]?.id}/front`
-            };
+    let metadata = {};
+    const shuffledSources = metadataSources.sort(() => 0.5 - Math.random()); // Randomize request order
+
+    for (const source of shuffledSources) {
+        try {
+            const response = await axios.get(source.url, { timeout: 5000 });
+            
+            if (response.data) {
+                if (!metadata.title && response.data.recordings) {
+                    metadata.title = response.data.recordings[0]?.title;
+                    metadata.artist = response.data.recordings[0]?.['artist-credit']?.[0]?.name;
+                }
+                if (!metadata.album && response.data.results) {
+                    metadata.album = response.data.results[0]?.collectionName;
+                    metadata.cover = response.data.results[0]?.artworkUrl100;
+                }
+                if (!metadata.artist && response.data.data) {
+                    metadata.artist = response.data.data[0]?.artist?.name;
+                    metadata.album = response.data.data[0]?.album?.title;
+                    metadata.cover = response.data.data[0]?.album?.cover_medium;
+                }
+            }
+        } catch (error) {
+            console.warn(`⚠️ Rate limit hit for ${source.key}. Retrying in ${RATE_LIMIT_DELAY}ms...`);
+            await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY));
+            RATE_LIMIT_DELAY *= 1.5; // Increase delay gradually
         }
-    } catch (error) {
-        console.warn(`⚠️ Rate limit hit for "${songName}". Retrying in ${RATE_LIMIT_DELAY * (retryCount + 1)}ms...`);
-        await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY * (retryCount + 1)));
-        if (retryCount < 5) return fetchMetadata(songName, retryCount + 1);
     }
-    return { title: songName, artist: "Unknown Artist", album: "Unknown Album", language: "Unknown", cover: "" };
+
+    return metadata;
 }
 
-// Function to update progress in the console
 function updateProgress(current, total) {
     const percentage = ((current / total) * 100).toFixed(2);
     process.stdout.clearLine();
@@ -66,33 +78,28 @@ function updateProgress(current, total) {
     process.stdout.write(`⏳ Progress: ${current}/${total} songs (${percentage}%)`);
 }
 
-// Main function to fetch all songs
 async function fetchAllSongs() {
     let files = await fetchGitHubFiles();
     let totalSongs = files.length;
 
     if (totalSongs === 0) {
-        console.log("❌ No songs found in the 'music/M1' directory.");
+        console.log("❌ No songs found in the 'music' directory.");
         return;
     }
 
-    console.log(`🎵 Found ${totalSongs} songs in 'music/M1'. Fetching metadata...\n`);
+    console.log(`🎵 Found ${totalSongs} songs in 'music'. Fetching metadata...\n`);
     let songs = [];
 
     for (let i = 0; i < totalSongs; i++) {
         let file = files[i];
         let songName = cleanSongName(file);
         let metadata = await fetchMetadata(songName);
-        songs.push({ ...metadata, url: `https://github.com/anyosil/symmusic.github.io/blob/main/${file}` });
-
-        // Update progress
+        songs.push({ ...metadata, url: `https://github.com/anyosil/nmdmdb/blob/main/${file}` });
         updateProgress(i + 1, totalSongs);
     }
 
-    // Save to JSON file
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(songs, null, 4));
     console.log("\n✅ Songs saved to:", OUTPUT_FILE);
 }
 
-// Run the script
 fetchAllSongs();

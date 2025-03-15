@@ -1,6 +1,100 @@
 var database = {
     "top": [
-      
+
+        {
+            "title": "APT",
+            "artist": "Rose",
+            "album": "APT. - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/APT.mp3"
+        },
+        {
+            "album": "Billie Eilish: Artist of the Year 2024 Live - EP",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/1e/45/251e454e-dab5-1e0a-f216-52e77d5032c0/24UM1IM41181.rgb.jpg/100x100bb.jpg",
+            "title": "BIRDS OF A FEATHER",
+            "artist": "Billie Eilish",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie Eilish Birds of a feather.mp3"
+        },
+        {
+            "title": "Blue",
+            "artist": "Yung Kai",
+            "album": "blue - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/62/62/33626226-0cf3-ff64-3296-b2355de71fac/0748777703419.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blue-Yung-Kai.mp3"
+        },
+        {
+            "title": "Cornfield Chase - From “Interstellar”",
+            "artist": "London Music Works",
+            "album": "Cornfield Chase (Interstellar) [Remix] - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/11/5e/18/115e18cc-b4be-c7b1-5954-157f261fa343/artwork.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cornfield Chase - Interstellar.mp3"
+        },
+        {
+            "artist": "Bruno Mars",
+            "album": "Die With A Smile - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/100x100bb.jpg",
+            "title": "Die With a Smile",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Die with a smile.mp3"
+        },
+        {
+            "artist": "Iván Cairo",
+            "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+            "title": "Dreaming Of The Crash",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dreaming of the Crash - Interstellar.mp3"
+        },
+        {
+            "artist": "LEANEAN",
+            "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+            "title": "Interstellar -- Dust",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dust - Interstellar.mp3"
+        },
+        {
+            "title": "Espresso",
+            "artist": "Sabrina Carpenter",
+            "album": "Singles",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Espresso.mp3"
+        },
+        {
+            "artist": "Ace of Base",
+            "album": "Greatest Hits",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/45/d9/df/45d9dfe2-d024-3387-58e9-9ad921d181d6/cover.jpg/100x100bb.jpg",
+            "title": "Happy Nation",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Happy Nation.mp3"
+        },
+        {
+            "title": "METAMORPHOSIS (slowed + reverb)",
+            "artist": "INTERWORLD",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Interworld - Metamorphosis (Slowed+Reverb).mp3"
+        },
+        {
+            "artist": "Sweet Serenity",
+            "title": "Summertime Sadness (Lana del Rey cover)",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Lana-Del-Rey-Summertime-Sadness.mp3"
+        },
+        {
+            "title": "Mary on a Cross",
+            "artist": "Ghost",
+            "album": "Mary On A Cross (slowed + reverb) - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b7/b8/3b/b7b83bb0-242d-93f3-e7d3-4a5d7b02c57d/22CRGIM34365.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Mary On A Cross.mp3"
+        },
+        {
+            "title": "FE!N",
+            "artist": "Travis Scott",
+            "album": "UTOPIA",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/09/7d/b0/097db06f-8403-3cf7-7510-139e570ca66b/196871341882.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Travis Scott - FE!N.mp3"
+        },
+        {
+            "title": "Honeypie",
+            "artist": "The Perpetrators",
+            "album": "Live Phish, Volume 13: 10/31/94 (Glens Falls Civic Center, Glens Falls, NY)",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f2/4c/64/f24c64fc-4bfd-e115-a73d-88813105429f/mzi.jiihzxqi.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/honeypie.mp3"
+        },      
         {
             "title": "Achacho",
             "artist": "Kharesma Ravichandran",
@@ -250,6 +344,222 @@ var database = {
             "url": "https://raw.githubusercontent.com/anyosil/symmusic.github.io/main/music/M1/Vennilavae.mp3"
         }
     ]
+    ,"sdb": [
+        {
+            "artist": "Bruno Mars, Rosie",
+            "album": "APT. - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/100x100bb.jpg",
+            "title": "APT!",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/APT.mp3"
+        },
+        {
+            "title": "Believer",
+            "artist": "Imagine Dragons",
+            "album": "Evolve",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Believer - Imagine Dragons.mp3"
+        },
+        {
+            "title": "Birds of a Feather",
+            "artist": "Billie Eilish",
+            "album": "Billie Eilish: Artist of the Year 2024 Live - EP",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/1e/45/251e454e-dab5-1e0a-f216-52e77d5032c0/24UM1IM41181.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie Eilish Birds of a feather.mp3"
+        },
+        {
+            "title": "Blinding Lights",
+            "artist": "The Weeknd",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blinding Lights (Live Performance) - The Weeknd.mp3"
+        },
+        {
+            "title": "blue",
+            "artist": "yung kai",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/62/62/33626226-0cf3-ff64-3296-b2355de71fac/0748777703419.jpg/100x100bb.jpg",
+            "album": "blue - Single",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blue (Artist-Yung Kai).mp3"
+        },
+        {
+            "artist": "Imagine Dragons",
+            "title": "Bones",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bones - Imagine Dragons.mp3"
+        },
+        {
+            "title": "Bye Bye Bye",
+            "artist": "*NSYNC",
+            "album": "The Essential *NSYNC",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/e5/ed/f0e5ed66-243f-44d0-0a6a-50885d3504bb/886444718912.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bye Bye Bye - nSync.mp3"
+        },
+        {
+            "artist": "Modern Talking",
+            "album": "Remix Album",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1f/ef/b6/mzi.mjmoikvm.jpg/100x100bb.jpg",
+            "title": "Cheri Cheri Lady",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cheri Cheri Lady.mp3"
+        },
+        {
+            "title": "Hymn for the Weekend",
+            "artist": "Coldplay",
+            "album": "A Head Full of Dreams",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/0a/6d/c80a6df9-e55a-fb83-0311-f4776984ac67/mzm.lasidxkv.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Coldplay - Hymn For The Weekend.mp3"
+        },
+        {
+            "artist": "London Music Works",
+            "album": "Cornfield Chase (Interstellar) [Remix] - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/11/5e/18/115e18cc-b4be-c7b1-5954-157f261fa343/artwork.jpg/100x100bb.jpg",
+            "title": "Cornfield Chase - From “Interstellar”",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cornfield Chase - Interstellar.mp3"
+        },
+        {
+            "title": "Die With a Smile",
+            "artist": "FKJ",
+            "album": "Die With A Smile - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Die with a smile.mp3"
+        },
+        {
+            "title": "Dreaming Of The Crash",
+            "artist": "Iván Cairo",
+            "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dreaming of the Crash - Interstellar.mp3"
+        },
+        {
+            "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+            "title": "Interstellar Dust",
+            "artist": "LEANEAN",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dust - Interstellar.mp3"
+        },
+        {
+            "artist": "Imagine Dragons",
+            "album": "Enemy (From Arcane: League of Legends) - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/77/08/767708a7-ec93-3b3d-3bac-40086e5a265c/21UM1IM29634.rgb.jpg/100x100bb.jpg",
+            "title": "Enemy",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Enemy - Imagine Dragons.mp3"
+        },
+        {
+            "title": "Espresso",
+            "artist": "Peter Kater",
+            "album": "Short n' Sweet",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Espresso.mp3"
+        },
+        {
+            "title": "Tadow",
+            "artist": "Masego",
+            "album": "Lady Lady",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/48/b3/3548b3c7-92bd-ea54-1e09-47a1f6f25b01/00842812109249.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/FKJ, Masego - Tadow.mp3"
+        },
+        {
+            "album": "Greatest Hits",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/45/d9/df/45d9dfe2-d024-3387-58e9-9ad921d181d6/cover.jpg/100x100bb.jpg",
+            "title": "Happy Nation",
+            "artist": "Kent Coda",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Happy Nation.mp3"
+        },
+        {
+            "artist": "Glass Animals",
+            "album": "Dreamland",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/100x100bb.jpg",
+            "title": "Heat Waves",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Heat Waves - Glass Animals.mp3"
+        },
+        {
+            "title": "METAMORPHOSIS (slowed + reverb)",
+            "artist": "INTERWORLD",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Interworld - Metamorphosis (Slowed+Reverb).mp3"
+        },
+        {
+            "title": "Summertime Sadness (Lana del Rey cover)",
+            "artist": "Sweet Serenity",
+            "album": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) [Cedric Gervais Remix] - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f2/06/d5/f206d5d7-8bd4-7622-c98d-cf39344b098e/00602537489985.rgb.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Lana-Del-Rey-Summertime-Sadness.mp3"
+        },
+        {
+            "artist": "Alexander Stewart",
+            "album": "Levitating (feat. DaBaby) - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/9c/e6/169ce699-5506-0e08-f514-81f08a9ed7f5/190295132651.jpg/100x100bb.jpg",
+            "title": "Levitating",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Levitating - Dua Lipa.mp3"
+        },
+        {
+            "album": "Mary On A Cross (slowed + reverb) - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b7/b8/3b/b7b83bb0-242d-93f3-e7d3-4a5d7b02c57d/22CRGIM34365.rgb.jpg/100x100bb.jpg",
+            "title": "Mary on a Cross",
+            "artist": "Adeena",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Mary On A Cross.mp3"
+        },
+        {
+            "album": "Sugarbread - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/21/04/1e/21041e2a-1bee-640c-f0a8-a2a8f1951ff4/5414939377679_cover.jpg/100x100bb.jpg",
+            "title": "Me and the Devil",
+            "artist": "The Animal in Me",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Me And The Devil -- Soap & Skin.mp3"
+        },
+        {
+            "artist": "Ed Sheeran",
+            "album": "Cynthia Covers 2018",
+           "title": "Perfect - Ed Sheeran",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Perfect - Ed Sheeran.mp3"
+        },
+        {
+            "title": "Sonne",
+            "artist": "Rammstein",
+            "album": "Mutter",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rammstein -- Sonne.mp3"
+        },
+        {
+            "artist": "Michael Andriano",
+            "album": "The Essential Boney M.",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b7/86/45/b786452a-a723-eaed-8170-cdc261367eb7/886443575578.jpg/100x100bb.jpg",
+            "title": "Rasputin (Boney M.)",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rasputin - Boney M.mp3"
+        },
+        {
+            "title": "Runaway (Slowed + Reverb)",
+            "artist": "Aurora",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Runaway-Slowed-Reverb (Aurora).mp3"
+        },
+        {
+            "title": "Stereo Hearts",
+            "artist": "Gym Class Heroes",
+            "album": "The Papercut Chronicles II",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/dc/f0/93/mzi.stzaqjgi.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Stereo Hearts - Gym Class Heroes.mp3"
+        },
+        {
+            "artist": "Travis Scott",
+            "album": "UTOPIA",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/09/7d/b0/097db06f-8403-3cf7-7510-139e570ca66b/196871341882.jpg/100x100bb.jpg",
+            "title": "FE!N",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Travis Scott - FE!N.mp3"
+        },
+        {
+            "title": "Unstoppable",
+            "artist": "Sia",
+            "album": "Ibiza Remixes Vol. 1",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/94/da/c4/94dac46d-0911-298d-01e4-a6568efecf0f/198025208553.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Unstoppable - Sia.mp3"
+        },
+        {
+            "album": "Waka Waka (Esto es Africa) [feat. Freshlyground] - Single",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c4/6e/63/c46e6321-2a8a-dfaa-2c0f-21d4b62450b3/884977620108.jpg/100x100bb.jpg",
+            "title": "Waka Waka",
+            "artist": "Shakira",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Waka Waka - Shakira.mp3"
+        },
+        {
+            "title": "Honeypie",
+            "artist": "Marcia Ball",
+            "album": "Live Phish, Volume 13: 10/31/94 (Glens Falls Civic Center, Glens Falls, NY)",
+            "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f2/4c/64/f24c64fc-4bfd-e115-a73d-88813105429f/mzi.jiihzxqi.jpg/100x100bb.jpg",
+            "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/honeypie.mp3"
+        }
+    ]
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -310,7 +620,7 @@ function populateFeaturedMusic() {
         ul.classList.add("music-grid");
 
         songs.forEach((song, index) => {
-            const songCover = song.cover || "default-cover.jpg";
+            const songCover = song.cover || "default-cover.png";
 
             const li = document.createElement("li");
             li.classList.add("music-tile");
@@ -341,6 +651,18 @@ function populateFeaturedMusic() {
     });
 }
 
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("song-item")) { 
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        
+        if (!loggedInUser) {
+            alert("Please sign in to continue using Symphonia.");
+            window.location.href = "register.html"; // Redirect to sign-in page
+        }
+    }
+});
+
+
 // 🎵 Play Song Handler
 function playSongHandler(event) {
     let li = event.target.closest("li"); // 🔥 Ensure clicking anywhere inside the tile works
@@ -369,6 +691,8 @@ function playSong(title, artist, cover, url) {
 
     if (!username) {
         console.error("❌ Error: No username found! Cannot update last played.");
+        alert("Please sign in to continue using Symphonia. Redirecting to Sign in page...");
+        window.location.replace("./register.html");
         return;
     }
 

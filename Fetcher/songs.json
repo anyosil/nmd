@@ -1,170 +1,216 @@
 [
     {
-        "title": "Achacho",
-        "artist": "Kharesma Ravichandran",
-        "album": "Aranmanai 4",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/5950a826-b631-49e1-957a-dd0644712efc/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Achacho.mp3"
+        "artist": "Bruno Mars, Rosie",
+        "album": "APT. - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/100x100bb.jpg",
+        "title": "APT!",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/APT.mp3"
     },
     {
-        "title": "Faded Love (Alan Walker vs. Selena Gomez)",
-        "artist": "aihposmashups",
-        "album": "Unknown Album",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/undefined/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Alan Walker Faded.mp3"
+        "title": "Believer",
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Believer - Imagine Dragons.mp3"
     },
     {
-        "title": "Azhagin Azhagu",
-        "artist": "Sinduri Vishal",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Azhagin-Azhagu Sita Ramam.mp3"
+        "title": "Birds of a Feather",
+        "artist": "Billie Eilish",
+        "album": "Billie Eilish: Artist of the Year 2024 Live - EP",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/1e/45/251e454e-dab5-1e0a-f216-52e77d5032c0/24UM1IM41181.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie Eilish Birds of a feather.mp3"
     },
     {
-        "title": "Chuttamalle",
-        "artist": "Shilpa Rao",
-        "album": "Devara Part 1",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/dc6f2139-159d-42be-a97a-1688ebc09e43/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Chuttamalle.mp3"
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blinding Lights (Live Performance) - The Weeknd.mp3"
     },
     {
-        "title": "Hey Minnale",
-        "artist": "HariCharan",
-        "album": "Amaran"  ,      
-        "language": "Tamil",
-        "cover": "https://coverartarchive.org/release/2f79e3fe-f55c-4986-ae73-5c11630ffa40/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/HM.mp3"
+        "title": "blue",
+        "artist": "yung kai",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/62/62/33626226-0cf3-ff64-3296-b2355de71fac/0748777703419.jpg/100x100bb.jpg",
+        "album": "blue - Single",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blue (Artist-Yung Kai).mp3"
     },
     {
-        "title": "Hey Sita Hey Rama",
-        "artist": "S.P.B. Charan",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Hey-Sita-Hey-Rama Sita Ramam.mp3"
+        "artist": "Imagine Dragons",
+        "title": "Bones",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bones - Imagine Dragons.mp3"
     },
     {
-        "title": "Hukum – Thalaivar Alappara",
-        "artist": "Anirudh Ravichander",
-        "album": "Jailer",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/275532ec-0908-4caa-9448-1cffd293af56/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Hukum---Thalaivar-Alappara-MassTamilan.dev.mp3"
+        "title": "Bye Bye Bye",
+        "artist": "*NSYNC",
+        "album": "The Essential *NSYNC",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/e5/ed/f0e5ed66-243f-44d0-0a6a-50885d3504bb/886444718912.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bye Bye Bye - nSync.mp3"
     },
     {
-        "title": "Skyfall (From ''James Bond - Skyfall'')",
-        "artist": "L’Orchestra Cinematique",
-        "album": "The Greatest Hits of L'Orchestra Cinematique, Vol. 1",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/6484fb5d-0a28-456e-b7fb-f85cce0176d4/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/James Bond - Skyfall.mp3"
+        "artist": "Modern Talking",
+        "album": "Remix Album",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1f/ef/b6/mzi.mjmoikvm.jpg/100x100bb.jpg",
+        "title": "Cheri Cheri Lady",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cheri Cheri Lady.mp3"
     },
     {
-        "title": "Kaalangal Thaandi",
-        "artist": "Sinduri Vishal",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kaalangal-Thaandi Sita Ramam.mp3"
+        "title": "Hymn for the Weekend",
+        "artist": "Coldplay",
+        "album": "A Head Full of Dreams",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/0a/6d/c80a6df9-e55a-fb83-0311-f4776984ac67/mzm.lasidxkv.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Coldplay - Hymn For The Weekend.mp3"
     },
     {
-        "title": "Sita Ramam Theme (Telugu)",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Extended Version)",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/ec71f732-357b-46f2-8dfb-70a566f90376/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kannukkulle Sita Ramam.mp3"
+        "artist": "London Music Works",
+        "album": "Cornfield Chase (Interstellar) [Remix] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/11/5e/18/115e18cc-b4be-c7b1-5954-157f261fa343/artwork.jpg/100x100bb.jpg",
+        "title": "Cornfield Chase - From “Interstellar”",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cornfield Chase - Interstellar.mp3"
     },
     {
-        "title": "Kurchi Madathapetti",
-        "artist": "Thaman S",
-        "album": "Guntur Kaaram",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/8513347a-e591-42b3-bf79-da6a1b96dc4a/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kurchi Madathapetti.mp3"
+        "title": "Die With a Smile",
+        "artist": "FKJ",
+        "album": "Die With A Smile - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Die with a smile.mp3"
     },
     {
-        "title": "Kurukku Paathaiyile",
-        "artist": "S. P. Balasubrahmanyam",
-        "album": "I Love India",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9ea56bdc-00de-45cd-985a-38bd38089048/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kurukku-Siruthavale.mp3"
+        "title": "Dreaming Of The Crash",
+        "artist": "Iván Cairo",
+        "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dreaming of the Crash - Interstellar.mp3"
     },
     {
-        "title": "Kurumugil",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kurumugil Sita Ramam.mp3"
+        "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
+        "title": "Interstellar Dust",
+        "artist": "LEANEAN",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dust - Interstellar.mp3"
     },
     {
-        "title": "Kurunchiragu",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Extended Version)",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/ec71f732-357b-46f2-8dfb-70a566f90376/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Kurunchiragu Sita Ramam.mp3"
+        "artist": "Imagine Dragons",
+        "album": "Enemy (From Arcane: League of Legends) - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/77/08/767708a7-ec93-3b3d-3bac-40086e5a265c/21UM1IM29634.rgb.jpg/100x100bb.jpg",
+        "title": "Enemy",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Enemy - Imagine Dragons.mp3"
     },
     {
-        "title": "Nannare",
-        "artist": "Shreya Ghoshal",
-        "album": "Guru",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/5fbe674d-0906-40f2-bbcb-ad9c619ffc13/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Nannare-Nannare.mp3"
+        "title": "Espresso",
+        "artist": "Peter Kater",
+        "album": "Short n' Sweet",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Espresso.mp3"
     },
     {
-        "title": "On & On",
-        "artist": "Cartoon",
-        "album": "Más Y Más / On & On",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/c332076d-f074-4679-9d05-e3eb6822d6a8/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/On & On (Cartoon).mp3"
+        "title": "Tadow",
+        "artist": "Masego",
+        "album": "Lady Lady",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/48/b3/3548b3c7-92bd-ea54-1e09-47a1f6f25b01/00842812109249.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/FKJ, Masego - Tadow.mp3"
     },
     {
-        "title": "Piriyadhey",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Piriyadhey Sita Ramam.mp3"
+        "album": "Greatest Hits",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/45/d9/df/45d9dfe2-d024-3387-58e9-9ad921d181d6/cover.jpg/100x100bb.jpg",
+        "title": "Happy Nation",
+        "artist": "Kent Coda",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Happy Nation.mp3"
     },
     {
-        "title": "Sita Ramam Theme (Tamil)",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Sita-Ramam-Theme-(Tamil)-MassTamilan.dev.mp3"
+        "artist": "Glass Animals",
+        "album": "Dreamland",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/100x100bb.jpg",
+        "title": "Heat Waves",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Heat Waves - Glass Animals.mp3"
     },
     {
-        "title": "Cradles",
-        "artist": "Sub Urban",
-        "album": "Cradles",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/49d4417b-ff36-47c6-b3b4-315737377d86/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Sub Urban - Cradles.mp3"
+        "title": "METAMORPHOSIS (slowed + reverb)",
+        "artist": "INTERWORLD",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Interworld - Metamorphosis (Slowed+Reverb).mp3"
     },
     {
-        "title": "Thooda Sita Ramam",
-        "artist": "Vishal Chandrasekhar",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Thooda Sita Ramam.mp3"
+        "title": "Summertime Sadness (Lana del Rey cover)",
+        "artist": "Sweet Serenity",
+        "album": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) [Cedric Gervais Remix] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f2/06/d5/f206d5d7-8bd4-7622-c98d-cf39344b098e/00602537489985.rgb.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Lana-Del-Rey-Summertime-Sadness.mp3"
     },
     {
-        "title": "Uraiyum Theeyil",
-        "artist": "Yazin Nizar",
-        "album": "Sita Ramam (Tamil) (Extended Version) [Original Motion Picture Soundtrack]",
-        "language": "Unknown",
-        "cover": "https://coverartarchive.org/release/9b7594dc-ea6d-4e11-bcf1-f8b7d178021b/front",
-        "url": "https://github.com/anyosil/symmusic.github.io/blob/main/music/M1/Uraiyum-Theeyil Sita Ramam.mp3"
+        "artist": "Alexander Stewart",
+        "album": "Levitating (feat. DaBaby) - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/9c/e6/169ce699-5506-0e08-f514-81f08a9ed7f5/190295132651.jpg/100x100bb.jpg",
+        "title": "Levitating",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Levitating - Dua Lipa.mp3"
+    },
+    {
+        "album": "Mary On A Cross (slowed + reverb) - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b7/b8/3b/b7b83bb0-242d-93f3-e7d3-4a5d7b02c57d/22CRGIM34365.rgb.jpg/100x100bb.jpg",
+        "title": "Mary on a Cross",
+        "artist": "Adeena",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Mary On A Cross.mp3"
+    },
+    {
+        "album": "Sugarbread - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/21/04/1e/21041e2a-1bee-640c-f0a8-a2a8f1951ff4/5414939377679_cover.jpg/100x100bb.jpg",
+        "title": "Me and the Devil",
+        "artist": "The Animal in Me",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Me And The Devil -- Soap & Skin.mp3"
+    },
+    {
+        "artist": "Ed Sheeran",
+        "album": "Cynthia Covers 2018",
+       "title": "Perfect - Ed Sheeran",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Perfect - Ed Sheeran.mp3"
+    },
+    {
+        "title": "Sonne",
+        "artist": "Rammstein",
+        "album": "Mutter",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rammstein -- Sonne.mp3"
+    },
+    {
+        "artist": "Michael Andriano",
+        "album": "The Essential Boney M.",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b7/86/45/b786452a-a723-eaed-8170-cdc261367eb7/886443575578.jpg/100x100bb.jpg",
+        "title": "Rasputin (Boney M.)",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rasputin - Boney M.mp3"
+    },
+    {
+        "title": "Runaway (Slowed + Reverb)",
+        "artist": "Aurora",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Runaway-Slowed-Reverb (Aurora).mp3"
+    },
+    {
+        "title": "Stereo Hearts",
+        "artist": "Gym Class Heroes",
+        "album": "The Papercut Chronicles II",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/dc/f0/93/mzi.stzaqjgi.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Stereo Hearts - Gym Class Heroes.mp3"
+    },
+    {
+        "artist": "Travis Scott",
+        "album": "UTOPIA",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/09/7d/b0/097db06f-8403-3cf7-7510-139e570ca66b/196871341882.jpg/100x100bb.jpg",
+        "title": "FE!N",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Travis Scott - FE!N.mp3"
+    },
+    {
+        "title": "Unstoppable",
+        "artist": "Sia",
+        "album": "Ibiza Remixes Vol. 1",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/94/da/c4/94dac46d-0911-298d-01e4-a6568efecf0f/198025208553.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Unstoppable - Sia.mp3"
+    },
+    {
+        "album": "Waka Waka (Esto es Africa) [feat. Freshlyground] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c4/6e/63/c46e6321-2a8a-dfaa-2c0f-21d4b62450b3/884977620108.jpg/100x100bb.jpg",
+        "title": "Waka Waka",
+        "artist": "Shakira",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Waka Waka - Shakira.mp3"
+    },
+    {
+        "title": "Honeypie",
+        "artist": "Marcia Ball",
+        "album": "Live Phish, Volume 13: 10/31/94 (Glens Falls Civic Center, Glens Falls, NY)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f2/4c/64/f24c64fc-4bfd-e115-a73d-88813105429f/mzi.jiihzxqi.jpg/100x100bb.jpg",
+        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/honeypie.mp3"
     }
 ]
