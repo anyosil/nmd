@@ -1,70 +1,80 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-<link rel="manifest" href="./images/site.webmanifest">
-        <title>Authuser-Nuvi Services</title>
-        <script src="www.tailwindcss.com"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <style>
-            body {
-                background: no-repeat center center fixed;
-                background-size: cover;
-                transition: background-image 0.5s ease-in-out;
-            }
-        </style>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const images = [
-                    "./images/img.jpg",
-                    "./images/img2.jpg",
-                    "./images/img3.jpg",
-                    "./images/img4.jpg",
-                    "./images/img5.jpg",
-                    "./images/img6.jpg",
-                ];
-                const randomImage = images[Math.floor(Math.random() * images.length)];
-                document.body.style.backgroundImage = `url('${randomImage}')`;
-            });
-        </script>
-    </head>
-<body class="flex items-center justify-center min-h-screen bg-purple-900">
-<script src="script.js"></script>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2>🎵 Now Playing</h2>
+    <audio id="audioPlayer" src="./HM.mp3" controls></audio>
+    <canvas id="audioVisualizer" width="400" height="100" style="background: #222;"></canvas>
 
-    <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-sm w-full">
-        <h2 class="text-2xl font-bold text-white text-center mb-6">Login</h2>
-        <form>
-            <div class="mb-4">
-                
-                <div class="relative">
-                    <input class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-500" type="text" id="username" placeholder="Username">
-                    <i class="fas fa-user absolute right-3 top-3 text-white"></i>
-                </div>
-            </div>
-            <div class="mb-4">
-                
-                <div class="relative">
-                    <input class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-500" type="password" id="password" placeholder="Password">
-                    <i class="fas fa-lock absolute right-3 top-3 text-white"></i>
-                </div>
-            </div>
-            <div class="flex items-center justify-between mb-6">
-                <label class="flex items-center text-white">
-                    <input type="checkbox" class="form-checkbox text-purple-500">
-                    <span class="ml-2">Remember me</span>
-                </label>
-                <a href="#" class="text-white">Forgot Password?</a>
-            </div>
-            <button class="w-full py-3 bg-white text-purple-900 font-bold rounded-lg hover:bg-gray-200 transition duration-300">Login</button>
-        </form>
-        <p class="text-center text-white mt-6">
-            Don't have an account? <a href="#" id="register-btn" class="font-bold text-white">Register</a>
-        </p>
-        
-    </div>
-</body>
-</html>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audioPlayer"); 
+    const canvas = document.getElementById("audioVisualizer");
+    const ctx = canvas.getContext("2d");
+
+    // Web Audio API
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    const source = audioContext.createMediaElementSource(audio);
+
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+    analyser.fftSize = 512; // High FFT for smoothness
+
+    const bufferLength = analyser.fftSize;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function drawWaveform() {
+        setTimeout(drawWaveform, 60); // Slow animation
+
+        analyser.getByteTimeDomainData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Gradient Glow Effect
+        let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        gradient.addColorStop(0, "#ff0000"); // Red
+        gradient.addColorStop(0.5, "#00ffff"); // Cyan
+        gradient.addColorStop(1, "#ff00ff"); // Purple
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 3;
+
+        ctx.beginPath();
+        let sliceWidth = canvas.width / bufferLength;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            let v = dataArray[i] / 128.0; 
+            let y = (v * canvas.height) / 2;
+
+            if (i === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                let prevX = x - sliceWidth;
+                let prevY = (dataArray[i - 1] / 128.0) * (canvas.height / 2);
+
+                // Smooth Bezier Curve
+                ctx.quadraticCurveTo(prevX, prevY, x, y);
+            }
+            x += sliceWidth;
+        }
+        ctx.stroke();
+    }
+
+    // Start visualization when playing
+    audio.addEventListener("play", () => {
+        if (audioContext.state === "suspended") {
+            audioContext.resume();
+        }
+        drawWaveform();
+    });
+});
+</script>
+
+ </body>
+ </html>
+ ```

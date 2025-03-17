@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvi Account - Symphonia</title>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const userData = JSON.parse(localStorage.getItem("nuviUser")) || {
+        username: "Guest",
+        email: "Not signed in",
+        avatar: "default-avatar.png",
+        downloads: [],
+        favorites: [],
+        recent: []
+    };
+
+    // Set user profile details
+    document.getElementById("username").textContent = userData.username;
+    document.getElementById("email").textContent = userData.email;
+    document.getElementById("avatar").src = userData.avatar;
+
+    // Populate lists
+    function populateList(id, data) {
+        const list = document.getElementById(id);
+        list.innerHTML = data.length ? data.map(item => `<li>${item}</li>`).join('') : "<li>No items yet.</li>";
+    }
+
+    populateList("downloadsList", userData.downloads);
+    populateList("favoritesList", userData.favorites);
+    populateList("recentList", userData.recent);
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("nuviUser");
+        window.location.href = "register.html"; // Redirect to sign-in page
+    });
+});
+
+    </script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #ff0080; /* Symphonia Pink */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoutBtn {
+    background: white;
+    color: #ff0080;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#userData {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+    </style>
+    <header>
+        <h2>Nuvi Account</h2>
+        <button id="logoutBtn">Log Out</button>
+    </header>
+
+    <section id="profile">
+        <img id="avatar" src="default-avatar.png" alt="Profile Picture">
+        <h3 id="username">Guest</h3>
+        <p id="email">Not signed in</p>
+    </section>
+
+    <section id="userData">
+        <h3>📥 My Downloads</h3>
+        <ul id="downloadsList"><li>No downloads yet.</li></ul>
+
+        <h3>⭐ Favorites</h3>
+        <ul id="favoritesList"><li>No favorites yet.</li></ul>
+
+        <h3>🎵 Recently Played</h3>
+        <ul id="recentList"><li>No recent songs.</li></ul>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

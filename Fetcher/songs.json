@@ -1,216 +1,1074 @@
 [
     {
-        "artist": "Bruno Mars, Rosie",
-        "album": "APT. - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/100x100bb.jpg",
-        "title": "APT!",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/APT.mp3"
+        "title": "DDU-DU DDU-DU",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/01. DDU-DU DDU-DU (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "FOREVER YOUNG",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/02. FOREVER YOUNG (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "WHISTLE (REMIX)",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/03. WHISTLE (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "STAY",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/04. STAY (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "artist": "ROSÉ",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "title": "LET IT BE ~ YOU & I ~ ONLY LOOK AT ME",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/05. LET IT BE ～ YOU & I ～ ONLY LOOK AT ME (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "雪の華",
+        "artist": "JISOO",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/06. 雪の華 (雪之花) (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA",
+        "title": "SOLO",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/07. SOLO (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "REALLY -LIVE-",
+        "artist": "BLACKPINK",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/08 BLACKPINK IN YOUR AREA (iTunes Plus) REALLY.mp3"
+    },
+    {
+        "title": "ラスト・クリスマス ~ 赤鼻のトナカイ",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 SPECIAL FINAL IN KYOCERA DOME OSAKA",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/08. ラスト・クリスマス ～ 赤鼻のトナカイ (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "Kiss and Make Up",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/09. Kiss and Make Up (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "title": "SO HOT -THEBLACKLABEL REMIX-",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/10. SO HOT (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "title": "REALLY",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/11. REALLY (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "title": "SEE U LATER",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/12. SEE U LATER (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "BOOMBAYAH",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/13. BOOMBAYAH (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "album": "Mercury - Act 1",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/01/8a/c2/018ac22e-1756-2dd1-03e7-74a55e92ea2c/21UMGIM58932.rgb.jpg/600x600bb.jpg",
+        "title": "Wrecked",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons  - Wrecked.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "title": "Amsterdam",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Amsterdam.mp3"
     },
     {
         "title": "Believer",
-        "artist": "Imagine Dragons",
-        "album": "Evolve",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Believer - Imagine Dragons.mp3"
+        "artist": "Alison Sparrow",
+        "album": "Imagine Dragons Believer - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/89/c8/03/89c80371-e39b-da03-23b4-214286e1aa6d/1963628939185_cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Believer.mp3"
     },
     {
-        "title": "Birds of a Feather",
+        "title": "Birds",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Birds.mp3"
+    },
+    {
+        "title": "Bleeding Out",
+        "artist": "Imagine Dragons",
+        "album": "Night Visions",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/1f/fa/09/1ffa092f-f52f-4a66-7d10-4cc5982dc747/12UMGIM46901.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Bleeding Out.mp3"
+    },
+    {
+        "title": "Boomerang",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Boomerang.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Origins",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ae/99/b0/ae99b033-76aa-580c-f6b0-2d374e89763d/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Bullet in a Gun",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Bullet In A Gun.mp3"
+    },
+    {
+        "title": "Burn Out",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Burn Out.mp3"
+    },
+    {
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Cool Out",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Cool Out.mp3"
+    },
+    {
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "Dancing in the Dark",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Dancing In The Dark.mp3"
+    },
+    {
+        "artist": "Alison Sparrow",
+        "title": "Demons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Demons.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Digital",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Digital.mp3"
+    },
+    {
+        "title": "Follow You",
+        "artist": "Imagine Dragons",
+        "album": "Follow You / Cutthroat - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4f/fe/b7/4ffeb7fd-e789-4faf-db3d-8145e19775fd/21UMGIM17772.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Follow You.mp3"
+    },
+    {
+        "album": "Imagine Dragons Medley: Radioactive / Believer / Gold / It's Time /Demons / Shots / On Top of the World / Natural (A Cappella) [feat. Chase Holfelder] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4a/2c/ae/4a2cae7c-61fe-dfe7-ffed-2737bc244ab0/bcded467-a35b-4634-b21b-4fefbdec472c.jpg/600x600bb.jpg",
+        "title": "Gold",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Gold.mp3"
+    },
+    {
+        "title": "Hear Me",
+        "artist": "Imagine Dragons",
+        "album": "Night Visions",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/1f/fa/09/1ffa092f-f52f-4a66-7d10-4cc5982dc747/12UMGIM46901.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Hear Me.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Smoke + Mirrors",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/16/59/c116596f-f3fd-3499-6cc2-bcb5b4931e6e/14UMGIM61459.rgb.jpg/600x600bb.jpg",
+        "title": "I Bet My Life",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - I Bet My Life.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "I’ll Make It Up to You",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - I'll Make It Up To You.mp3"
+    },
+    {
+        "title": "It's Time",
+        "artist": "Imagine Dragons",
+        "album": "Imagine Dragons Medley: Radioactive / Believer / Gold / It's Time /Demons / Shots / On Top of the World / Natural (A Cappella) [feat. Chase Holfelder] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4a/2c/ae/4a2cae7c-61fe-dfe7-ffed-2737bc244ab0/bcded467-a35b-4634-b21b-4fefbdec472c.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - It's Time.mp3"
+    },
+    {
+        "title": "I’m So Sorry",
+        "artist": "Imagine Dragons",
+        "album": "Imagine Dragons Live in Vegas",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c1/9d/f1/c19df16e-8cfe-84f9-3401-47b6a9085e99/23UMGIM84011.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - I’m So Sorry.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Love",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Love.mp3"
+    },
+    {
+        "title": "Machine",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Machine.mp3"
+    },
+    {
+        "title": "Mouth of the River",
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Mouth Of The River.mp3"
+    },
+    {
+        "title": "Natural",
+        "artist": "Pianella Piano",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Natural.mp3"
+    },
+    {
+        "title": "Next to Me",
+        "artist": "Imagine Dragons",
+        "album": "Imagine Dragons Live in Vegas",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c1/9d/f1/c19df16e-8cfe-84f9-3401-47b6a9085e99/23UMGIM84011.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Next To Me.mp3"
+    },
+    {
+        "title": "On Top of the World",
+        "artist": "Imagine Dragons",
+        "album": "Night Visions",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/1f/fa/09/1ffa092f-f52f-4a66-7d10-4cc5982dc747/12UMGIM46901.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - On Top Of The World.mp3"
+    },
+    {
+        "title": "Only",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Only.mp3"
+    },
+    {
+        "album": "Acoustic Guitar Renditions of Imagine Dragons",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cd/7c/4a/cd7c4afd-f234-d3ee-13b0-74404fdc18ba/192641027192_Cover.jpg/600x600bb.jpg",
+        "title": "Imagine Dragons - Radioactive (Klaypex Cover)",
+        "artist": "Klaypex",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Radioactive.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Real Life",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Real Life.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "Rise Up",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Rise Up.mp3"
+    },
+    {
+        "title": "Shots",
+        "artist": "Imagine Dragons",
+        "album": "Imagine Dragons Medley: Radioactive / Believer / Gold / It's Time /Demons / Shots / On Top of the World / Natural (A Cappella) [feat. Chase Holfelder] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4a/2c/ae/4a2cae7c-61fe-dfe7-ffed-2737bc244ab0/bcded467-a35b-4634-b21b-4fefbdec472c.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Shots.mp3"
+    },
+    {
+        "album": "Smoke + Mirrors",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/16/59/c116596f-f3fd-3499-6cc2-bcb5b4931e6e/14UMGIM61459.rgb.jpg/600x600bb.jpg",
+        "title": "Smoke and Mirrors",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Smoke And Mirrors.mp3"
+    },
+    {
+        "title": "Start Over",
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Start Over.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "title": "Stuck",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Stuck.mp3"
+    },
+    {
+        "title": "Thunder",
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Thunder.mp3"
+    },
+    {
+        "title": "Walking the Wire",
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Walking The Wire.mp3"
+    },
+    {
+        "artist": "Les bruh",
+        "album": "Smoke + Mirrors (Deluxe)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b3/a8/b0/b3a8b05f-7dfe-f557-6147-57e74dfdbebe/15UMGIM53209.rgb.jpg/600x600bb.jpg",
+        "title": "Warriors - Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Warrior.mp3"
+    },
+    {
+        "title": "West Coast",
+        "artist": "Imagine Dragons",
+        "album": "Origins (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3f/80/a8/3f80a8ef-5409-42ac-c126-c7354698c7fc/18UMGIM65849.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - West Coast.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "Whatever It Takes",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Whatever It Takes.mp3"
+    },
+    {
+        "title": "Wrecked",
+        "artist": "Imagine Dragons",
+        "album": "Mercury - Act 1",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/01/8a/c2/018ac22e-1756-2dd1-03e7-74a55e92ea2c/21UMGIM58932.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Wrecked.mp3"
+    },
+    {
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "Yesterday",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons - Yesterday.mp3"
+    },
+    {
+        "artist": "Imagine Dragons",
+        "album": "Enemy (From Arcane: League of Legends) - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/77/08/767708a7-ec93-3b3d-3bac-40086e5a265c/21UM1IM29634.rgb.jpg/600x600bb.jpg",
+        "title": "Enemy (opening title version)",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons _JID - Enemy.mp3"
+    },
+    {
+        "artist": "HeDLesS",
+        "title": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14 Imagine Dragons ‒ Zero.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "title": "PLAYING WITH FIRE",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/14. PLAYING WITH FIRE (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "AS IF IT’S YOUR LAST",
+        "artist": "BLACKPINK",
+        "album": "BLACKPINK ARENA TOUR 2018 \"SPECIAL FINAL IN KYOCERA DOME OSAKA\"",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/26/d7/3c26d718-1898-4629-865e-34365109e8f7/AVBY-58890.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/15. AS IF IT’S YOUR LAST (BLACKPINK ARENA TOUR 2018 _SPECIAL FINAL IN KYOCERA DOME OSAKA_).mp3"
+    },
+    {
+        "title": "Apt",
+        "artist": "Front End Loader",
+        "album": "APT. - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/APT.mp3"
+    },
+    {
+        "artist": "Nicola Hitchcock",
+        "album": "Scars & Souvenirs",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/fd/90/72/fd90727a-667e-c00d-5122-08a1230e934d/mzi.cqxyzzlf.jpg/600x600bb.jpg",
+        "title": "All or Nothing",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/All or Nothing.mp3"
+    },
+    {
+        "title": "Anyone of Us",
+        "artist": "Gareth Gates",
+        "album": "Dancebeat 12 - Rumbas",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/60/69/08/606908cd-ac5c-828a-2c83-574be481b538/5012992000260.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Anyone Of Us.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "BOOMBAYAH",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 01 BOOMBAYAH.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "WHISTLE",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 02 WHISTLE.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "PLAYING WITH FIRE",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 03 PLAYING WITH FIRE.mp3"
+    },
+    {
+        "title": "STAY",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 04 STAY.mp3"
+    },
+    {
+        "title": "As If It’s Your Last",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 05 AS IF IT'S YOUR LAST.mp3"
+    },
+    {
+        "title": "WHISTLE (acoustic ver.)",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK - EP (iTunes) 06 WHISTLE (Acoustic Ver.).mp3"
+    },
+    {
+        "title": "BOOMBAYAH",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 01 BOOMBAYAH.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "WHISTLE",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 02 WHISTLE.mp3"
+    },
+    {
+        "title": "PLAYING WITH FIRE",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 03 PLAYING WITH FIRE.mp3"
+    },
+    {
+        "title": "STAY",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 04 BLACKPINK IN YOUR AREA (iTunes Plus) STAY.mp3"
+    },
+    {
+        "title": "AS IF IT'S YOUR LAST",
+        "artist": "BLACKPINK",
+        "album": "For Blink - EP",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/62/25/72/622572e9-e127-da5d-fa0c-58fdd836e619/artwork.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 05 AS IF IT'S YOUR LAST.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "DDU-DU DDU-DU",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 06 DDU-DU DDU-DU.mp3"
+    },
+    {
+        "artist": "BLACKPINK",
+        "title": "FOREVER YOUNG -LIVE-",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 07 FOREVER YOUNG.mp3"
+    },
+    {
+        "title": "SEE U LATER",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BLACKPINK IN YOUR AREA (iTunes Plus) 09 SEE U LATER.mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Silver Spoon",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_'Silver_Spoon_(Baepsae)'_mirrored_Dance_Practice(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Airplane pt.2 -Japanese ver.-",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Airplane_pt.2_-Korean_ver-'_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Anpanman",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Anpanman'_@_TODAY_Citi_Music_Series(128k).mp3"
+    },
+    {
+        "title": "Black Swan",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Black_Swan'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Butter",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Butter'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "DNA",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'DNA'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "Dynamite",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Dynamite'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "FAKE LOVE",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'FAKE_LOVE'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "title": "Film out",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Film_out'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "IDOL",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'IDOL'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "I NEED U (original ver.)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'I_NEED_U'_Official_MV_(Original_ver.)(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "title": "Life Goes On",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Life_Goes_On'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "MIC Drop (Steve Aoki remix)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'MIC_Drop_(Steve_Aoki_Remix)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "Make It Right",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Make_It_Right_(feat._Lauv)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "No More Dream",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'No_More_Dream'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "Not Today",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Not_Today'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "Permission to Dance",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Permission_to_Dance'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Save ME",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Save_ME'_Official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Stay Gold",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'Stay_Gold'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "봄날",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'봄날_(Spring_Day)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "불타오르네 (FIRE)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'불타오르네_(FIRE)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "작은 것들을 위한 시 (Boy with Luv)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'작은_것들을_위한_시_(Boy_With_Luv)_(feat._Halsey)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "피 땀 눈물",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_'피_땀_눈물_(Blood_Sweat_&_Tears)'_Official_MV(128k).mp3"
+    },
+    {
+        "title": "Serendipity (full length edition)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_LOVE_YOURSELF_結_Answer_'Epiphany'_Comeback_Trailer(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Heartbeat","cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_(방탄소년단)_‘Heartbeat_(BTS_WORLD_OST)’_MV(128k).mp3"
+    },
+    {
+        "title": "Friends (친구)",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_JIMIN,_V_-_'FRIENDS'_(친구)_Lyrics_[Color_Coded_Han_Rom_Eng](128k).mp3"
+    },
+    {
+        "title": "FOR BTS JIMIN OUR Mochi",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_JIMIN_FILTER_PERFORMANCE_DAY_1(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "Zero O'Clock",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS__%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8__-_00_00__Zero_O_Clock___Color_Coded_Lyrics_Eng_Rom_Han_%EA%B0%80%EC%82%AC_(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "title": "Jason Derulo",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_‘Savage_love_feat.Jason_Derulo'_official_MV(128k).mp3"
+    },
+    {
+        "artist": "BTS",
+        "title": "GO GO (live)",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/BTS_방탄_소년단_-_GO_GO_(Live_Performance)(128k).mp3"
+    },
+    {
+        "album": "Evolve",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg",
+        "title": "Believer",
+        "artist": "Imagine Dragons",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Believer - Imagine Dragons.mp3"
+    },
+    {
         "artist": "Billie Eilish",
         "album": "Billie Eilish: Artist of the Year 2024 Live - EP",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/1e/45/251e454e-dab5-1e0a-f216-52e77d5032c0/24UM1IM41181.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie Eilish Birds of a feather.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/1e/45/251e454e-dab5-1e0a-f216-52e77d5032c0/24UM1IM41181.rgb.jpg/600x600bb.jpg",
+        "title": "Billie Eilish and FINNEAS on BIRDS OF A FEATHER",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Billie Eilish Birds of a feather.mp3"
     },
     {
         "title": "Blinding Lights",
         "artist": "The Weeknd",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blinding Lights (Live Performance) - The Weeknd.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Blinding Lights (Live Performance) - The Weeknd.mp3"
     },
     {
         "title": "blue",
         "artist": "yung kai",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/62/62/33626226-0cf3-ff64-3296-b2355de71fac/0748777703419.jpg/100x100bb.jpg",
-        "album": "blue - Single",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Blue (Artist-Yung Kai).mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Blue (Artist-Yung Kai).mp3"
     },
     {
         "artist": "Imagine Dragons",
+        "album": "Bones - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/33/87/c8/3387c827-adaa-681d-bd10-ce7d8e888b9c/22UMGIM21054.rgb.jpg/600x600bb.jpg",
         "title": "Bones",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bones - Imagine Dragons.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Bones - Imagine Dragons.mp3"
     },
     {
-        "title": "Bye Bye Bye",
         "artist": "*NSYNC",
         "album": "The Essential *NSYNC",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/e5/ed/f0e5ed66-243f-44d0-0a6a-50885d3504bb/886444718912.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Bye Bye Bye - nSync.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/e5/ed/f0e5ed66-243f-44d0-0a6a-50885d3504bb/886444718912.jpg/600x600bb.jpg",
+        "title": "Bye Bye Bye",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Bye Bye Bye - nSync.mp3"
     },
     {
-        "artist": "Modern Talking",
+        "title": "Bye Bye Bye Bye",
+        "artist": "Kinch",
+        "album": "No Strings Attached",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/36/22/d6/3622d665-873c-57b8-392b-971292e6086f/012414170224.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Bye Bye Bye.mp3"
+    },
+    {
         "album": "Remix Album",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1f/ef/b6/mzi.mjmoikvm.jpg/100x100bb.jpg",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1f/ef/b6/mzi.mjmoikvm.jpg/600x600bb.jpg",
         "title": "Cheri Cheri Lady",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cheri Cheri Lady.mp3"
+        "artist": "Talking System",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Cheri Cheri Lady.mp3"
     },
     {
         "title": "Hymn for the Weekend",
         "artist": "Coldplay",
         "album": "A Head Full of Dreams",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/0a/6d/c80a6df9-e55a-fb83-0311-f4776984ac67/mzm.lasidxkv.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Coldplay - Hymn For The Weekend.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/0a/6d/c80a6df9-e55a-fb83-0311-f4776984ac67/mzm.lasidxkv.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Coldplay - Hymn For The Weekend.mp3"
     },
     {
-        "artist": "London Music Works",
+        "title": "Ain’t My Universe Fun (Paramore vs. Coldplay X BTS)",
+        "artist": "BTS x Coldplay x Paramore",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Coldplay_X_BTS_-_My_Universe_(Official_Video)(128k).mp3"
+    },
+    {
         "album": "Cornfield Chase (Interstellar) [Remix] - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/11/5e/18/115e18cc-b4be-c7b1-5954-157f261fa343/artwork.jpg/100x100bb.jpg",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/11/5e/18/115e18cc-b4be-c7b1-5954-157f261fa343/artwork.jpg/600x600bb.jpg",
         "title": "Cornfield Chase - From “Interstellar”",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Cornfield Chase - Interstellar.mp3"
+        "artist": "London Music Works",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Cornfield Chase - Interstellar.mp3"
     },
     {
+        "artist": "Bruno Mars x Lady Gaga",
+        "cover" : "https://i1.sndcdn.com/artworks-yK259aYB0cZhXswO-GxwgVw-t500x500.jpg",
         "title": "Die With a Smile",
-        "artist": "FKJ",
-        "album": "Die With A Smile - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Die with a smile.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Die with a smile.mp3"
+    },
+    {
+        "artist": "Nick Carter",
+        "album": "Now or Never",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/18/6d/fb/186dfb14-bc9c-0aff-477f-49270a47e0ca/mzi.ajxhhyjf.jpg/600x600bb.jpg",
+        "title": "Do I Have to Cry for You",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Do I Have To Cry For You.mp3"
     },
     {
         "title": "Dreaming Of The Crash",
         "artist": "Iván Cairo",
         "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dreaming of the Crash - Interstellar.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Dreaming of the Crash - Interstellar.mp3"
     },
     {
-        "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/100x100bb.jpg",
         "title": "Interstellar Dust",
         "artist": "LEANEAN",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Dust - Interstellar.mp3"
+        "album": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/5b/73/f45b735a-8d7a-9713-b217-0f8e1593c28b/794043201943.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Dust - Interstellar.mp3"
     },
     {
+        "title": "Enemy",
         "artist": "Imagine Dragons",
         "album": "Enemy (From Arcane: League of Legends) - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/77/08/767708a7-ec93-3b3d-3bac-40086e5a265c/21UM1IM29634.rgb.jpg/100x100bb.jpg",
-        "title": "Enemy",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Enemy - Imagine Dragons.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/77/08/767708a7-ec93-3b3d-3bac-40086e5a265c/21UM1IM29634.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Enemy - Imagine Dragons.mp3"
     },
     {
-        "title": "Espresso",
-        "artist": "Peter Kater",
+        "artist": "Dumas",
         "album": "Short n' Sweet",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Espresso.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/600x600bb.jpg",
+        "title": "Espresso",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Espresso.mp3"
+    },
+    {
+        "title": "Everytime",
+        "artist": "Lustral",
+        "album": "Greatest Hits: My Prerogative",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6a/09/1d/6a091d79-1548-96dd-40ee-34d03823bd7f/dj.ykkseugw.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Everytime.mp3"
     },
     {
         "title": "Tadow",
         "artist": "Masego",
         "album": "Lady Lady",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/48/b3/3548b3c7-92bd-ea54-1e09-47a1f6f25b01/00842812109249.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/FKJ, Masego - Tadow.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/48/b3/3548b3c7-92bd-ea54-1e09-47a1f6f25b01/00842812109249.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/FKJ, Masego - Tadow.mp3"
     },
     {
-        "album": "Greatest Hits",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/45/d9/df/45d9dfe2-d024-3387-58e9-9ad921d181d6/cover.jpg/100x100bb.jpg",
         "title": "Happy Nation",
-        "artist": "Kent Coda",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Happy Nation.mp3"
+        "artist": "Ace of Base",
+        "album": "Greatest Hits",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/45/d9/df/45d9dfe2-d024-3387-58e9-9ad921d181d6/cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Happy Nation.mp3"
     },
     {
         "artist": "Glass Animals",
         "album": "Dreamland",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/100x100bb.jpg",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/600x600bb.jpg",
         "title": "Heat Waves",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Heat Waves - Glass Animals.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Heat Waves - Glass Animals.mp3"
     },
     {
-        "title": "METAMORPHOSIS (slowed + reverb)",
+        "album": "Here We Come",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/34/37/74/34377443-a560-82c1-95c6-36abfa21f3ee/mzi.ygnrhvsu.jpg/600x600bb.jpg",
+        "title": "Heaven by Your Side",
+        "artist": "A1",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Heaven By Your Side.mp3"
+    },
+    {
+        "title": "I Do I Do I Do I Do I Do",
+        "artist": "ABBA",
+        "album": "Wish You Were Here",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ea/51/c7/ea51c7a6-ae9d-209d-4e2d-fc01a62505a6/00731453631724.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/I Do (CherishYou).mp3"
+    },
+    {
+        "title": "I Knew I Loved You",
+        "artist": "Céline Dion",
+        "album": "Affirmation",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/d7/21/7f/mzi.bcoqqnsb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/I Knew I Loved You.mp3"
+    },
+    {
+        "title": "If Life Is so Short",
+        "artist": "Music Travel Love",
+        "album": "Chapter 1: A New Beginning",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2c/f8/0c/2cf80cdd-15fa-a9e1-4468-cb2458ea6da0/859752301961_cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/If Life Is So Short.mp3"
+    },
+    {
         "artist": "INTERWORLD",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Interworld - Metamorphosis (Slowed+Reverb).mp3"
+        "title": "METAMORPHOSIS (slowed + reverb)",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Interworld - Metamorphosis (Slowed+Reverb).mp3"
     },
     {
-        "title": "Summertime Sadness (Lana del Rey cover)",
+        "title": "Kill This Love",
+        "artist": "Epik High",
+        "album": "Kill This Love - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d0/91/ca/d091cacc-bf4c-d131-7700-086a9de05930/192641642821_Cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Kill This Love 01. Kill This Love.mp3"
+    },
+    {
+        "title": "Don't Know What to Do",
+        "artist": "Liz Pennock & Dr. Blues",
+        "album": "Parasocial Love - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8e/e7/6b/8ee76bea-bfcc-9f82-fe22-9ee8e5489bf9/artwork.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Kill This Love 02 Don't Know What To Do.mp3"
+    },
+    {
+        "artist": "Norberto Lusso",
+        "title": "KICK 03",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Kill This Love 03 Kick It.mp3"
+    },
+    {
+        "title": "아니길 (Hope Not)",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Kill This Love 04 아니길 (Hope Not).mp3"
+    },
+    {
+        "title": "뚜두뚜두 (DDU‐DU‐DDU‐DU)",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Kill This Love 05. 뚜두뚜두 (DDU-DU DDU-DU) (Remix).mp3"
+    },
+    {
         "artist": "Sweet Serenity",
-        "album": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) [Cedric Gervais Remix] - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f2/06/d5/f206d5d7-8bd4-7622-c98d-cf39344b098e/00602537489985.rgb.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Lana-Del-Rey-Summertime-Sadness.mp3"
+        "title": "Summertime Sadness (Lana del Rey cover)",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Lana-Del-Rey-Summertime-Sadness.mp3"
+    },
+    {
+        "title": "Last Flight Out",
+        "artist": "Plus One",
+        "album": "The Promise",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4d/c4/55/4dc455b5-67ef-1db1-2878-6b49af5a0d0c/mzi.wwcbfxtp.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Last Flight Out.mp3"
+    },
+    {
+        "artist": "Animals Within Animals",
+        "title": "128k Segue",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Let_Go(128k).mp3"
     },
     {
         "artist": "Alexander Stewart",
         "album": "Levitating (feat. DaBaby) - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/9c/e6/169ce699-5506-0e08-f514-81f08a9ed7f5/190295132651.jpg/100x100bb.jpg",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/9c/e6/169ce699-5506-0e08-f514-81f08a9ed7f5/190295132651.jpg/600x600bb.jpg",
         "title": "Levitating",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Levitating - Dua Lipa.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Levitating - Dua Lipa.mp3"
     },
     {
-        "album": "Mary On A Cross (slowed + reverb) - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b7/b8/3b/b7b83bb0-242d-93f3-e7d3-4a5d7b02c57d/22CRGIM34365.rgb.jpg/100x100bb.jpg",
-        "title": "Mary on a Cross",
+        "artist": "Soluna Samay",
+        "album": "Like a Rose",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/14/fa/59/14fa594a-4cc8-e3c1-14fb-0f8495286aa9/093624946151.jpg/600x600bb.jpg",
+        "title": "Like a Rose",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Like A Rose.mp3"
+    },
+    {
+        "title": "128k Segue",
+        "artist": "Animals Within Animals",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Magic_Shop(128k).mp3"
+    },
+    {
         "artist": "Adeena",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Mary On A Cross.mp3"
+        "album": "Mary On A Cross (slowed + reverb) - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b7/b8/3b/b7b83bb0-242d-93f3-e7d3-4a5d7b02c57d/22CRGIM34365.rgb.jpg/600x600bb.jpg",
+        "title": "Mary on a Cross",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Mary On A Cross.mp3"
     },
     {
-        "album": "Sugarbread - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/21/04/1e/21041e2a-1bee-640c-f0a8-a2a8f1951ff4/5414939377679_cover.jpg/100x100bb.jpg",
-        "title": "Me and the Devil",
+        "title": "Soap",
         "artist": "The Animal in Me",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Me And The Devil -- Soap & Skin.mp3"
+        "album": "Sugarbread - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/21/04/1e/21041e2a-1bee-640c-f0a8-a2a8f1951ff4/5414939377679_cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Me And The Devil -- Soap & Skin.mp3"
     },
     {
-        "artist": "Ed Sheeran",
+        "artist": "Natalie Cole",
+        "title": "Miss You Like Crazy",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Miss You Like Crazy.mp3"
+    },
+    {
+        "artist": "Ryan Leslie",
+        "album": "My Everything (Bonus Tracks Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a5/39/86/a5398609-ad90-50d3-57ad-0f87a4df5ac4/14UMGIM28138.rgb.jpg/600x600bb.jpg",
+        "title": "My Everything",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/My Everything.mp3"
+    },
+    {
+        "title": "One More Try",
+        "artist": "The Rolling Stones",
+        "album": "Ladies & Gentlemen",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/46/95/8946959a-e959-f22d-ced2-745feb799454/mzm.upagbaeg.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/One More Try.mp3"
+    },
+    {
+        "title": "One in Love",
+        "artist": "A1",
+        "album": "Made In The A.M. (Deluxe Edition)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/45/ac/db/45acdb3d-1a85-52e3-43d5-195f8f58067d/mzm.qyfviqnb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/One in Love.mp3"
+    },
+    {
+        "title": "Perfect - Ed Sheeran",
+        "artist": "Tadeusz Machalski",
         "album": "Cynthia Covers 2018",
-       "title": "Perfect - Ed Sheeran",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Perfect - Ed Sheeran.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/eb/f9/f5/ebf9f545-4dd2-e407-0e4f-0fb9112c6fb8/cover.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Perfect - Ed Sheeran.mp3"
     },
     {
-        "title": "Sonne",
+        "title": "Pied Piper : Pied Piper",
+        "artist": "Azmari",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Pied_Piper(128k).mp3"
+    },
+    {
         "artist": "Rammstein",
         "album": "Mutter",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rammstein -- Sonne.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
+        "title": "Sonne",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Rammstein -- Sonne.mp3"
     },
     {
         "artist": "Michael Andriano",
         "album": "The Essential Boney M.",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b7/86/45/b786452a-a723-eaed-8170-cdc261367eb7/886443575578.jpg/100x100bb.jpg",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b7/86/45/b786452a-a723-eaed-8170-cdc261367eb7/886443575578.jpg/600x600bb.jpg",
         "title": "Rasputin (Boney M.)",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Rasputin - Boney M.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Rasputin - Boney M.mp3"
     },
     {
-        "title": "Runaway (Slowed + Reverb)",
-        "artist": "Aurora",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Runaway-Slowed-Reverb (Aurora).mp3"
+        "title": "Slowed Reverb (Slowed)",
+        "artist": "FULMETALPARKA$",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Runaway-Slowed-Reverb (Aurora).mp3"
     },
     {
-        "title": "Stereo Hearts",
+        "title": "뚜두뚜두 (DDU-DU DDU-DU)",
+        "artist": "BLACKPINK",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/SQUARE UP 01. 뚜두뚜두 (DDU-DU DDU-DU).mp3"
+    },
+    {
+        "artist": "The City of Prague Philharmonic Orchestra",
+        "title": "Forever Young: Forever Young",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/SQUARE UP 02. Forever Young.mp3"
+    },
+    {
+        "artist": "Moses Boyd",
+        "title": "Square Up",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/SQUARE UP 03. Really.mp3"
+    },
+    {
+        "artist": "Dzespoirs",
+        "title": "See U Later",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/SQUARE UP 04. See U Later.mp3"
+    },
+    {
         "artist": "Gym Class Heroes",
         "album": "The Papercut Chronicles II",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/dc/f0/93/mzi.stzaqjgi.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Stereo Hearts - Gym Class Heroes.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/dc/f0/93/mzi.stzaqjgi.jpg/600x600bb.jpg",
+        "title": "Stereo Hearts",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Stereo Hearts - Gym Class Heroes.mp3"
+    },
+    {
+        "artist": "Richard Marx",
+        "album": "The Essential *NSYNC",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/e5/ed/f0e5ed66-243f-44d0-0a6a-50885d3504bb/886444718912.jpg/600x600bb.jpg",
+        "title": "This I Promise You",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/This I Promise You.mp3"
     },
     {
         "artist": "Travis Scott",
-        "album": "UTOPIA",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/09/7d/b0/097db06f-8403-3cf7-7510-139e570ca66b/196871341882.jpg/100x100bb.jpg",
         "title": "FE!N",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Travis Scott - FE!N.mp3"
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Travis Scott - FE!N.mp3"
     },
     {
-        "title": "Unstoppable",
+        "title": "Truly Madly Deeply",
+        "artist": "The Dualers",
+        "album": "Till the Sun Turns Black (Bonus Track Version)",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/aa/71/62/aa7162f7-87de-837a-2800-1f6b1ff9dfdf/888880018045.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Truly Madly Deeply.mp3"
+    },
+    {
         "artist": "Sia",
-        "album": "Ibiza Remixes Vol. 1",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/94/da/c4/94dac46d-0911-298d-01e4-a6568efecf0f/198025208553.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Unstoppable - Sia.mp3"
+        "title": "Unstoppable",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Unstoppable - Sia.mp3"
     },
     {
-        "album": "Waka Waka (Esto es Africa) [feat. Freshlyground] - Single",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c4/6e/63/c46e6321-2a8a-dfaa-2c0f-21d4b62450b3/884977620108.jpg/100x100bb.jpg",
         "title": "Waka Waka",
         "artist": "Shakira",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Waka Waka - Shakira.mp3"
+        "album": "Waka Waka (Esto es Africa) [feat. Freshlyground] - Single",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c4/6e/63/c46e6321-2a8a-dfaa-2c0f-21d4b62450b3/884977620108.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Waka Waka - Shakira.mp3"
     },
     {
-        "title": "Honeypie",
+        "title": "Walking in the Rain",
+        "artist": "The Partridge Family",
+        "album": "Exodus",
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/b4/c2/27b4c28d-a4a0-4c26-7055-58719515de47/21UMGIM38975.rgb.jpg/600x600bb.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/Walking in the Rain.mp3"
+    },
+    {
+        "title": "쩔어",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/[MV]_BTS(방탄소년단)___DOPE(쩔어)(128k).mp3"
+    },
+    {
+        "artist": "天上智喜 The Grace",
+        "title": "하루만 (Just For One Day)",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/[MV]_BTS(방탄소년단)___Just_One_Day(하루만)(128k).mp3"
+    },
+    {
+        "title": "호르몬 전쟁",
+        "artist": "BTS",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/[MV]_BTS(방탄소년단)___War_of_Hormone(호르몬_전쟁)(128k).mp3"
+    },
+    {
+        "title": "DREAM 128K",
+        "artist": "Disco Bambinos",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/_Come_Prima(128k).mp3"
+    },
+    {
         "artist": "Marcia Ball",
         "album": "Live Phish, Volume 13: 10/31/94 (Glens Falls Civic Center, Glens Falls, NY)",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f2/4c/64/f24c64fc-4bfd-e115-a73d-88813105429f/mzi.jiihzxqi.jpg/100x100bb.jpg",
-        "url": "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/honeypie.mp3"
+        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f2/4c/64/f24c64fc-4bfd-e115-a73d-88813105429f/mzi.jiihzxqi.jpg/600x600bb.jpg",
+        "title": "Honeypie",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/honeypie.mp3"
+    },
+    {
+        "title": "소우주 (Mikrokosmos)",
+        "artist": "BTS",
+        "cover": "https://m.media-amazon.com/images/M/MV5BYzU5NjA3Y2YtY2UwZi00ZDMwLWE5NjAtOTljNTA4NTI4ZjYyXkEyXkFqcGc@._V1_.jpg",
+        "url": "https://github.com/anyosil/nmdmdb/blob/main/music/소우주_(Mikrokosmos)(128k).mp3"
     }
 ]

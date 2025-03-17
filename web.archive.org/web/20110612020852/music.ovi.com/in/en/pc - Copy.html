@@ -169,6 +169,98 @@
     margin: 2px 0;
 }
 
+/* Make the page scale properly on mobile */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive music grid */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusts based on screen size */
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Style for music tiles */
+.music-tile {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.music-tile:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive images */
+.music-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Song info text */
+.song-info {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* 🎵 Make the music player responsive */
+#music-player {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* 🎯 Mobile-Friendly Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ff4081;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Make buttons touch-friendly */
+button, .music-tile {
+    padding: 10px;
+    touch-action: manipulation;
+}
+
+/* 📱 Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .music-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .song-info {
+        font-size: 12px;
+    }
+
+    #music-player {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
 </style>    
 
 
@@ -181,6 +273,7 @@
 <link rel="icon" type="image/png" href="../../../../20110704121150im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/favIcon16.png"/>
 <link rel="apple-touch-icon" type="image/png" href="../../../../20110704121045im_/http_/1.musicimg.ovi.com/u/1.0/assets/Global/PC/images/icons/favIcon32.png"/>
 <link href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/Site/OpenSearchDefinition/" rel="search" title="Nuvi Music" type="application/opensearchdescription+xml"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <!-- Logger. --> 
 <script type="text/javascript">var logger={};var origConsole;(function(){if(window&&window.console){origConsole=window.console;}var setFunc=function(func,origFunc){logger[func]=function(msg){if(origConsole&&origConsole[func]){origConsole[func](msg);}else if(logger[origFunc]){logger[origFunc](msg);}};};setFunc('log','null');setFunc('debug','log');setFunc('info','log');})();</script>

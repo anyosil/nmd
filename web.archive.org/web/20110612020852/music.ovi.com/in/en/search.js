@@ -33,9 +33,10 @@ function handleSearch(query) {
     console.log("Available songs:", allSongs.map(s => s.title)); // Debugging available songs
 
     const filteredSongs = allSongs.filter(song =>
-        song.title.toLowerCase().includes(query.toLowerCase()) ||
-        song.artist.toLowerCase().includes(query.toLowerCase())
+        (song.title && song.title.toLowerCase().includes(query.toLowerCase())) ||
+        (song.artist && song.artist.toLowerCase().includes(query.toLowerCase()))
     );
+    
 
     if (filteredSongs.length === 0) {
         searchResults.innerHTML = "<li>No results found</li>";
