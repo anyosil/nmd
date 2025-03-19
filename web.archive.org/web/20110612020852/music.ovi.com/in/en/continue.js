@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: songData.title || "Unknown Title",
             artist: songData.artist || "Unknown Artist",
             album: "Symphonia",
-            artwork: [{ src: songData.cover || "./images/default-cover.jpg", sizes: "512x512", type: "image/png" }]
+            artwork: [{ src: songData.cover || "./default-cover.png", sizes: "512x512", type: "image/png" }]
         });
 
         navigator.mediaSession.setActionHandler("play", () => {
