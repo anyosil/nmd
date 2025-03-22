@@ -68,65 +68,63 @@
 
         <div class="section">
             <h3>Download History</h3>
-            <ul id="downloadHistory">
-                <!-- Download items will be populated here -->
-            </ul>
+            <ul id="downloadHistory"></ul>
         </div>
 
         <div class="section">
             <h3>Favorites</h3>
-            <ul id="favorites">
-                <!-- Favorite items will be populated here -->
-            </ul>
+            <ul id="favorites"></ul>
         </div>
 
         <button class="button" onclick="logout()">Logout</button>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Ensure localStorage has user data
-            let user = localStorage.getItem("loggedInUser");
+        document.addEventListener("DOMContentLoaded", async function () {
+            const JSONBIN_ID = "67ca7dcaad19ca34f817f025";
+            const API_KEY = "$2a$10$IG0fCGUHCL7iFsZMFQjI4e4ufPung048BrnWjddZBoo5V3UjUQ4ja";
 
-            if (!user) {
+            let username = localStorage.getItem("loggedInUser");
+
+            if (!username) {
                 alert("No user is signed in. Redirecting to register...");
-                window.location.href = "register.html"; // Redirect to registration page
-            } else {
-                // Retrieve user data from localStorage
-                user = JSON.parse(user);
-                document.getElementById("username").innerText = user.username || "Unknown";
-                document.getElementById("email").innerText = user.email || "Not Set";
-
-                // Generate a random Robohash profile picture
-                const profilePicUrl = `https://robohash.org/${encodeURIComponent(user.username)}?set=set4`;
-                document.getElementById("profilePic").src = profilePicUrl;
-
-                // Load download history
-                const downloads = JSON.parse(localStorage.getItem(`${user.username}_downloads`)) || [];
-                const downloadsList = document.getElementById("downloadHistory");
-                if (downloads.length === 0) {
-                    downloadsList.innerHTML = "<li>No downloads yet.</li>";
-                } else {
-                    downloads.forEach(download => {
-                        const listItem = document.createElement("li");
-                        listItem.innerText = `${download.songName} by ${download.artist}`;
-                        downloadsList.appendChild(listItem);
-                    });
-                }
-
-                // Load favorites
-                const favorites = JSON.parse(localStorage.getItem(`${user.username}_favorites`)) || [];
-                const favoritesList = document.getElementById("favorites");
-                if (favorites.length === 0) {
-                    favoritesList.innerHTML = "<li>No favorites yet.</li>";
-                } else {
-                    favorites.forEach(fav => {
-                        const listItem = document.createElement("li");
-                        listItem.innerText = `${fav.songName} by ${fav.artist}`;
-                        favoritesList.appendChild(listItem);
-                    });
-                }
+                window.location.href = "register.html";
+                return;
             }
+
+            document.getElementById("username").innerText = username;
+
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_ID}`, {
+                    headers: { 'X-Master-Key': API_KEY }
+                });
+                const data = await response.json();
+                const users = data.record.users;
+
+                if (users[username]) {
+                    document.getElementById("email").innerText = users[username].email;
+                } else {
+                    document.getElementById("email").innerText = "Email Not Found";
+                }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+                document.getElementById("email").innerText = "Error Fetching Email";
+            }
+
+            const profilePicUrl = `https://robohash.org/${encodeURIComponent(username)}?set=set4`;
+            document.getElementById("profilePic").src = profilePicUrl;
+
+            const downloads = JSON.parse(localStorage.getItem(`${username}_downloads`)) || [];
+            const downloadsList = document.getElementById("downloadHistory");
+            downloadsList.innerHTML = downloads.length === 0
+                ? "<li>No downloads yet.</li>"
+                : downloads.map(d => `<li>${d.songName} by ${d.artist}</li>`).join("");
+
+            const favorites = JSON.parse(localStorage.getItem(`${username}_favorites`)) || [];
+            const favoritesList = document.getElementById("favorites");
+            favoritesList.innerHTML = favorites.length === 0
+                ? "<li>No favorites yet.</li>"
+                : favorites.map(f => `<li>${f.songName} by ${f.artist}</li>`).join("");
         });
 
         function logout() {
