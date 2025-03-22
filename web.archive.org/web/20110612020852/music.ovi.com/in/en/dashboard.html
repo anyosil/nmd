@@ -43,6 +43,7 @@
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            background-color: #ddd;
         }
         .user-info {
             display: flex;
@@ -83,44 +84,54 @@
     </div>
 
     <script>
-        // Fetch user data from localStorage
-        const user = JSON.parse(localStorage.getItem('userData'));
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ensure localStorage has user data
+            let user = localStorage.getItem("loggedInUser");
 
-        // If no user is logged in, redirect to login page
-        if (!user) {
-            alert("No user is logged in. Please sign in.");
-            window.location.href = 'login.html'; // Redirect to login page
-        } else {
-            document.getElementById('username').innerText = user.username;
-            document.getElementById('email').innerText = user.email;
-            
-            // Generate a random Robohash image for profile pic
-            const profilePicUrl = `https://robohash.org/${user.username}?set=set4`; // set4 gives a more "robotic" look
-            document.getElementById('profilePic').src = profilePicUrl;
-            
-            // Populate Download History (from localStorage)
-            const downloads = JSON.parse(localStorage.getItem(`${user.username}_downloads`)) || [];
-            const downloadsList = document.getElementById('downloadHistory');
-            downloads.forEach(download => {
-                const listItem = document.createElement('li');
-                listItem.innerText = `${download.songName} by ${download.artist}`;
-                downloadsList.appendChild(listItem);
-            });
+            if (!user) {
+                alert("No user is signed in. Redirecting to register...");
+                window.location.href = "register.html"; // Redirect to registration page
+            } else {
+                // Retrieve user data from localStorage
+                user = JSON.parse(user);
+                document.getElementById("username").innerText = user.username || "Unknown";
+                document.getElementById("email").innerText = user.email || "Not Set";
 
-            // Populate Favorites (from localStorage)
-            const favorites = JSON.parse(localStorage.getItem(`${user.username}_favorites`)) || [];
-            const favoritesList = document.getElementById('favorites');
-            favorites.forEach(fav => {
-                const listItem = document.createElement('li');
-                listItem.innerText = `${fav.songName} by ${fav.artist}`;
-                favoritesList.appendChild(listItem);
-            });
-        }
+                // Generate a random Robohash profile picture
+                const profilePicUrl = `https://robohash.org/${encodeURIComponent(user.username)}?set=set4`;
+                document.getElementById("profilePic").src = profilePicUrl;
 
-        // Logout function
+                // Load download history
+                const downloads = JSON.parse(localStorage.getItem(`${user.username}_downloads`)) || [];
+                const downloadsList = document.getElementById("downloadHistory");
+                if (downloads.length === 0) {
+                    downloadsList.innerHTML = "<li>No downloads yet.</li>";
+                } else {
+                    downloads.forEach(download => {
+                        const listItem = document.createElement("li");
+                        listItem.innerText = `${download.songName} by ${download.artist}`;
+                        downloadsList.appendChild(listItem);
+                    });
+                }
+
+                // Load favorites
+                const favorites = JSON.parse(localStorage.getItem(`${user.username}_favorites`)) || [];
+                const favoritesList = document.getElementById("favorites");
+                if (favorites.length === 0) {
+                    favoritesList.innerHTML = "<li>No favorites yet.</li>";
+                } else {
+                    favorites.forEach(fav => {
+                        const listItem = document.createElement("li");
+                        listItem.innerText = `${fav.songName} by ${fav.artist}`;
+                        favoritesList.appendChild(listItem);
+                    });
+                }
+            }
+        });
+
         function logout() {
-            localStorage.removeItem('userData');
-            window.location.href = 'login.html'; // Redirect to login page
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "register.html";
         }
     </script>
 </body>
