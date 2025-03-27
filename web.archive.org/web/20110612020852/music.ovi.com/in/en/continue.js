@@ -63,6 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
     audioPlayer.addEventListener("pause", savePlaybackState);
     audioPlayer.addEventListener("timeupdate", savePlaybackState);
 
+    
+
+
     // 🔥 Restore playback & metadata when switching pages
     restorePlayback();
 
@@ -72,7 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("❌ Songs database not loaded yet!");
             return;
         }
+let username = localStorage.getItem("loggedInUser"); 
 
+    if (!username) {
+        console.error("❌ Error: No username found! Cannot update last played.");
+        alert("Please sign in to continue using Symphonia. Redirecting to Sign in page...");
+        window.location.replace("./register.html");
+        return;
+    }
         // 🔍 Find song details from the database
         const flattenedSongs = Object.values(database).flat();
         const songIndex = flattenedSongs.findIndex(song => song.title.toLowerCase() === songTitle.toLowerCase());
@@ -83,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const songData = flattenedSongs[songIndex];
-
         audioPlayer.src = songData.url;
         audioPlayer.play();
 
@@ -120,3 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // 🎵 Autoplay next song when current song ends
     audioPlayer.addEventListener("ended", playNextSong);
 });
+

@@ -483,26 +483,62 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>           
     
 </div>
+
+<!--<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: #ff4081;
+        color: white;
+        border-radius: 10px 10px 0 0;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section {
+        flex: 1 1 45%;
+        margin: 10px;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            width: 90%;
+        }
+    }
+</style> -->
             
 <div id="login-section">
     <!-- This will be populated by script.js -->
 </div>
-       
-
-
-<div class="panel-sup" id="last-listened-widget">
-    <div class="hd">
-        <h2>
-            <span>Recently Played Song on Symphonia</span>
-        </h2>
-    </div>
-    <div class="bd box">
-        <p id="last-listened-title">No song played</p>
-        <img id="last-listened-cover" src="default-cover.jpg" alt="Now Playing Cover" />
-    </div>
-    <div class="ft"><span>&nbsp;</span></div>
-</div>
-            
+          
 <style>
     #last-listened-cover {
     width: 64px !important;  /* Set width to 64px */
@@ -531,42 +567,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
                  
                         <div class="cta-btns">
-                            <a class="btn" href="https://anyosil.github.io/symmusic.github.io" target="_blank">
-                            <span>Go to Mobile Version!</span></a>
+                            <a class="btn" href="#" onclick="redirectToMobile()">
+                                <span>Go to Mobile Version!</span>
+                            </a>
                         </div>
+                        
+                        <script>
+                            function redirectToMobile() {
+                                alert('Mobile Version Is Still Under Development! Many Links will be Broken!!');
+                                window.location.href = "https://anyosil.github.io/symmusic.github.io";
+                            }
+                        </script>
+                        
                         <em>Mobile Version is very much optimised for Mobiles and Relatively smaller screens!</em>
                     </div>
                 </div>
             </div>
         </div>
-    <script type="text/javascript">     
-     (function(){
-         var flashPlayerVersion = "9.0.159";
-         try{
-             if (swfobject.hasFlashPlayerVersion(flashPlayerVersion)) {
-                var flashvars = {};
-                flashvars.xmlurl = "https://web.archive.org/web/20110612020852/http://music.ovi.com/in/en/pc/cmsregion/home_flash";
-                flashvars.lcshopwindow = "_lcShopWindow"; //This is the connection class name for the LocalConnection to the clip player
-                flashvars.lcclipplayer = "_lcClipPlayer"; //This is the connection class name for the LocalConnection from the clip player
-                var params = {};
-                params.menu = "false";
-                params.quality = "autohigh";
-                params.scale = "noscale";
-                params.allowfullscreen = "false";
-                params.allownetworking = "all";
-                params.allowScriptAccess = "always";
-                params.wmode = "transparent";
-                params.bgcolor = "#FFFFFF";
-                var attributes = {};
-                attributes.id = "shopWindow";
-                attributes.name = "shopWindow";
-                //Embed the SWF
-                swfobject.embedSWF("https://web.archive.org/web/20110612020852/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/flash/ShopWindow.swf", "shopWindow", "769", "285", "9.0.159", "https://web.archive.org/web/20110612020852/http://1.musicimg.ovi.com/u/1.0/assets/Global/PC/flash/ExpressInstall.swf", flashvars, params, attributes);
-             }
-         }
-         catch(ex){};
-     })();
-</script>
 
 <script src="script.js"></script>
 

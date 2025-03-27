@@ -154,9 +154,40 @@ audioPlayer.onended = function () {
     playSong(nextSong.title); // Play the next song automatically
 };
 
-setTimeout(() => {
-    let confirmRedirect = confirm("Do you want to Go to HomePage? Music will continue playing");
-    if (confirmRedirect) {
-        window.open("pc.html", "_blank"); // ✅ Opens pc.html in a new tab while music continues
+document.addEventListener("DOMContentLoaded", () => {
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    // Check if a song is already playing
+    const savedSong = localStorage.getItem("currentSong");
+    if (savedSong) {
+        const { url, title, time, isPlaying } = JSON.parse(savedSong);
+        audioPlayer.src = url;
+        audioPlayer.currentTime = time || 0;
+
+        if (isPlaying) {
+            audioPlayer.play();
+        }
     }
-}, 2000); // Wait 2 seconds after play starts
+
+    // Update localStorage when song changes
+    audioPlayer.addEventListener("play", () => {
+        updatePlaybackState(true);
+    });
+
+    audioPlayer.addEventListener("pause", () => {
+        updatePlaybackState(false);
+    });
+
+    audioPlayer.addEventListener("timeupdate", () => {
+        updatePlaybackState(audioPlayer.paused ? false : true);
+    });
+
+    function updatePlaybackState(isPlaying) {
+        localStorage.setItem("currentSong", JSON.stringify({
+            url: audioPlayer.src,
+            title: audioPlayer.getAttribute("data-title") || "Unknown Song",
+            time: audioPlayer.currentTime,
+            isPlaying: isPlaying
+        }));
+    }
+});
