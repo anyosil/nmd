@@ -39,7 +39,7 @@ function handleSearch(query) {
     
 
     if (filteredSongs.length === 0) {
-        searchResults.innerHTML = "<li>Uh Oh! We've searched Near and Far, We haven't Found this Song 😔..</li><span class="text-gray-500 italic">&nbsp;&nbsp;Maybe it is still not in our database 🤔?</span>;
+        searchResults.innerHTML = "<li>Uh Oh! We've searched Near and Far, We haven't Found this Song 😔..Maybe it is still not in our database 🤔?</li>;
         return;
     }
 
