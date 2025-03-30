@@ -115,7 +115,7 @@ function playSong(songTitle) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: song.title,
             artist: song.artist,
-            artwork: [{ src: song.cover, sizes: "512x512", type: "image/png" }]
+            artwork: [{ src: song.cover, sizes: "512x512", type: "./default_cover.png" }]
         });
 
         navigator.mediaSession.setActionHandler("play", () => audioPlayer.play());
