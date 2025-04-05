@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Symphonia PC</title>
-  <link rel="stylesheet" href="styles.css" />
-<script src="script.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #111;
       color: white;
-      text-align: center;
       margin: 0;
       padding: 0;
     }
@@ -28,11 +24,21 @@
       font-weight: bold;
       color: #ff007f;
     }
-    .ribbon nav a {
+    .ribbon nav {
+      display: flex;
+      gap: 10px;
+    }
+    .ribbon nav a, .ribbon nav input {
       color: white;
+      background: #333;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
       text-decoration: none;
-      margin: 0 10px;
       font-size: 1em;
+    }
+    .ribbon nav input {
+      color: black;
     }
     .visualizer-section {
       margin: 20px auto;
@@ -41,23 +47,23 @@
       align-items: center;
     }
     canvas {
-      background: #000;
-      border-radius: 50%;
+      width: 300px;
+      height: 100px;
+      background: black;
+      border-radius: 10px;
     }
-    #now-playing {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-    #top {
+    .featured-music {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       margin-top: 20px;
     }
     .song-tile {
       background: #222;
-      padding: 10px;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
       border-radius: 10px;
       text-align: center;
       cursor: pointer;
@@ -67,153 +73,126 @@
       transform: scale(1.05);
     }
     .song-tile img {
-      width: 100px;
-      height: 100px;
-      border-radius: 10px;
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      border-radius: 5px;
     }
     .song-info {
       margin-top: 5px;
+      font-size: 0.8em;
     }
   </style>
 </head>
 <body>
-  <!-- Ribbon -->
   <header class="ribbon">
     <div class="logo">Symphonia</div>
     <nav>
-      <a href="#">Sign In</a>
+      <input type="text" id="searchBox" placeholder="Search songs..." oninput="searchSongs()">
+      <a href="#" id="signInBtn" onclick="handleSignIn()">Sign In</a>
       <a href="#">Dashboard</a>
       <a href="#">Help</a>
-      <a href="#">Search</a>
     </nav>
-  </header>
-
-  <!-- Visualizer -->
-  <section class="visualizer-section">
-    <canvas id="visualizer-canvas" width="250" height="250"></canvas>
+  </header>  <section class="visualizer-section">
+    <canvas id="visualizer"></canvas>
     <div id="now-playing">Now Playing: <span id="song-title">None</span></div>
-    <audio id="audio" style="display:none" controls></audio>
-  </section>
-
-  <!-- Featured Music -->
-  <section id="top"></section>
+  </section>  <section id="top" class="featured-music"></section><audio id="audio" controls style="display:none;"></audio>
 
   <script>
-  const database = {
-    top: [
-      {
-        title: "Blinding Lights",
-        artist: "The Weeknd",
-        cover: "cover1.jpg",
-        url: "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie%20Eilish%20idontwannabeyouanymore.mp3"
-      },
-      {
-        title: "Save Your Tears",
-        artist: "The Weeknd",
-        cover: "cover2.jpg",
-        url: "song2.mp3"
-      },
-      {
-        title: "Shape of You",
-        artist: "Ed Sheeran",
-        cover: "cover3.jpg",
-        url: "song3.mp3"
-      }
-    ]
-  };
-
-  let audioCtx, analyser, source, dataArray, bufferLength;
-  let animationId;
-
-  function playSong(song) {
     const audio = document.getElementById("audio");
-    const canvas = document.getElementById("visualizer-canvas");
+    const canvas = document.getElementById("visualizer");
     const ctx = canvas.getContext("2d");
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
-    const radius = 60;
+    let audioCtx, analyser, source, dataArray;
 
-    // Stop previous animation if any
-    if (animationId) cancelAnimationFrame(animationId);
-
-    // Set source and play
-    audio.src = song.url;
-    audio.crossOrigin = "anonymous";
-    audio.load();
-    audio.play();
-
-    document.getElementById("song-title").textContent = song.title;
-
-    // Create new audio context every time
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    analyser = audioCtx.createAnalyser();
-    source = audioCtx.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(audioCtx.destination);
-    analyser.fftSize = 256;
-    bufferLength = analyser.frequencyBinCount;
-    dataArray = new Uint8Array(bufferLength);
+    function setupVisualizer() {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      source = audioCtx.createMediaElementSource(audio);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+      analyser.fftSize = 64;
+      const bufferLength = analyser.frequencyBinCount;
+      dataArray = new Uint8Array(bufferLength);
+      draw();
+    }
 
     function draw() {
-      animationId = requestAnimationFrame(draw);
+      requestAnimationFrame(draw);
       analyser.getByteFrequencyData(dataArray);
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const angleStep = (Math.PI * 2) / bufferLength;
+      dataArray.forEach((val, i) => {
+        ctx.fillStyle = "#ff007f";
+        ctx.fillRect(i * 10, canvas.height - val, 8, val);
+      });
+    }
 
-      for (let i = 0; i < bufferLength; i++) {
-        const value = dataArray[i];
-        const barLength = value * 0.8;
-        const angle = i * angleStep;
+    const database = {
+      top: [
+        { title: "Blinding Lights", artist: "The Weeknd", cover: "cover1.jpg", url: "song1.mp3" },
+        { title: "Save Your Tears", artist: "The Weeknd", cover: "cover2.jpg", url: "song2.mp3" },
+        { title: "Shape of You", artist: "Ed Sheeran", cover: "cover3.jpg", url: "song3.mp3" }
+      ]
+    };
 
-        const x1 = centerX + Math.cos(angle) * radius;
-        const y1 = centerY + Math.sin(angle) * radius;
-        const x2 = centerX + Math.cos(angle) * (radius + barLength);
-        const y2 = centerY + Math.sin(angle) * (radius + barLength);
+    function playSong(song) {
+      document.getElementById("song-title").textContent = song.title;
+      audio.src = song.url;
+      audio.play();
+      if (!audioCtx) setupVisualizer();
+    }
 
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.strokeStyle = `hsl(${i * 2}, 100%, 50%)`;
-        ctx.lineWidth = 2;
-        ctx.stroke();
+    function populateFeaturedMusic() {
+      const section = document.getElementById("top");
+      section.innerHTML = "";
+      database.top.forEach(song => {
+        const div = document.createElement("div");
+        div.classList.add("song-tile");
+        div.innerHTML = `
+          <img src="${song.cover}" alt="${song.title}">
+          <div class="song-info">
+            <strong>${song.title}</strong><br>
+            <span>${song.artist}</span>
+          </div>
+        `;
+        div.addEventListener("click", () => playSong(song));
+        section.appendChild(div);
+      });
+    }
+
+    function handleSignIn() {
+      const user = localStorage.getItem("username");
+      if (user) return;
+      window.location.href = "register.html";
+    }
+
+    function searchSongs() {
+      const term = document.getElementById("searchBox").value.toLowerCase();
+      const section = document.getElementById("top");
+      section.innerHTML = "";
+      database.top.filter(song =>
+        song.title.toLowerCase().includes(term) ||
+        song.artist.toLowerCase().includes(term)
+      ).forEach(song => {
+        const div = document.createElement("div");
+        div.classList.add("song-tile");
+        div.innerHTML = `
+          <img src="${song.cover}" alt="${song.title}">
+          <div class="song-info">
+            <strong>${song.title}</strong><br>
+            <span>${song.artist}</span>
+          </div>
+        `;
+        div.addEventListener("click", () => playSong(song));
+        section.appendChild(div);
+      });
+    }
+
+    window.onload = () => {
+      populateFeaturedMusic();
+      const username = localStorage.getItem("username");
+      if (username) {
+        document.getElementById("signInBtn").textContent = `Signed in: ${username}`;
       }
     }
-
-    draw();
-  }
-
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
-
-  function populateFeaturedMusic() {
-    const section = document.getElementById("top");
-    if (!section) return console.error("❌ Section not found");
-
-    let songs = [...database.top];
-    shuffleArray(songs);
-    section.innerHTML = "";
-
-    songs.forEach(song => {
-      const div = document.createElement("div");
-      div.classList.add("song-tile");
-      div.innerHTML = `
-        <img src="${song.cover}" alt="${song.title}">
-        <div class="song-info">
-          <strong>${song.title}</strong>
-          <p>${song.artist}</p>
-        </div>
-      `;
-      div.addEventListener("click", () => playSong(song));
-      section.appendChild(div);
-    });
-  }
-
-  populateFeaturedMusic();
-</script>
-</body>
+  </script></body>
 </html>
