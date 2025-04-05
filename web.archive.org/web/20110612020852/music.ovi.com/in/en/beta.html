@@ -5,6 +5,27 @@
   <title>Symphonia PC</title>
   <script src="script.js"></script>
   <style>
+   .song-tile {
+    width: 180px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    color: #000; /* Make text visible on white bg */
+}
+
+.song-tile:hover {
+    transform: scale(1.05);
+}
+
+.song-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
     body {
       font-family: Arial, sans-serif;
       background: #111;
