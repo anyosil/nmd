@@ -99,123 +99,121 @@
   <section id="top"></section>
 
   <script>
-    // Sample music database (replace or load from script.js)
-    const database = {
-      top: [
-        {
-          title: "Blinding Lights",
-          artist: "The Weeknd",
-          cover: "cover1.jpg",
-          url: "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie%20Eilish%20idontwannabeyouanymore.mp3"
-        },
-        {
-          title: "Save Your Tears",
-          artist: "The Weeknd",
-          cover: "cover2.jpg",
-          url: "song2.mp3"
-        },
-        {
-          title: "Shape of You",
-          artist: "Ed Sheeran",
-          cover: "cover3.jpg",
-          url: "song3.mp3"
-        }
-      ]
-    };
-
-    let audioCtx, analyser, source, bufferLength, dataArray;
-
-    function playSong(song) {
-      const audio = document.getElementById("audio");
-      const canvas = document.getElementById("visualizer-canvas");
-
-      audio.src = song.url;
-      audio.play();
-      document.getElementById("song-title").textContent = song.title;
-
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioCtx.createAnalyser();
-        source = audioCtx.createMediaElementSource(audio);
-        source.connect(analyser);
-        analyser.connect(audioCtx.destination);
-        analyser.fftSize = 128;
-        bufferLength = analyser.frequencyBinCount;
-        dataArray = new Uint8Array(bufferLength);
+  const database = {
+    top: [
+      {
+        title: "Blinding Lights",
+        artist: "The Weeknd",
+        cover: "cover1.jpg",
+        url: "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie%20Eilish%20idontwannabeyouanymore.mp3"
+      },
+      {
+        title: "Save Your Tears",
+        artist: "The Weeknd",
+        cover: "cover2.jpg",
+        url: "song2.mp3"
+      },
+      {
+        title: "Shape of You",
+        artist: "Ed Sheeran",
+        cover: "cover3.jpg",
+        url: "song3.mp3"
       }
+    ]
+  };
 
-      drawVisualizer();
-    }
+  let audioCtx, analyser, source, dataArray, bufferLength;
+  let animationId;
 
-    function drawVisualizer() {
-      const canvas = document.getElementById("visualizer-canvas");
-      const ctx = canvas.getContext("2d");
-      const centerX = canvas.width / 2;
-      const centerY = canvas.height / 2;
-      const radius = 60;
+  function playSong(song) {
+    const audio = document.getElementById("audio");
+    const canvas = document.getElementById("visualizer-canvas");
+    const ctx = canvas.getContext("2d");
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 60;
 
-      function draw() {
-        requestAnimationFrame(draw);
-        analyser.getByteFrequencyData(dataArray);
+    // Stop previous animation if any
+    if (animationId) cancelAnimationFrame(animationId);
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Set source and play
+    audio.src = song.url;
+    audio.crossOrigin = "anonymous";
+    audio.load();
+    audio.play();
 
-        const bars = dataArray.length;
-        const angleStep = (Math.PI * 2) / bars;
+    document.getElementById("song-title").textContent = song.title;
 
-        for (let i = 0; i < bars; i++) {
-          const value = dataArray[i];
-          const barHeight = value / 2;
-          const angle = i * angleStep;
+    // Create new audio context every time
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioCtx.createAnalyser();
+    source = audioCtx.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    analyser.fftSize = 256;
+    bufferLength = analyser.frequencyBinCount;
+    dataArray = new Uint8Array(bufferLength);
 
-          const x1 = centerX + Math.cos(angle) * radius;
-          const y1 = centerY + Math.sin(angle) * radius;
-          const x2 = centerX + Math.cos(angle) * (radius + barHeight);
-          const y2 = centerY + Math.sin(angle) * (radius + barHeight);
+    function draw() {
+      animationId = requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArray);
 
-          ctx.beginPath();
-          ctx.moveTo(x1, y1);
-          ctx.lineTo(x2, y2);
-          ctx.strokeStyle = `hsl(${i * 4}, 100%, 50%)`;
-          ctx.lineWidth = 2;
-          ctx.stroke();
-        }
-      }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const angleStep = (Math.PI * 2) / bufferLength;
 
-      draw();
-    }
+      for (let i = 0; i < bufferLength; i++) {
+        const value = dataArray[i];
+        const barLength = value * 0.8;
+        const angle = i * angleStep;
 
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        const x1 = centerX + Math.cos(angle) * radius;
+        const y1 = centerY + Math.sin(angle) * radius;
+        const x2 = centerX + Math.cos(angle) * (radius + barLength);
+        const y2 = centerY + Math.sin(angle) * (radius + barLength);
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.strokeStyle = `hsl(${i * 2}, 100%, 50%)`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
       }
     }
 
-    function populateFeaturedMusic() {
-      const section = document.getElementById("top");
-      if (!section) return console.error("❌ Section not found");
+    draw();
+  }
 
-      let songs = [...database.top];
-      shuffleArray(songs);
-      section.innerHTML = "";
-
-      songs.forEach(song => {
-        const div = document.createElement("div");
-        div.classList.add("song-tile");
-        div.innerHTML = `
-          <img src="${song.cover}" alt="${song.title}">
-          <div class="song-info">
-            <strong>${song.title}</strong>
-            <p>${song.artist}</p>
-          </div>
-        `;
-        div.addEventListener("click", () => playSong(song));
-        section.appendChild(div);
-      });
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+  }
 
-    populateFeaturedMusic();
-  </script>
+  function populateFeaturedMusic() {
+    const section = document.getElementById("top");
+    if (!section) return console.error("❌ Section not found");
+
+    let songs = [...database.top];
+    shuffleArray(songs);
+    section.innerHTML = "";
+
+    songs.forEach(song => {
+      const div = document.createElement("div");
+      div.classList.add("song-tile");
+      div.innerHTML = `
+        <img src="${song.cover}" alt="${song.title}">
+        <div class="song-info">
+          <strong>${song.title}</strong>
+          <p>${song.artist}</p>
+        </div>
+      `;
+      div.addEventListener("click", () => playSong(song));
+      section.appendChild(div);
+    });
+  }
+
+  populateFeaturedMusic();
+</script>
 </body>
 </html>
