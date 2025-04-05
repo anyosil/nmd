@@ -1,187 +1,184 @@
 <!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symphonia PC</title>
-<script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-        }header {
-        background: #222;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 3px solid #ff007f;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symphonia PC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: white;
+    }header {
+  background: #1b1b1b;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #ff007f;
+}
 
-    .logo {
-        font-size: 1.8em;
-        font-weight: bold;
-        color: #ff007f;
-    }
+.logo {
+  font-size: 1.8rem;
+  color: #ff007f;
+  font-weight: bold;
+}
 
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+nav {
+  display: flex;
+  gap: 1rem;
+}
 
-    nav input[type="text"] {
-        padding: 6px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-    }
+nav a, nav input[type="text"] {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-    nav button, nav a {
-        background: #ff007f;
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
+#searchInput {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
 
-    .visualizer {
-        width: 100%;
-        height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #1a1a1a;
-        gap: 4px;
-    }
+.visualizer {
+  width: 100%;
+  height: 100px;
+  background: black;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
-    .bar {
-        width: 4px;
-        background: #ff007f;
-        animation: bounce 1s infinite ease-in-out;
-    }
+.bar {
+  width: 4px;
+  height: 20px;
+  background: #ff007f;
+  animation: bounce 1s infinite ease-in-out;
+}
 
-    @keyframes bounce {
-        0%, 100% { height: 20px; }
-        50% { height: 100px; }
-    }
+@keyframes bounce {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
 
-    .featured-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 30px;
-        justify-content: center;
-    }
+#top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
 
-    .song-tile {
-        width: 180px;
-        background: #ffffff;
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease-in-out;
-        color: #000;
-    }
+.song-tile {
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
 
-    .song-tile:hover {
-        transform: scale(1.05);
-    }
+.song-tile:hover {
+  transform: scale(1.05);
+}
 
-    .song-tile img {
-        width: 100%;
-        border-radius: 8px;
-    }
-</style>
+.song-tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
+.song-info {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Symphonia</div>
-        <nav>
-            <input type="text" id="searchBox" placeholder="Search music...">
-            <button onclick="performSearch()">Search</button>
-            <a id="signin-btn" href="register.html">Sign In</a>
-        </nav>
-    </header><div class="visualizer" id="visualizer"></div>
-
-<section id="top" class="featured-section"></section>
-
-<script>
-    // Initialize sign in state
-    const username = localStorage.getItem('username');
-    const signinBtn = document.getElementById('signin-btn');
-    if (username) {
-        signinBtn.textContent = `Signed in: ${username}`;
-        signinBtn.href = '#';
-    }
-
-    // Music database (expected to be loaded from script.js)
+  <header>
+    <div class="logo">Symphonia</div>
+    <nav>
+      <input type="text" id="searchInput" placeholder="Search songs...">
+      <a href="register.html" id="signInBtn">Sign In</a>
+    </nav>
+  </header>  <div class="visualizer" id="visualizer"></div>
+  <section id="top"></section>  <script>
     const database = {
-        top: [
-            { title: "Levitating", artist: "Dua Lipa", cover: "cover1.jpg", url: "song1.mp3" },
-            { title: "Industry Baby", artist: "Lil Nas X", cover: "cover2.jpg", url: "song2.mp3" },
-            { title: "Heat Waves", artist: "Glass Animals", cover: "cover3.jpg", url: "song3.mp3" }
-        ]
+      top: [
+        { title: "Blinding Lights", artist: "The Weeknd", cover: "cover1.jpg", url: "https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie%20Eilish%20idontwannabeyouanymore.mp3" },
+        { title: "Save Your Tears", artist: "The Weeknd", cover: "cover2.jpg", url: "song2.mp3" },
+        { title: "Shape of You", artist: "Ed Sheeran", cover: "cover3.jpg", url: "song3.mp3" }
+      ]
     };
 
     const audio = new Audio();
+    let bars = [];
 
-    function populateSongs() {
-        const container = document.getElementById('top');
-        container.innerHTML = '';
-        database.top.forEach(song => {
-            const tile = document.createElement('div');
-            tile.className = 'song-tile';
-            tile.innerHTML = `
-                <img src="${song.cover}" alt="${song.title}">
-                <h4>${song.title}</h4>
-                <p>${song.artist}</p>
-            `;
-            tile.onclick = () => playSong(song);
-            container.appendChild(tile);
-        });
+    function initVisualizer() {
+      const container = document.getElementById("visualizer");
+      for (let i = 0; i < 40; i++) {
+        const bar = document.createElement("div");
+        bar.classList.add("bar");
+        bar.style.animationDelay = `${Math.random()}s`;
+        container.appendChild(bar);
+        bars.push(bar);
+      }
+    }
+
+    function updateSignInText() {
+      const btn = document.getElementById("signInBtn");
+      const user = localStorage.getItem("username");
+      if (user) btn.textContent = `Signed in: ${user}`;
     }
 
     function playSong(song) {
-        audio.src = song.url;
-        audio.play();
+      document.querySelectorAll(".bar").forEach(bar => {
+        bar.style.animationPlayState = 'running';
+      });
+      audio.src = song.url;
+      audio.play();
     }
 
-    // Simple animated bars for visualizer
-    const visualizer = document.getElementById('visualizer');
-    for (let i = 0; i < 32; i++) {
-        const bar = document.createElement('div');
-        bar.className = 'bar';
-        bar.style.animationDelay = `${(i % 10) * 0.1}s`;
-        visualizer.appendChild(bar);
+    function renderSongs(list) {
+      const container = document.getElementById("top");
+      container.innerHTML = "";
+      list.forEach(song => {
+        const div = document.createElement("div");
+        div.classList.add("song-tile");
+        div.innerHTML = `
+          <img src="${song.cover}" alt="${song.title}">
+          <div class="song-info">
+            <strong>${song.title}</strong>
+            <p>${song.artist}</p>
+          </div>
+        `;
+        div.onclick = () => playSong(song);
+        container.appendChild(div);
+      });
     }
 
-    function performSearch() {
-        const query = document.getElementById('searchBox').value.toLowerCase();
-        const filtered = database.top.filter(song => song.title.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query));
-        const container = document.getElementById('top');
-        container.innerHTML = '';
-        filtered.forEach(song => {
-            const tile = document.createElement('div');
-            tile.className = 'song-tile';
-            tile.innerHTML = `
-                <img src="${song.cover}" alt="${song.title}">
-                <h4>${song.title}</h4>
-                <p>${song.artist}</p>
-            `;
-            tile.onclick = () => playSong(song);
-            container.appendChild(tile);
-        });
+    function searchSongs() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = database.top.filter(song => song.title.toLowerCase().includes(input) || song.artist.toLowerCase().includes(input));
+      renderSongs(filtered);
     }
 
-    populateSongs();
-</script>
+    document.getElementById("searchInput").addEventListener("input", searchSongs);
 
-</body>
+    initVisualizer();
+    updateSignInText();
+    renderSongs(database.top);
+  </script></body>
 </html>
