@@ -1,199 +1,211 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Symphonia PC</title>
 <script src="script.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #111;
+      background-color: #111;
       color: white;
       margin: 0;
       padding: 0;
-    }
-    .ribbon {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background: #222;
-      border-bottom: 3px solid #ff007f;
-    }
-    .ribbon .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #ff007f;
-    }
-    .ribbon nav {
-      display: flex;
-      gap: 10px;
-    }
-    .ribbon nav a, .ribbon nav input {
-      color: white;
-      background: #333;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      text-decoration: none;
-      font-size: 1em;
-    }
-    .ribbon nav input {
-      color: black;
-    }
-    .visualizer-section {
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    canvas {
-      width: 300px;
-      height: 100px;
-      background: black;
-      border-radius: 10px;
-    }
-    .featured-music {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .song-tile {
-      background: #222;
-      width: 100px;
-      height: 100px;
-      padding: 5px;
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .song-tile:hover {
-      transform: scale(1.05);
-    }
-    .song-tile img {
-      width: 100%;
-      height: 60%;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-    .song-info {
-      margin-top: 5px;
-      font-size: 0.8em;
-    }
+    }header.ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  border-bottom: 3px solid #ff007f;
+  padding: 10px 20px;
+}
+
+.ribbon .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff007f;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+#search-bar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+#visualizer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.bar {
+  width: 4px;
+  background: #ff007f;
+  height: 10px;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+#top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.song-tile {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 150px;
+  cursor: pointer;
+}
+
+.song-tile:hover {
+  transform: scale(1.05);
+}
+
+.song-tile img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.song-info {
+  margin-top: 5px;
+}
+
   </style>
 </head>
 <body>
   <header class="ribbon">
     <div class="logo">Symphonia</div>
     <nav>
-      <input type="text" id="searchBox" placeholder="Search songs..." oninput="searchSongs()">
-      <a href="#" id="signInBtn" onclick="handleSignIn()">Sign In</a>
+      <a href="#" id="signin-btn">Sign In</a>
       <a href="#">Dashboard</a>
       <a href="#">Help</a>
     </nav>
-  </header>  <section class="visualizer-section">
-    <canvas id="visualizer"></canvas>
-    <div id="now-playing">Now Playing: <span id="song-title">None</span></div>
-  </section>  <section id="top" class="featured-music"></section><audio id="audio" controls style="display:none;"></audio>
+  </header>  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search songs or artists...">
+  </div>  <div id="visualizer"></div>  <section id="top"></section>  <script>
+    const signinBtn = document.getElementById('signin-btn');
+    const storedUser = localStorage.getItem('username');
+    if (storedUser) {
+      signinBtn.textContent = `Signed in: ${storedUser}`;
+    }
+    signinBtn.addEventListener('click', () => {
+      if (!localStorage.getItem('username')) {
+        window.location.href = 'register.html';
+      }
+    });
 
-  <script>
-    const audio = document.getElementById("audio");
-    const canvas = document.getElementById("visualizer");
-    const ctx = canvas.getContext("2d");
-    let audioCtx, analyser, source, dataArray;
-
-    function setupVisualizer() {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      analyser = audioCtx.createAnalyser();
-      source = audioCtx.createMediaElementSource(audio);
-      source.connect(analyser);
-      analyser.connect(audioCtx.destination);
-      analyser.fftSize = 64;
-      const bufferLength = analyser.frequencyBinCount;
-      dataArray = new Uint8Array(bufferLength);
-      draw();
+    const visualizer = document.getElementById('visualizer');
+    for (let i = 0; i < 40; i++) {
+      const bar = document.createElement('div');
+      bar.classList.add('bar');
+      bar.style.animationDelay = `${i * 0.05}s`;
+      visualizer.appendChild(bar);
     }
 
-    function draw() {
-      requestAnimationFrame(draw);
-      analyser.getByteFrequencyData(dataArray);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      dataArray.forEach((val, i) => {
-        ctx.fillStyle = "#ff007f";
-        ctx.fillRect(i * 10, canvas.height - val, 8, val);
+    const audio = new Audio();
+
+    function playSong(song) {
+      audio.src = song.url;
+      audio.play();
+      document.querySelectorAll('.bar').forEach(bar => {
+        bar.style.animationPlayState = 'running';
       });
     }
 
     const database = {
       top: [
-        { title: "Blinding Lights", artist: "The Weeknd", cover: "cover1.jpg", url: "song1.mp3" },
-        { title: "Save Your Tears", artist: "The Weeknd", cover: "cover2.jpg", url: "song2.mp3" },
-        { title: "Shape of You", artist: "Ed Sheeran", cover: "cover3.jpg", url: "song3.mp3" }
+        {
+          title: 'Blinding Lights',
+          artist: 'The Weeknd',
+          cover: 'cover1.jpg',
+          url: 'https://raw.githubusercontent.com/anyosil/nmdmdb/main/music/Billie%20Eilish%20idontwannabeyouanymore.mp3'
+        },
+        {
+          title: 'Save Your Tears',
+          artist: 'The Weeknd',
+          cover: 'cover2.jpg',
+          url: 'song2.mp3'
+        },
+        {
+          title: 'Shape of You',
+          artist: 'Ed Sheeran',
+          cover: 'cover3.jpg',
+          url: 'song3.mp3'
+        }
       ]
     };
 
-    function playSong(song) {
-      document.getElementById("song-title").textContent = song.title;
-      audio.src = song.url;
-      audio.play();
-      if (!audioCtx) setupVisualizer();
-    }
-
-    function populateFeaturedMusic() {
-      const section = document.getElementById("top");
-      section.innerHTML = "";
+    function populateSongs() {
+      const section = document.getElementById('top');
+      section.innerHTML = '';
       database.top.forEach(song => {
-        const div = document.createElement("div");
-        div.classList.add("song-tile");
-        div.innerHTML = `
+        const tile = document.createElement('div');
+        tile.className = 'song-tile';
+        tile.innerHTML = `
           <img src="${song.cover}" alt="${song.title}">
           <div class="song-info">
-            <strong>${song.title}</strong><br>
-            <span>${song.artist}</span>
-          </div>
-        `;
-        div.addEventListener("click", () => playSong(song));
-        section.appendChild(div);
+            <strong>${song.title}</strong>
+            <p>${song.artist}</p>
+          </div>`;
+        tile.addEventListener('click', () => playSong(song));
+        section.appendChild(tile);
       });
     }
 
-    function handleSignIn() {
-      const user = localStorage.getItem("username");
-      if (user) return;
-      window.location.href = "register.html";
-    }
-
-    function searchSongs() {
-      const term = document.getElementById("searchBox").value.toLowerCase();
-      const section = document.getElementById("top");
-      section.innerHTML = "";
-      database.top.filter(song =>
-        song.title.toLowerCase().includes(term) ||
-        song.artist.toLowerCase().includes(term)
-      ).forEach(song => {
-        const div = document.createElement("div");
-        div.classList.add("song-tile");
-        div.innerHTML = `
+    document.getElementById('search-input').addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      const section = document.getElementById('top');
+      section.innerHTML = '';
+      const results = database.top.filter(song =>
+        song.title.toLowerCase().includes(query) ||
+        song.artist.toLowerCase().includes(query)
+      );
+      results.forEach(song => {
+        const tile = document.createElement('div');
+        tile.className = 'song-tile';
+        tile.innerHTML = `
           <img src="${song.cover}" alt="${song.title}">
           <div class="song-info">
-            <strong>${song.title}</strong><br>
-            <span>${song.artist}</span>
-          </div>
-        `;
-        div.addEventListener("click", () => playSong(song));
-        section.appendChild(div);
+            <strong>${song.title}</strong>
+            <p>${song.artist}</p>
+          </div>`;
+        tile.addEventListener('click', () => playSong(song));
+        section.appendChild(tile);
       });
-    }
+    });
 
-    window.onload = () => {
-      populateFeaturedMusic();
-      const username = localStorage.getItem("username");
-      if (username) {
-        document.getElementById("signInBtn").textContent = `Signed in: ${username}`;
-      }
-    }
+    populateSongs();
   </script></body>
 </html>
