@@ -1,8 +1,8 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const { Octokit } = require('@octokit/rest');
+const readline = require('readline-sync');
 
-// Spotify credentials
 const SPOTIFY_CLIENT_ID = 'a3d7fbc83a94498ba578b978c8bd584c';
 const SPOTIFY_CLIENT_SECRET = '6b5e34d0e1754fbea0bfc3a3d043a2f2';
 
@@ -14,7 +14,7 @@ async function getSpotifyToken() {
     const res = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
-            'Authorization': 'Basic ' + Buffer.from(SPOTIFY_CLIENT_ID + ':' + SPOTIFY_CLIENT_SECRET).toString('base64'),
+            'Authorization': 'Basic ' + Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64'),
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: 'grant_type=client_credentials'
@@ -80,30 +80,27 @@ async function fetchFromJioSaavn(name) {
     throw new Error("JioSaavn not found");
 }
 
+function isMatch(sourceTitle, filename) {
+    const lowerTitle = sourceTitle.toLowerCase().replace(/[^\w\s]/gi, '');
+    const lowerFile = filename.toLowerCase().replace(/[^\w\s]/gi, '');
+    return lowerFile.includes(lowerTitle) || lowerTitle.includes(lowerFile);
+}
+
 function resolveMetadata(metaList, fileName) {
-    let voteMap = {};
     for (const meta of metaList) {
-        const key = `${meta.title}|${meta.artist}|${meta.album}`;
-        voteMap[key] = (voteMap[key] || 0) + 1;
+        if (isMatch(meta.title, fileName)) {
+            return meta; // auto-select if title matches filename
+        }
     }
 
-    const sorted = Object.entries(voteMap).sort((a, b) => b[1] - a[1]);
-
-    if (sorted.length === 0) return null;
-
-    if (sorted.length === 1 || sorted[0][1] >= 2) {
-        const [title, artist, album] = sorted[0][0].split('|');
-        const cover = metaList.find(m => m.title === title && m.artist === artist && m.album === album)?.cover;
-        return { title, artist, album, cover };
-    }
+    if (metaList.length === 0) return null;
 
     console.log(`Conflict in metadata for ${fileName}:`);
     metaList.forEach((meta, i) => {
         console.log(` [${i + 1}] ${meta.source}: ${meta.title} - ${meta.artist} (${meta.album})`);
     });
 
-    const prompt = require('readline-sync');
-    const choice = prompt.questionInt('Choose correct metadata [1/2/3/...]: ') - 1;
+    const choice = readline.questionInt('Choose correct metadata [1/2/3/...]: ') - 1;
     return metaList[choice];
 }
 
@@ -125,9 +122,11 @@ async function fetchSongs() {
         });
 
         const files = res.data.filter(f => f.name.endsWith('.mp3'));
+
         for (const file of files) {
             const songName = extractSongName(file.name);
             const url = `https://raw.githubusercontent.com/${repo.owner}/${repo.repo}/main/${repo.path}/${file.name}`;
+            console.log(`\nFetching metadata for: ${songName}`);
 
             const metaList = [];
 
@@ -135,7 +134,13 @@ async function fetchSongs() {
             try { metaList.push(await fetchFromSpotify(songName, spotifyToken)); } catch {}
             try { metaList.push(await fetchFromiTunes(songName)); } catch {}
 
-            const chosen = resolveMetadata(metaList, file.name);
+            // Check if at least one metadata matches filename
+            if (!metaList.some(meta => isMatch(meta.title, songName))) {
+                console.log(`Skipping ${file.name} - No title matches found`);
+                continue;
+            }
+
+            const chosen = resolveMetadata(metaList, songName);
             if (chosen) {
                 db.push({
                     title: chosen.title,
@@ -148,12 +153,12 @@ async function fetchSongs() {
                 console.log(`Could not determine metadata for ${file.name}`);
             }
 
-            await sleep(1000); // To avoid rate limits
+            await sleep(1000);
         }
     }
 
     fs.writeFileSync('songs.json', JSON.stringify(db, null, 2));
-    console.log('songs.json created with', db.length, 'songs.');
+    console.log('\nDone. songs.json created with', db.length, 'songs.');
 }
 
 fetchSongs().catch(console.error);
