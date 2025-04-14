@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symphonia Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #e60073;
+      color: white;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    .song-list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .song-item {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .song-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .song-info {
+      flex: 1;
+    }
+
+    .song-title {
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .song-artist {
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .play-btn {
+      background: #e60073;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>Symphonia Mobile</header>
+<div class="song-list" id="songList">Loading...</div>
+
+<script src="script.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const list = document.getElementById("songList");
+    list.innerHTML = "";
+
+    const songs = database.top;
+    if (!Array.isArray(songs)) {
+      list.innerHTML = "<p style='padding:1em;'>Music library not loaded.</p>";
+      return;
+    }
+
+    songs.forEach((song, index) => {
+      const item = document.createElement("div");
+      item.className = "song-item";
+
+      const img = document.createElement("img");
+      img.src = song.cover || "https://via.placeholder.com/60x60?text=No+Cover";
+
+      const info = document.createElement("div");
+      info.className = "song-info";
+
+      const title = document.createElement("div");
+      title.className = "song-title";
+      title.textContent = song.title || "Untitled";
+
+      const artist = document.createElement("div");
+      artist.className = "song-artist";
+      artist.textContent = song.artist || "Unknown Artist";
+
+      info.appendChild(title);
+      info.appendChild(artist);
+
+      const playBtn = document.createElement("button");
+      playBtn.className = "play-btn";
+      playBtn.textContent = "Play";
+      playBtn.onclick = () => {
+        if (typeof playSong === "function") {
+          playSong(index); // assumes your global player logic uses this
+        } else {
+          console.warn("playSong() is not defined.");
+        }
+      };
+
+      item.appendChild(img);
+      item.appendChild(info);
+      item.appendChild(playBtn);
+
+      list.appendChild(item);
+    });
+  });
+</script>
+
+</body>
+</html>
