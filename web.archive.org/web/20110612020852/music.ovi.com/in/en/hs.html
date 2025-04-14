@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symphonia Help & Setup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+    h1 {
+      color: #e91e63;
+      border-bottom: 2px solid #e91e63;
+      padding-bottom: 0.5rem;
+    }
+    h2 {
+      color: #333;
+      margin-top: 2rem;
+    }
+    ul {
+      line-height: 1.6;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .os-box {
+      background: #f9f9f9;
+      border-left: 4px solid #e91e63;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .os-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .os-title img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Symphonia Help & Setup</h1>
+
+  <h2>Getting Started</h2>
+  <ul>
+    <li>To <strong>register</strong>, click on the <code>Sign In</code> button and select <code>Create Account</code>.</li>
+    <li>Your account details are saved securely on-device. You don't need to remember anything!</li>
+    <li>Check the "Always Logged In" option to skip login next time.</li>
+  </ul>
+
+  <h2>How to Listen to Music</h2>
+  <ul>
+    <li>Browse songs on the homepage or use the search bar to find your favorite tracks.</li>
+    <li><strong>On desktop</strong>, songs are <strong>streamed</strong> directly from our servers — no downloads.</li>
+    <li><strong>On supported mobile devices</strong>, tapping a song may start a direct download, only if allowed by the platform.</li>
+    <li>Symphonia doesn’t host pirated music — only royalty-free or user-submitted content is allowed.</li>
+  </ul>
+
+  <h2>Favorites, Downloads & Recently Played</h2>
+  <ul>
+    <li>Every time you listen to a song, it may be added to <code>Recently Played</code>.</li>
+    <li>Click the heart icon to add to <code>Favorites</code>.</li>
+    <li><code>My Downloads</code> only appears on supported mobile browsers that allow downloading MP3s.</li>
+    <li>All data is stored using <code>localStorage</code>, so it stays with your browser!</li>
+  </ul>
+
+  <h2>Enabling Song Notifications</h2>
+  <ul>
+    <li>Supported browsers will show a small popup asking for permission — accept it!</li>
+    <li>Each time a song changes, a system notification will appear (if enabled).</li>
+    <li>Does not work on Firefox, Edge, or older mobile devices.</li>
+  </ul>
+
+  <h2>Browser & OS Setup</h2>
+
+  <div class="os-box">
+    <div class="os-title">
+      <img src="assets/logos/xp.png" alt="Windows XP Logo">
+      <strong>Windows XP</strong>
+    </div>
+    <ul>
+      <li>Use <strong>Supermium</strong> browser: <a href="https://supermium.com">supermium.com</a></li>
+      <li>Enable notifications when prompted.</li>
+      <li>Seekbar and music details won’t work on Firefox — use Supermium for full features.</li>
+    </ul>
+  </div>
+
+  <div class="os-box">
+    <div class="os-title">
+      <img src="assets/logos/vista.png" alt="Windows Vista Logo">
+      <strong>Windows Vista</strong>
+    </div>
+    <ul>
+      <li>Use <strong>Supermium</strong> or Chrome 109 (last supported version).</li>
+      <li>Turn on system notifications in Supermium for best experience.</li>
+      <li>Older Edge and Firefox may not support media metadata — limited UI features.</li>
+    </ul>
+  </div>
+
+  <div class="os-box">
+    <div class="os-title">
+      <img src="assets/logos/win7.png" alt="Windows 7 Logo">
+      <strong>Windows 7</strong>
+    </div>
+    <ul>
+      <li>Use a modern Chromium-based browser. Supermium or Chrome 109 is recommended.</li>
+      <li>Ensure notification permission is granted for full experience.</li>
+      <li>Some features may be unavailable in older browser versions.</li>
+    </ul>
+  </div>
+
+  <h2>FAQ</h2>
+  <ul>
+    <li><strong>Why can't I download songs on PC?</strong><br>
+    To comply with content regulations and copyright safety, downloads are restricted to supported mobile devices only.</li>
+
+    <li><strong>Why don’t I see song details on Firefox or Edge?</strong><br>
+    Some browsers don’t support the Media Session API. You’ll still hear music, but enhanced features are unavailable.</li>
+
+    <li><strong>What’s the best browser for Symphonia?</strong><br>
+    We recommend Chromium-based browsers like Chrome, Brave, or Supermium (especially on older systems).</li>
+  </ul>
+
+</body>
+</html>
