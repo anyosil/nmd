@@ -2,143 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-
-        .container {
-            position: relative;
-            height: 100vh;
-            background: #87CEEB; /* Sky blue */
-        }
-
-        .sky {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-        }
-
-        .cloud {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .cloud1 {
-            width: 100px;
-            height: 60px;
-            top: 20px;
-            left: 50px;
-            animation: moveClouds 20s linear infinite;
-        }
-
-        .cloud2 {
-            width: 120px;
-            height: 70px;
-            top: 50px;
-            left: 300px;
-            animation: moveClouds 25s linear infinite;
-        }
-
-        .cloud3 {
-            width: 80px;
-            height: 50px;
-            top: 10px;
-            left: 600px;
-            animation: moveClouds 15s linear infinite;
-        }
-
-        @keyframes moveClouds {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(100vw); }
-        }
-
-        .park {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 50%;
-            background: #4CAF50; /* Grass green */
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            padding: 20px;
-        }
-
-        .bench {
-            width: 150px;
-            height: 50px;
-            background: #8B4513; /* Brown */
-            position: relative;
-            border-radius: 5px;
-        }
-
-        .person {
-            width: 30px;
-            height: 50px;
-            background: #FFD700; /* Gold */
-            border-radius: 15px;
-            position: absolute;
-            bottom: 50px; /* Sitting on the bench */
-        }
-
-        .sitting {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .walking {
-            animation: walk 2s linear infinite;
-            left: 0;
-        }
-
-        @keyframes walk {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(100px); }
-            100% { transform: translateX(0); }
-        }
-
-        .error-message {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2em;
-            color: #FF0000; /* Red */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    <title>404 Error Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sky">
-            <div class="cloud cloud1"></div>
-            <div class="cloud cloud2"></div>
-            <div class="cloud cloud3"></div>
-        </div>
-        <div class="park">
-            <div class="bench">
-                <div class="person sitting"></div>
-            </div>
-            <div class="bench">
-                <div class="person walking"></div>
-            </div>
-            <div class="bench">
-                <div class="person walking"></div>
-            </div>
-            <div class="bench">
-                <div class="person sitting"></div>
-            </div>
-            <div class="error-message">404 - Page Not Found</div>
-        </div>
+    <div class="frem">
+        <p>404</p>
+        <h2>Look like you're lost</h2>
+        <h5>the page you are looking for not available</h5>
+        <a href="#">Go to Home</a>
     </div>
 </body>
 </html>
