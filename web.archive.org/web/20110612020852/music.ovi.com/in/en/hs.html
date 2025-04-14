@@ -2,105 +2,96 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Symphonia Help & Setup</title>
+  <title>Symphonia Help</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #f4f4f4;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
       margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
       padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
     h1 {
-      color: #c2185b;
+      color: #d81b60;
+      text-align: center;
+      margin-bottom: 30px;
     }
     h2 {
+      font-size: 1.2em;
+      margin-top: 30px;
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: 30px;
-      color: #333;
     }
     img.os-logo {
-      width: 24px;
-      height: 24px;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: 20px;
+      vertical-align: middle;
     }
     ul {
-      padding-left: 20px;
+      margin: 10px 0 20px 25px;
+      padding-left: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Welcome to Symphonia - Help & Setup</h1>
 
-  <h1>Welcome to Symphonia - Help & Setup</h1>
-
-  <section>
     <h2>Getting Started</h2>
     <ul>
-      <li>To register, go to the top-right corner and click <strong>Sign In</strong>. Then click <strong>Register</strong>.</li>
-      <li>Once logged in, your favorites, downloads, and recently played tracks will be saved.</li>
-      <li>Click on any song to start listening instantly.</li>
+      <li>To register, click <strong>Sign In</strong> on the top right, then choose <strong>Register</strong>.</li>
+      <li>Once signed in, your favorites, downloads, and recent plays are saved.</li>
+      <li>Click any song to start listening.</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>
-      <img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Windows_logo_-_2002.svg/24px-Windows_logo_-_2002.svg.png" alt="Windows XP">
-      Windows XP
-    </h2>
+    <h2><img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2001.svg" alt="XP logo"> Windows XP</h2>
     <ul>
-      <li>Use the <strong>Supermium</strong> browser for best compatibility.</li>
-      <li>Enable Notifications in Supermium to receive song change alerts.</li>
-      <li>HTML5 Audio is supported in Supermium, but not in Firefox. Please avoid using Firefox on XP.</li>
+      <li>Use the <strong>Supermium</strong> browser for best support.</li>
+      <li>Enable Notifications in Supermium to get music info updates.</li>
+      <li>Avoid Firefox – it does not support MediaSession API.</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>
-      <img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Windows_Vista_logo.svg/24px-Windows_Vista_logo.svg.png" alt="Windows Vista">
-      Windows Vista
-    </h2>
+    <h2><img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Windows_Vista_logo.png" alt="Vista logo"> Windows Vista</h2>
     <ul>
-      <li>Recommended Browser: Supermium or Chromium 87+ based forks.</li>
-      <li>Ensure JavaScript is enabled and page notifications are allowed.</li>
-      <li>Use the mobile version if you face layout issues.</li>
+      <li>Supermium is still your best bet here.</li>
+      <li>Make sure notifications are turned on.</li>
+      <li>If layout issues occur, use the mobile site version.</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>
-      <img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Windows_logo_-_2002.svg/24px-Windows_logo_-_2002.svg.png" alt="Windows 7">
-      Windows 7
-    </h2>
+    <h2><img class="os-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Windows_7_logo.png" alt="Windows 7 logo"> Windows 7</h2>
     <ul>
-      <li>Recommended Browser: Chrome, Supermium, or Opera 70+.</li>
-      <li>MS Media Session API is partially supported. If music details don’t show, enable notifications to get updates.</li>
-      <li>Use the desktop site for the best visual experience.</li>
+      <li>Use Chrome or Supermium for best performance.</li>
+      <li>If song details don't appear, use browser notifications instead.</li>
     </ul>
-  </section>
 
-  <section>
     <h2>Browser Compatibility</h2>
     <ul>
-      <li><strong>Edge</strong>: Song details may not appear. Please enable notifications.</li>
-      <li><strong>Firefox</strong>: Media Session API is not supported. Use Chrome-based browsers instead.</li>
-      <li><strong>Supermium</strong>: Best for legacy Windows systems (XP, Vista).</li>
+      <li><strong>Edge:</strong> Doesn't show song info well. Use notifications instead.</li>
+      <li><strong>Firefox:</strong> Media Session API unsupported. Use Chrome-based browsers.</li>
+      <li><strong>Supermium:</strong> Ideal for legacy systems like XP, Vista, 7.</li>
     </ul>
-  </section>
 
-  <section>
     <h2>FAQs</h2>
     <ul>
-      <li><strong>Why can't I download music?</strong><br>Symphonia streams legally available content. Downloads are not allowed on desktop to prevent piracy.</li>
-      <li><strong>Why don't I see song name/artist info?</strong><br>This depends on your browser’s support for the Media Session API. Enable notifications to get info as popup alerts instead.</li>
+      <li><strong>Why can't I download music?</strong><br>Symphonia only streams music to avoid piracy. Downloads are available only on specific mobile platforms.</li>
+      <li><strong>Why doesn’t song info appear?</strong><br>Check if your browser supports Media Session API. If not, enable notifications to get updates.</li>
     </ul>
-  </section>
-
+  </div>
 </body>
 </html>
