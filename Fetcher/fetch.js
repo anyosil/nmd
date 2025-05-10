@@ -5,7 +5,7 @@ const axios = require("axios");
 const GITHUB_REPO_API = "https://api.github.com/repos/anyosil/nmdmdb/git/trees/main?recursive=1";
 const OUTPUT_FILE = path.join(__dirname, "songs.json");
 const TARGET_DIRECTORY = "music"; // Fetch only from this folder
-let RATE_LIMIT_DELAY = 2000; // Initial delay (dynamically increases)
+let RATE_LIMIT_DELAY = 2; // Initial delay (dynamically increases)
 
 async function fetchGitHubFiles(retryCount = 0) {
     try {
