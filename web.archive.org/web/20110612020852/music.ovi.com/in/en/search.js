@@ -39,7 +39,7 @@ function handleSearch(query) {
     
 
     if (filteredSongs.length === 0) {
-        searchResults.innerHTML = "<li>Uh Oh! We've searched Near and Far, We haven't Found this Song 😔..Maybe it is still not in our database 🤔?</li>";
+        searchResults.innerHTML = "<li>No results found</li>";
         return;
     }
 
@@ -115,7 +115,7 @@ function playSong(songTitle) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: song.title,
             artist: song.artist,
-            artwork: [{ src: song.cover, sizes: "512x512", type: "./default-cover.png" }]
+            artwork: [{ src: song.cover, sizes: "512x512", type: "image/png" }]
         });
 
         navigator.mediaSession.setActionHandler("play", () => audioPlayer.play());

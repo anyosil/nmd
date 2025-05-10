@@ -1,65 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="./continue.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuvi Help Desk</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Nuvi Help And Support</title>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9faff;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    main {
+      flex: 1 0 auto;
+      max-width: 650px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #34495e;
+      font-weight: 600;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .faq {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .faq li {
+      background: #fff;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .faq li:hover {
+      background-color: #e8f0fe;
+    }
+    .faq-question {
+      font-weight: 600;
+      color: #2c3e50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      margin-top: 0.5rem;
+      color: #555;
+      font-weight: 400;
+      line-height: 1.4;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.35s ease;
+    }
+    .faq li.active .faq-answer {
+      max-height: 300px; /* large enough for content */
+      opacity: 1;
+    }
+    .faq li .toggle-icon {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2980b9;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+    .faq li.active .toggle-icon {
+      transform: rotate(45deg);
+    }
+    footer {
+      background: #2c3e50;
+      color: #bdc3c7;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+    /* Responsive */
+    @media (max-width: 400px) {
+      main {
+        margin: 1rem 0.5rem;
+        padding: 0 0.5rem;
+      }
+      header h1 {
+        font-size: 1.25rem;
+      }
+      .faq-question {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-center text-blue-600"><a href="./pc.html"><button>Welcome to Symphonia Help Centre!</button></a></h1>
-        
-        <div class="mt-6 bg-white shadow-md rounded-lg p-6">
-            <h2 class="text-2xl font-semibold text-gray-800">Getting Started</h2>
-<br>
-<span class="text-gray-500 italic"> In order to Return to Homepage, Click the Blue Heading!"</span>
-            <p class="mt-2 text-gray-600">Symphonia Desktop is your go-to music service for enjoying your favorite tracks. Follow these steps to get started:</p>
-            <ul class="mt-3 list-disc list-inside text-gray-700">
-                <li>Sign in to your account <span class="text-gray-500 italic">&nbsp; &nbsp; **This is required in order to listen to Music!</span></li>
-                <li>Search for your favorite songs using Search Bar</li>
-                <li>Click on a Music tile in Homepage or the Play button in the search page to Play Music</li>
-                <li>Compatiblity: All Browsers With Media Session API <span class="text-gray-500 italic">Chrome 57, Edge 79, Firefox 78, Opera 44</span></li>
-                <li>Manage your favorites and playlists <span class="text-gray-500 italic">Coming Soon!</span></li>
-            </ul>
-        </div>
-        
-        <div class="mt-6 bg-white shadow-md rounded-lg p-6">
-            <h2 class="text-2xl font-semibold text-gray-800">Frequently Asked Questions</h2>
-            <div class="mt-3">
-                <h3 class="text-xl font-medium text-blue-600">How do I search for music?</h3>
-                <p class="text-gray-600">Use the search bar at the top of the page to find songs by title, artist, or album.</p>
-            </div>
-            <div class="mt-3">
-                <h3 class="text-xl font-medium text-blue-600">Can I download songs?</h3>
-                <p class="text-gray-600">Sadly No, You Cannot download Songs Here but can in the Mobile Website!</p>
-            </div>
-            <div class="mt-3">
-                <h3 class="text-xl font-medium text-blue-600">How do I Register With Symphonia?</h3>
-                <p class="text-gray-600">From the Symphonia Home Page, Press "Login" button, Press Register and Enter Valid Password</p>
-            </div>
-            <div class="mt-3">
-                <h3 class="text-xl font-medium text-blue-600">How Do I Listen to Songs?</h3>
-                <p class="text-gray-600">Click on a Music tile in Homepage or the Play button in the search page to Play Music. To Control Playback, Check the Music Player Button (Usually Near the Search bar). It should show Track Name, Artist and Playback</p>
-            </div>    
-        </div>
-       <div class="mt-3">
-                <h3 class="text-xl font-medium text-blue-600">Will My Song Continue to Play Even if I Navigate between pages?</h3>
-                <p class="text-gray-600">Yes! Your Music will continue Playing even if you navigate to Search to Homepage or Vice Versa!. If Navigating between Tabs make sure Symphonia Tab is Open!.
-
-Exceptions:
-
-Help Page
-Mobile Site</p>
-            </div>
-        
-        <div class="mt-6 bg-white shadow-md rounded-lg p-6">
-            <h2 class="text-2xl font-semibold text-gray-800">Need More Help?</h2>
-            <p class="text-gray-600">If you have any issues, feel free to reach out to our support team at <a href="mailto:enuviverify@gmail.com" class="text-blue-600">enuviverify@gmail.com</a>.</p>
-        </div>
-    </div>
+<body>
+  <header>
+    <h1>Help &amp; Support - Symphonia Desktop</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Getting Started</h2>
+      <p>Welcome to the help page for Symphonia! Here you’ll find answers to common questions and useful tips to get the most out of the site.</p>
+    </section>
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq" id="faq">
+        <li>
+          <div class="faq-question">
+            How do I create an account?
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            To create an account, click on the “Sign Up” button at the top-right corner of the homepage and fill out the registration form with your details.
+          </div>
+        </li>
+        <li>
+          <div class="faq-question">
+            I forgot my password. What should I do?
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Click on the “Forgot Password?” link on the login page and enter your registered email address to receive a password reset link.
+          </div>
+        </li>
+        <li>
+          <div class="faq-question">
+            How do I reset my profile data?
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            To reset your profile data, go to your account settings, scroll down to “Reset Profile”, and confirm the action. Please note this cannot be undone.
+          </div>
+        </li>
+        <li>
+          <div class="faq-question">
+            Is my data safe and private?
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, we take your privacy seriously. Your data is stored securely and is never shared without your consent.
+          </div>
+        </li>
+        <li>
+          <div class="faq-question">
+            How can I contact support?
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            You can reach out to us anytime via email at <a href="mailto:enuviverify@gmail.com">Here!</a>. We strive to respond within 24 hours.
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Compatibility</h2>
+      <p>Symphonia Desktop works best on modern browsers and devices to provide a smooth and reliable experience. Below are the current compatibility details:</p>
+      <ul>
+        <li><strong>Supported Browsers:</strong> Chrome (latest), Firefox (latest), Edge (latest), Safari (latest)</li>
+        <li><strong>Mobile:</strong> Fully responsive and functional on iOS Safari, Android Chrome, and most mobile browsers.</li>
+        <li><strong>Requirements:</strong> JavaScript enabled for interaction and dynamic content.</li>
+        <li><strong>Known Issues:</strong> Older browsers (IE11 and below) are not supported and may experience display or functionality issues.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Tutorials</h2>
+      <p>Explore these tutorials to get started and enhance your experience:</p>
+      <ul>
+        <li><a href="https://anyosil.github.io/nmd/tutorials/getting-started.html" target="_blank" rel="noopener">Getting Started Guide</a></li>
+        <li><a href="https://anyosil.github.io/nmd/tutorials/account-management.html" target="_blank" rel="noopener">Account Management</a></li>
+        <li><a href="https://anyosil.github.io/nmd/tutorials/privacy-settings.html" target="_blank" rel="noopener">Privacy & Security Settings</a></li>
+        <li><a href="https://anyosil.github.io/nmd/tutorials/advanced-features.html" target="_blank" rel="noopener">Advanced Features</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About Developer</h2>
+      <p>Anyosil is the creator and developer behind this project. Passionate about web technologies and user-centric design, Anyosil strives to build helpful, user-friendly applications that empower people. For more information or collaborations, you can reach out via email or through social media channels linked on the main website.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Anyosil. All rights reserved.
+  </footer>
+  <script>
+    // FAQ toggle with animation handled by CSS max-height and opacity
+    document.getElementById('faq').addEventListener('click', function(e) {
+      const li = e.target.closest('li');
+      if (!li) return;
+      if (li.classList.contains('active')) {
+        li.classList.remove('active');
+      } else {
+        [...this.children].forEach(child => child.classList.remove('active'));
+        li.classList.add('active');
+      }
+    });
+  </script>
 </body>
-<footer>
-<span class="text-gray-600 italic"> Copyright Nuvi Services. Symphonia Is a Venture of Nuvi Services</span>
 </html>
