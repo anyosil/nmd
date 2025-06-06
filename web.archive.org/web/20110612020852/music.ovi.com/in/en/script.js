@@ -833,7 +833,7 @@ var database = {
             "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/43/43/b3/4343b351-cfae-48d5-bba7-173dfb796947/197190446395.jpg/1000x1000bb.jpg",
             "title": "Alaipayuthey",
             "artist": "Harini",
-            "url": "https://raw.github.com/anyosil/nmdmdb/main/music/Alaipayuthey-Kanna.mp3"
+            "url": "https://anyosil.github.io/nmdmdb/music/Alaipayuthey-Kanna.mp3"
         },
         {
             "title": "Alappara Theme (instrumental)",
