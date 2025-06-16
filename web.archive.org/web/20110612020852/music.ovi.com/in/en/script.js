@@ -833,7 +833,7 @@ var database = {
             "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/43/43/b3/4343b351-cfae-48d5-bba7-173dfb796947/197190446395.jpg/1000x1000bb.jpg",
             "title": "Alaipayuthey",
             "artist": "Harini",
-            "url": "https://anyosil.github.io/nmdmdb/music/Alaipayuthey-Kanna.mp3"
+            "url": "https://raw.github.com/anyosil/nmdmdb/main/music/Alaipayuthey-Kanna.mp3"
         },
         {
             "title": "Alappara Theme (instrumental)",
@@ -3138,73 +3138,6 @@ document.addEventListener("DOMContentLoaded", function () {
     cleanWaybackLinks();
 })();
 
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Search page loaded...");
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("query");
-
-    console.log("Query received:", query);
-
-    if (query) {
-        handleSearch(query);
-    } else {
-        console.error("No search query found!");
-    }
-});
-
-function handleSearch(query) {
-    console.log("Handling search for:", query);
-
-    if (typeof database === "undefined") {
-        console.error("Error: database is not defined in script.js!");
-        return;
-    }
-
-    const searchResults = document.getElementById("searchResults").querySelector("ul");
-    if (!searchResults) {
-        console.error("Error: searchResults element not found!");
-        return;
-    }
-
-    searchResults.innerHTML = ""; // Clear previous results
-
-    const filteredSongs = database.filter(song =>
-        song.title.toLowerCase().includes(query.toLowerCase()) ||
-        song.artist.toLowerCase().includes(query.toLowerCase())
-    );
-
-    if (filteredSongs.length === 0) {
-        searchResults.innerHTML = "<li>No results found</li>";
-        return;
-    }
-
-    filteredSongs.forEach((song) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-            <div class="song">
-                <img src="${song.cover}" alt="Cover Image">
-                <strong>${song.title}</strong>
-                <p>${song.artist}</p>
-                <button class="play-btn" data-src="${song.src}" data-title="${song.title}" data-artist="${song.artist}" data-cover="${song.cover}">▶ Play</button>
-            </div>
-        `;
-        searchResults.appendChild(li);
-    });
-
-    console.log("Results added:", searchResults.innerHTML);
-
-    document.querySelectorAll(".play-btn").forEach((btn) => {
-        btn.addEventListener("click", function () {
-            const songSrc = this.getAttribute("data-src");
-            const songTitle = this.getAttribute("data-title");
-            const songArtist = this.getAttribute("data-artist");
-            const songCover = this.getAttribute("data-cover");
-            
-            playSong(songSrc, songTitle, songArtist, songCover);
-        });
-    });
-}
 
 
 

@@ -413,6 +413,7 @@ var storeLanguage = "en";
 </ul>
 
 
+<!-- Fixed and streamlined search page -->
 <div id="searchContent">
     <form id="searchForm" class="srch-music">
         <div class="txtbox t-l">
@@ -426,32 +427,170 @@ var storeLanguage = "en";
     </form>
 </div>
 
+<div id="searchOverlay" style="
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  overflow-y: auto;
+  padding: 40px 5vw;
+  box-sizing: border-box;
+">
+  <div style="text-align: right; margin-bottom: 20px;">
+    <button id="closeSearch" style="
+      background: #fff;
+      border: none;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    ">Close ✖</button>
+  </div>
+  <div id="searchResults" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  "></div>
+</div>
+
+<audio id="player" style="display: none;"></audio>
+
 <script src="script.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("searchForm");
     const searchInput = document.getElementById("searchCriteria");
+    const searchResults = document.getElementById("searchResults");
+    const searchOverlay = document.getElementById("searchOverlay");
+    const closeSearch = document.getElementById("closeSearch");
+    const player = document.getElementById("player");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+    if (typeof database !== 'undefined') {
+      if (!Array.isArray(database)) {
+        const flat = [];
+        Object.values(database).forEach(group => {
+          if (Array.isArray(group)) flat.push(...group);
+        });
+        window.database = flat;
+      }
+    } else {
+      window.database = [];
+    }
 
-        const query = searchInput.value.trim();
-        if (query.length === 0 || query === "Search Music") return; // Stop if empty or default text
-
-        // Redirect to search.html with the correct parameter
-        window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-    });
-
-    // Clear placeholder when clicked
     searchInput.addEventListener("focus", function () {
-        if (this.value === "Search Music") this.value = "";
+      if (this.value === "Search Music") this.value = "";
     });
 
     searchInput.addEventListener("blur", function () {
-        if (this.value.trim() === "") this.value = "Search Music";
+      if (this.value.trim() === "") this.value = "Search Music";
     });
-});
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+
+      if (!query || query === "search music") {
+        searchResults.innerHTML = '<p style="text-align: center; color: gray;">Please enter a search term.</p>';
+        searchOverlay.style.display = "block";
+        return;
+      }
+
+      renderSearchResults(query);
+      searchOverlay.style.display = "block";
+    });
+
+    closeSearch.addEventListener("click", function () {
+      searchOverlay.style.display = "none";
+      player.pause();
+    });
+
+    function renderSearchResults(query) {
+      searchResults.innerHTML = "";
+
+      if (!Array.isArray(database)) {
+        searchResults.innerHTML = '<p style="text-align: center; color: red;">Database is not loaded properly.</p>';
+        return;
+      }
+
+      const filtered = database.filter(song => {
+        return (
+          containsMatch(song.title, query) ||
+          containsMatch(song.album, query) ||
+          containsMatch(song.artist, query)
+        );
+      });
+
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: gray;">No results found.</p>';
+        return;
+      }
+
+      filtered.forEach(song => {
+        const card = document.createElement("div");
+        card.style.border = "1px solid #ddd";
+        card.style.borderRadius = "10px";
+        card.style.overflow = "hidden";
+        card.style.background = "#fff";
+        card.style.boxShadow = "0 2px 6px rgba(0,0,0,0.08)";
+        card.innerHTML = `
+          <img src="${song.cover || 'default-cover.png'}" onerror="this.src='default-cover.png'" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 10px;">
+            <div style="font-weight: bold; font-size: 14px;">${song.title}</div>
+            <div style="font-size: 13px; color: #555;">${song.artist}</div>
+            <div style="font-size: 12px; color: #888;"><em>${song.album}</em></div>
+            <button class="play-btn" data-url="${song.url}" style="
+              margin-top: 8px;
+              padding: 6px 10px;
+              font-size: 12px;
+              border: none;
+              background-color: #e91e63;
+              color: white;
+              border-radius: 4px;
+              cursor: pointer;
+            ">▶ Play</button>
+          </div>
+        `;
+        searchResults.appendChild(card);
+      });
+
+      const playButtons = document.querySelectorAll(".play-btn");
+      playButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const url = this.getAttribute("data-url");
+          player.src = url;
+          player.play();
+          if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+              title: this.parentElement.querySelector("div:nth-child(1)").textContent,
+              artist: this.parentElement.querySelector("div:nth-child(2)").textContent,
+              album: this.parentElement.querySelector("div:nth-child(3)").textContent,
+              artwork: [
+                { src: this.parentElement.parentElement.querySelector("img").src, sizes: '512x512', type: 'image/jpeg' }
+              ]
+            });
+          }
+        });
+      });
+    }
+
+    function containsMatch(source, query) {
+      if (!source) return false;
+      source = source.toLowerCase().normalize("NFD").replace(/[^\w\s]|_/g, "").replace(/[\u0300-\u036f]/g, "");
+      query = query.toLowerCase().normalize("NFD").replace(/[^\w\s]|_/g, "").replace(/[\u0300-\u036f]/g, "");
+      return source.includes(query);
+    }
+  });
 </script>
+
 
   
   <!-- end searchContent-->
@@ -460,24 +599,6 @@ document.addEventListener("DOMContentLoaded", function () {
             
     <script src="script.js"></script>  
     
-    <script>
-        src="script.js"
-        document.addEventListener('DOMContentLoaded', function() {
-          const form = document.getElementById('searchForm');
-          form.addEventListener('submit', function(event) {
-            event.preventDefault(); // stop the normal HTTP post
-            const query = document.getElementById('searchCriteria').value.trim();
-            
-            // Call a function from script.js that handles the search
-            // Example: if script.js has handleSearch(query), call that:
-            if (typeof handleSearch === 'function') {
-              handleSearch(query);
-            } else {
-              console.warn('No handleSearch() function found in script.js');
-            }
-          });
-        });
-    </script>
                     
 
 </div>           
@@ -565,9 +686,21 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p>Symphonia! Now with More than 700 Music Files!</p>
                         
                         <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
+                 
+                        <div class="cta-btns">
+                            <a class="btn" href="#" onclick="redirectToMobile()">
+                                <span>Go to Mobile Version!</span>
+                            </a>
+                        </div>
                         
+                        <script>
+                            function redirectToMobile() {
+                                alert('Mobile Version Is Still Under Development! Many Links will be Broken!!');
+                                window.location.href = "https://anyosil.github.io/symmusic.github.io";
+                            }
+                        </script>
                         
-                        <em>Symphonia is an Independent Project aimed at providing free music streaming access to all without any ads</em>
+                        <em>Mobile Version is very much optimised for Mobiles and Relatively smaller screens!</em>
                     </div>
                 </div>
             </div>
