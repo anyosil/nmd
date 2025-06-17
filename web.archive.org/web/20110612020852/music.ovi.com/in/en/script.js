@@ -2928,6 +2928,9 @@ function playSong(title, artist, cover, url) {
         })
         .catch(err => console.error("❌ Playback error:", err));
 
+audioPlayer.addEventListener("ended", playNextSong);
+});
+
     audioPlayer.onended = () => playNext();
 }
 
