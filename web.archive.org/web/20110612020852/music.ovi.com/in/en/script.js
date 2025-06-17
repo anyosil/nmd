@@ -2787,7 +2787,14 @@ let currentSection = "top";
 let audioPlayer = new Audio(); // Persistent audio player
 
 
+function playNextSong() {
+        const flattenedSongs = Object.values(database).flat();
+        let currentSongIndex = parseInt(localStorage.getItem("currentSongIndex") || 0, 10);
 
+        if (currentSongIndex < flattenedSongs.length - 1) {
+            playSong(flattenedSongs[currentSongIndex + 1].title);
+        }
+    }
 
 
 // 🚀 Populate Featured Music Section
