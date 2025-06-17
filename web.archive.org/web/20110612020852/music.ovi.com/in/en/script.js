@@ -2935,8 +2935,6 @@ function playSong(title, artist, cover, url) {
         })
         .catch(err => console.error("❌ Playback error:", err));
 
-audioPlayer.addEventListener("ended", playNextSong);
-});
 
     audioPlayer.onended = () => playNext();
 }
@@ -3005,21 +3003,7 @@ function updateMediaSession(title, artist, cover) {
 }
 
 
-// 🔥 Play Next Song
-function playNext() {
-    const songList = database[currentSection] || [];
-    currentSongIndex = (currentSongIndex + 1) % songList.length;
-    const nextSong = songList[currentSongIndex];
-    playSong(nextSong.title, nextSong.artist, nextSong.cover, nextSong.url);
-}
-
-// 🔥 Play Previous Song
-function playPrevious() {
-    const songList = database[currentSection] || [];
-    currentSongIndex = (currentSongIndex - 1 + songList.length) % songList.length;
-    const prevSong = songList[currentSongIndex];
-    playSong(prevSong.title, prevSong.artist, prevSong.cover, prevSong.url);
-}
+// 
 
 
 
