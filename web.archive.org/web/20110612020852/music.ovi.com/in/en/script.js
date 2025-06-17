@@ -2940,6 +2940,33 @@ function playSong(title, artist, cover, url) {
 }
 
 
+let currentIndex = 0; // Start with the first track in the database
+const audioPlayer = document.getElementById("audioPlayer"); // Get the audio player element
+
+// Function to load and play the current track
+function loadTrack(index) {
+    if (index >= 0 && index < database.length) {
+        currentIndex = index;
+        const track = database[currentIndex];
+        audioPlayer.src = track.url; // Set the audio source to the track's URL
+        audioPlayer.play(); // Start playing the track
+    } else {
+        console.error("Invalid track index:", index);
+    }
+}
+
+// Function to play the next track
+function playNext() {
+    currentIndex = (currentIndex + 1) % database.length; // Loop back to the start if at the end
+    loadTrack(currentIndex);
+}
+
+// Attach the `onended` event listener to play the next track automatically
+audioPlayer.onended = playNext;
+
+// Start playing the first track in the database
+loadTrack(currentIndex);
+
 // 🔥 Update Last Played Song in JSONBin
 function saveAndUpdateLastPlayed(username, songName) {
     if (!username) {
