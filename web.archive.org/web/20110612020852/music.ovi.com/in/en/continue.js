@@ -22,7 +22,12 @@ function savePlaybackState(trackIndex, currentTime) {
 
 // Update Media Session metadata for lock screen / notification controls
 function updateMediaSessionMetadata(track) {
-  if ("mediaSession" in navigator && track) {
+  if (!("mediaSession" in navigator) || !track) return;
+  // If another script recently set media session metadata, skip to avoid stomping it.
+  try {
+    if (window.__msapiLock && (Date.now() - window.__msapiLock) < 2000) return;
+  } catch (e) {}
+  try {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track.title,
       artist: track.artist,
@@ -31,7 +36,7 @@ function updateMediaSessionMetadata(track) {
         { src: track.cover || "default_cover.png", sizes: "512x512", type: "image/png" },
       ],
     });
-  }
+  } catch (e) {}
 }
 
 // Play song by index from the database starting at specified time

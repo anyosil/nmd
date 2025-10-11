@@ -23,12 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateMediaSession(title, artist, cover) {
         if (!("mediaSession" in navigator)) return;
 
-        navigator.mediaSession.metadata = new MediaMetadata({
-            title: title || "Unknown Title",
-            artist: artist || "Unknown Artist",
-            album: "Symphonia",
-            artwork: [{ src: cover || "https://example.com/default-cover.jpg", sizes: "512x512", type: "image/png" }]
-        });
+        // If the main script recently set metadata, don't overwrite it immediately
+        try { if (window.__msapiLock && (Date.now() - window.__msapiLock) < 2000) return; } catch (e) {}
+        try {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: title || "Unknown Title",
+                artist: artist || "Unknown Artist",
+                album: "Symphonia",
+                artwork: [{ src: cover || "https://example.com/default-cover.jpg", sizes: "512x512", type: "image/png" }]
+            });
+        } catch (e) {}
 
         navigator.mediaSession.setActionHandler("play", () => {
             audioPlayer.play();
@@ -48,14 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 📝 Save playback data in `localStorage`
     function savePlaybackState() {
-        localStorage.setItem("currentSong", JSON.stringify({
-            url: audioPlayer.src,
-            title: navigator.mediaSession.metadata?.title || "Unknown Title",
-            artist: navigator.mediaSession.metadata?.artist || "Unknown Artist",
-            cover: navigator.mediaSession.metadata?.artwork?.[0]?.src || "https://example.com/default-cover.jpg",
-            time: audioPlayer.currentTime,
-            isPlaying: !audioPlayer.paused
-        }));
+        try {
+            localStorage.setItem("currentSong", JSON.stringify({
+                url: audioPlayer.src,
+                title: navigator.mediaSession.metadata?.title || "Unknown Title",
+                artist: navigator.mediaSession.metadata?.artist || "Unknown Artist",
+                cover: navigator.mediaSession.metadata?.artwork?.[0]?.src || "https://example.com/default-cover.jpg",
+                time: audioPlayer.currentTime,
+                isPlaying: !audioPlayer.paused
+            }));
+        } catch (e) {}
     }
 
     // 🎵 Update state when playing/pausing

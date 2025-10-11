@@ -110,23 +110,28 @@ function playSong(songTitle) {
     }).catch(error => {
         console.error("Playback failed:", error);
     });
+    // Set data attributes so central scripts can persist metadata
+    try {
+        audioPlayer.setAttribute && audioPlayer.setAttribute('data-title', song.title || '');
+        audioPlayer.setAttribute && audioPlayer.setAttribute('data-artist', song.artist || '');
+        audioPlayer.setAttribute && audioPlayer.setAttribute('data-cover', song.cover || '');
+    } catch (e) {}
 
-    if ('mediaSession' in navigator) {
-        navigator.mediaSession.metadata = new MediaMetadata({
-            title: song.title,
-            artist: song.artist,
-            artwork: [{ src: song.cover, sizes: "512x512", type: "image/png" }]
-        });
-
-        navigator.mediaSession.setActionHandler("play", () => audioPlayer.play());
-        navigator.mediaSession.setActionHandler("pause", () => audioPlayer.pause());
-        navigator.mediaSession.setActionHandler("stop", () => {
-            audioPlayer.pause();
-            audioPlayer.currentTime = 0;
-        });
-
-        console.log("Now playing via Media Session:", song.title);
-    }
+    // Prefer central updateMediaSession when available; otherwise respect msapi lock
+    try {
+        if (typeof updateMediaSession === 'function') updateMediaSession(song.title, song.artist, song.cover);
+        else if ('mediaSession' in navigator) {
+            if (!(window.__msapiLock && (Date.now() - window.__msapiLock) < 2000)) {
+                try {
+                    navigator.mediaSession.metadata = new MediaMetadata({
+                        title: song.title,
+                        artist: song.artist,
+                        artwork: [{ src: song.cover, sizes: "512x512", type: "image/png" }]
+                    });
+                } catch (e) {}
+            }
+        }
+    } catch (e) {}
 }
 filteredSongs.forEach((song) => {
     const li = document.createElement("li");
@@ -186,6 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("currentSong", JSON.stringify({
             url: audioPlayer.src,
             title: audioPlayer.getAttribute("data-title") || "Unknown Song",
+            artist: audioPlayer.getAttribute("data-artist") || '',
+            cover: audioPlayer.getAttribute("data-cover") || '',
             time: audioPlayer.currentTime,
             isPlaying: isPlaying
         }));

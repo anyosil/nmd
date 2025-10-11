@@ -2751,6 +2751,71 @@ var database = {
         
 };
 
+// Single global audio player reference. We initialize it on DOMContentLoaded
+// to prefer an existing <audio id="audioPlayer"> element when present.
+var audioPlayer = null;
+let currentTrack = null;
+
+// Prevent overlapping audio: when any audio starts playing, pause all other audio sources.
+// Guard to ensure we only patch once even if script.js is included multiple times.
+if (!window.__nuviaudioPatched) {
+    window.__nuviaudioPatched = true;
+    (function () {
+        const audioSet = new Set();
+        const OriginalAudio = window.Audio;
+        const originalPlay = HTMLMediaElement.prototype.play;
+
+        function pauseAllExcept(current) {
+            try {
+                // Pause all DOM audio elements
+                document.querySelectorAll('audio').forEach(a => {
+                    if (a !== current) try { a.pause(); } catch (e) {}
+                });
+
+                // Pause tracked in-memory Audio instances
+                audioSet.forEach(a => {
+                    if (a !== current) try { a.pause(); } catch (e) {}
+                });
+
+                // Also pause the global audioPlayer if it's different
+                if (window.audioPlayer && window.audioPlayer !== current) {
+                    try { window.audioPlayer.pause(); } catch (e) {}
+                }
+            } catch (e) { /* best-effort */ }
+        }
+
+        // Wrap play to pause others first
+        HTMLMediaElement.prototype.play = function () {
+            try { pauseAllExcept(this); } catch (e) {}
+            return originalPlay.apply(this, arguments);
+        };
+
+        // Wrap the Audio constructor so created in-memory Audio instances are tracked
+        function TrackingAudio() {
+            const instance = new OriginalAudio(...arguments);
+            audioSet.add(instance);
+            // When the instance is removed or ended, we keep it in set — it's harmless.
+            // Provide a way to cleanup on unload
+            if (typeof instance.addEventListener === 'function') {
+                instance.addEventListener('ended', function () { /* no-op */ });
+            }
+            return instance;
+        }
+        // Keep prototype chain
+        TrackingAudio.prototype = OriginalAudio.prototype;
+        window.Audio = TrackingAudio;
+    })();
+}
+
+// Expose a helper to explicitly pause all audio sources (useful for external callers)
+function pauseAllAudio() {
+    try {
+        document.querySelectorAll('audio').forEach(a => { try { a.pause(); } catch (e) {} });
+        if (window.audioPlayer && typeof window.audioPlayer.pause === 'function') try { window.audioPlayer.pause(); } catch (e) {}
+    } catch (e) {}
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("lgn-btn");
 
@@ -2784,7 +2849,6 @@ const API_KEY = "$2a$10$IG0fCGUHCL7iFsZMFQjI4e4ufPung048BrnWjddZBoo5V3UjUQ4ja";
 
 let currentSongIndex = 0;
 let currentSection = "top";
-let audioPlayer = new Audio(); // Persistent audio player
 
 
 function playNextSong() {
@@ -2924,16 +2988,49 @@ function playSong(title, artist, cover, url) {
 
     console.log(`🎵 Song Play Call Initiated for ${username}: ${title}`);
     
+    if (!audioPlayer) {
+        // If audioPlayer hasn't been assigned yet, try to use existing DOM element or create fallback
+        audioPlayer = document.getElementById("audioPlayer") || new Audio();
+    }
+
+    // Ensure the audio element has current metadata attributes so persistence and media session read correct values
+    try {
+        if (audioPlayer.setAttribute) {
+            audioPlayer.setAttribute('data-title', title || '');
+            audioPlayer.setAttribute('data-artist', artist || '');
+            audioPlayer.setAttribute('data-cover', cover || '');
+        }
+    } catch (e) {}
+
     audioPlayer.src = url;
     audioPlayer.load();
     audioPlayer.play()
         .then(() => {
             console.log(`✅ Now playing: ${title}`);
-            updateMediaSession(title, artist, cover);
+            // Update Media Session metadata and playback state
+            updateMediaSession(title || "Unknown Title", artist || "Unknown Artist", cover);
+            if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+
+            // Persist currentSong immediately so restores use the correct title
+            try {
+                localStorage.setItem("currentSong", JSON.stringify({
+                    url: audioPlayer.src,
+                    title: title || audioPlayer.getAttribute('data-title') || "Unknown Song",
+                    artist: artist || audioPlayer.getAttribute && audioPlayer.getAttribute('data-artist') || '',
+                    cover: cover || audioPlayer.getAttribute && audioPlayer.getAttribute('data-cover') || '',
+                    time: audioPlayer.currentTime || 0,
+                    isPlaying: true
+                }));
+            } catch (e) {}
+
             saveAndUpdateLastPlayed(username, title); // ✅ Pass username properly
-        setTimeout(updateLastListenedWidget, 1000); // Fetch updated data after saving
+            setTimeout(updateLastListenedWidget, 1000); // Fetch updated data after saving
         })
-        .catch(err => console.error("❌ Playback error:", err));
+        .catch(err => {
+            console.warn("⚠️ Autoplay prevented or playback error:", err);
+            // Autoplay may be blocked; we'll wait for a user gesture to resume
+            addUserGestureAutoplay();
+        });
 
 
     audioPlayer.onended = () => playNext();
@@ -2945,11 +3042,44 @@ let currentIndex = 0; // Start with the first track in the database
 
 // Function to load and play the current track
 function loadTrack(index) {
-    if (index >= 0 && index < database.length) {
+    const flattened = Object.values(database).flat();
+    if (!Array.isArray(flattened) || flattened.length === 0) return console.error("Database not available or empty");
+    if (index >= 0 && index < flattened.length) {
         currentIndex = index;
-        const track = database[currentIndex];
-        audioPlayer.src = track.url; // Set the audio source to the track's URL
-        audioPlayer.play(); // Start playing the track
+        const track = flattened[currentIndex];
+
+        if (!audioPlayer) audioPlayer = document.getElementById("audioPlayer") || new Audio();
+
+        audioPlayer.src = track.url || ""; // Set the audio source to the track's URL
+        // Update the data-* attributes so other code can read title/time
+        try {
+            if (audioPlayer.setAttribute) {
+                audioPlayer.setAttribute("data-title", track.title || "");
+                audioPlayer.setAttribute("data-artist", track.artist || "");
+                audioPlayer.setAttribute("data-cover", track.cover || "");
+            }
+        } catch (e) {}
+
+        // Ensure onended cycles to next track
+        try { audioPlayer.onended = playNext; } catch (e) {}
+
+        audioPlayer.play().then(() => {
+            updateMediaSession(track.title, track.artist, track.cover);
+            if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+            try {
+                localStorage.setItem('currentSong', JSON.stringify({
+                    url: audioPlayer.src,
+                    title: track.title || audioPlayer.getAttribute('data-title') || 'Unknown Song',
+                    time: audioPlayer.currentTime || 0,
+                    isPlaying: true
+                }));
+            } catch (e) {}
+        }).catch(err => {
+            console.warn("⚠️ loadTrack autoplay prevented:", err);
+            updateMediaSession(track.title, track.artist, track.cover);
+            addUserGestureAutoplay();
+        });
+
     } else {
         console.error("Invalid track index:", index);
     }
@@ -2957,14 +3087,13 @@ function loadTrack(index) {
 
 // Function to play the next track
 function playNext() {
-    currentIndex = (currentIndex + 1) % database.length; // Loop back to the start if at the end
+    const flattened = Object.values(database).flat();
+    if (!Array.isArray(flattened) || flattened.length === 0) return;
+    currentIndex = (currentIndex + 1) % flattened.length; // Loop back to the start if at the end
     loadTrack(currentIndex);
 }
 
-// Attach the `onended` event listener to play the next track automatically
-audioPlayer.onended = playNext;
-
-// Start playing the first track in the database
+// Start playing the first track in the database (will safely initialize audioPlayer)
 loadTrack(currentIndex);
 
 // 🔥 Update Last Played Song in JSONBin
@@ -3014,19 +3143,143 @@ function saveAndUpdateLastPlayed(username, songName) {
 
 
 // 🔥 Update Media Session API
+// Robust Media Session API handling. Updates metadata, artwork, action handlers,
+// and keeps positionState in sync when supported.
 function updateMediaSession(title, artist, cover) {
-    if ("mediaSession" in navigator) {
+    if (!("mediaSession" in navigator)) return;
+
+    // Normalize inputs
+    // Prefer provided args, fall back to audioPlayer's data attributes for correctness
+    try {
+        if (!title && audioPlayer && audioPlayer.getAttribute) title = audioPlayer.getAttribute('data-title');
+        if (!artist && audioPlayer && audioPlayer.getAttribute) artist = audioPlayer.getAttribute('data-artist');
+        if (!cover && audioPlayer && audioPlayer.getAttribute) cover = audioPlayer.getAttribute('data-cover');
+    } catch (e) {}
+
+    title = title || "Unknown Title";
+    artist = artist || "Unknown Artist";
+
+    // Provide multiple artwork sizes where possible
+    const artwork = [];
+    if (cover) {
+        artwork.push({ src: cover,   sizes: '512x512', type: 'image/png' });
+        artwork.push({ src: cover,   sizes: '256x256', type: 'image/png' });
+        artwork.push({ src: cover,   sizes: '96x96',   type: 'image/png' });
+    } else {
+        // Optional: a default placeholder image (data URI omitted for brevity)
+        // artwork.push({ src: '/images/default-cover.png', sizes: '512x512', type: 'image/png' });
+    }
+
+    try {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: title,
-            artist: artist || "Unknown Artist",
-            artwork: [{ src: cover, sizes: "512x512", type: "image/png" }]
+            artist: artist,
+            album: '',
+            artwork: artwork
         });
-
-        navigator.mediaSession.setActionHandler("play", () => audioPlayer.play());
-        navigator.mediaSession.setActionHandler("pause", () => audioPlayer.pause());
-        navigator.mediaSession.setActionHandler("nexttrack", () => playNext());
-        navigator.mediaSession.setActionHandler("previoustrack", () => playPrevious());
+    } catch (e) {
+        console.warn('MediaMetadata error:', e);
     }
+
+    // Set a short-lived lock so other scripts don't stomp our metadata when a track change occurs.
+    try {
+        window.__msapiLock = Date.now();
+        // expire after 2 seconds
+        setTimeout(() => { try { if (window.__msapiLock && (Date.now() - window.__msapiLock) > 1800) window.__msapiLock = null; } catch(e){} }, 2000);
+    } catch (e) {}
+
+    // Action handlers
+    navigator.mediaSession.setActionHandler('play', () => {
+        if (!audioPlayer) audioPlayer = document.getElementById('audioPlayer') || new Audio();
+        audioPlayer.play();
+    });
+    navigator.mediaSession.setActionHandler('pause', () => audioPlayer && audioPlayer.pause());
+    navigator.mediaSession.setActionHandler('previoustrack', () => typeof playPrevious === 'function' && playPrevious());
+    navigator.mediaSession.setActionHandler('nexttrack', () => typeof playNext === 'function' && playNext());
+
+    // Seek handlers (best-effort). Many browsers restrict seek handlers unless supported.
+    try {
+        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+            const skip = (details && details.seekOffset) || 10;
+            if (audioPlayer) audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - skip);
+            syncPositionState();
+        });
+        navigator.mediaSession.setActionHandler('seekforward', (details) => {
+            const skip = (details && details.seekOffset) || 10;
+            if (audioPlayer) audioPlayer.currentTime = Math.min(audioPlayer.duration || Infinity, audioPlayer.currentTime + skip);
+            syncPositionState();
+        });
+        navigator.mediaSession.setActionHandler('seekto', (details) => {
+            if (audioPlayer && typeof details === 'object') {
+                // details.seekTime may be fractional
+                audioPlayer.currentTime = Math.min(audioPlayer.duration || Infinity, Math.max(0, details.seekTime));
+                syncPositionState();
+            }
+        });
+    } catch (e) {
+        // Some browsers throw if they don't support certain handlers
+    }
+
+    // Update position state when supported
+    function syncPositionState() {
+        if (!('setPositionState' in navigator.mediaSession)) return;
+        if (!audioPlayer || isNaN(audioPlayer.duration)) return;
+        try {
+            navigator.mediaSession.setPositionState({
+                duration: audioPlayer.duration,
+                playbackRate: audioPlayer.playbackRate || 1,
+                position: audioPlayer.currentTime
+            });
+        } catch (e) {
+            // Ignore position update errors
+        }
+    }
+
+    // Hook audio events once to keep msapi state in sync
+    if (audioPlayer) {
+        audioPlayer.removeEventListener('timeupdate', syncPositionState);
+        audioPlayer.addEventListener('timeupdate', syncPositionState);
+
+        audioPlayer.removeEventListener('play', onPlayPause);
+        audioPlayer.removeEventListener('pause', onPlayPause);
+        audioPlayer.addEventListener('play', onPlayPause);
+        audioPlayer.addEventListener('pause', onPlayPause);
+    }
+
+    function onPlayPause() {
+        try {
+            navigator.mediaSession.playbackState = audioPlayer && !audioPlayer.paused ? 'playing' : 'paused';
+        } catch (e) {}
+    }
+}
+
+// If autoplay is blocked, listen once for a user gesture to resume playback
+function addUserGestureAutoplay() {
+    function resume() {
+        if (!audioPlayer) return remove();
+        audioPlayer.play().then(() => {
+            // Update media session and persist current song so UI reflects the resumed track
+            const resumedTitle = audioPlayer.getAttribute && audioPlayer.getAttribute('data-title') || '';
+            const resumedArtist = audioPlayer.getAttribute && audioPlayer.getAttribute('data-artist') || '';
+            const resumedCover = audioPlayer.getAttribute && audioPlayer.getAttribute('data-cover') || '';
+            updateMediaSession(resumedTitle, resumedArtist, resumedCover);
+            try {
+                localStorage.setItem('currentSong', JSON.stringify({
+                    url: audioPlayer.src,
+                    title: resumedTitle || 'Unknown Song',
+                    time: audioPlayer.currentTime || 0,
+                    isPlaying: true
+                }));
+            } catch (e) {}
+        }).catch(() => {});
+        remove();
+    }
+    function remove() {
+        window.removeEventListener('click', resume);
+        window.removeEventListener('keydown', resume);
+    }
+    window.addEventListener('click', resume, { once: true });
+    window.addEventListener('keydown', resume, { once: true });
 }
 
 
@@ -3583,64 +3836,122 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Initialize and wire the global audioPlayer once when the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-    const audioPlayer = document.getElementById("audioPlayer");
+    const domAudio = document.getElementById("audioPlayer");
 
-    // Check if a song is already playing
-    const savedSong = localStorage.getItem("currentSong");
-    if (savedSong) {
-        const { url, title, time, isPlaying } = JSON.parse(savedSong);
-        audioPlayer.src = url;
-        audioPlayer.currentTime = time || 0;
-
-        if (isPlaying) {
-            audioPlayer.play();
-        }
+    // If an in-memory audioPlayer exists from earlier code, transfer its state to the DOM audio
+    if (audioPlayer && domAudio && audioPlayer !== domAudio) {
+        try {
+            if (audioPlayer.src) domAudio.src = audioPlayer.src;
+            if (!isNaN(audioPlayer.currentTime)) domAudio.currentTime = audioPlayer.currentTime;
+            ['data-title','data-artist','data-cover'].forEach(k => {
+                try { const v = audioPlayer.getAttribute && audioPlayer.getAttribute(k); if (v) domAudio.setAttribute(k, v); } catch (e) {}
+            });
+            if (!audioPlayer.paused) domAudio.play().catch(() => {});
+        } catch (e) { console.warn('audio adopt failed', e); }
+        audioPlayer = domAudio;
+    } else {
+        // Prefer DOM element if available, otherwise use existing or create new
+        audioPlayer = domAudio || audioPlayer || new Audio();
     }
 
-    // Update localStorage when song changes
+    // Restore saved playback state if available
+    try {
+        let restored = false;
+        // If persistent-player exposed a restore, prefer its data
+        if (window.persistentPlayer && window.persistentPlayer.restore) {
+            try {
+                // ensure the persistent audio element is adopted by our audioPlayer variable
+                window.persistentPlayer.restore();
+                const pAudio = window.persistentPlayer.audio;
+                if (pAudio && (pAudio.currentSrc || pAudio.src)) {
+                    if (!audioPlayer || audioPlayer.id !== pAudio.id) {
+                        // try to adopt the persistent element into our variable
+                        audioPlayer = pAudio;
+                    }
+                    // update metadata and state
+                    try { audioPlayer.currentTime = pAudio.currentTime || 0; } catch (e) {}
+                    if (!pAudio.paused) audioPlayer.play().catch(() => addUserGestureAutoplay());
+                    const title = (pAudio.dataset && pAudio.dataset.title) || (pAudio.getAttribute && pAudio.getAttribute('data-title')) || '';
+                    // Use the persisted attributes from the adopted audio to populate Media Session
+                    const artist = (pAudio.dataset && pAudio.dataset.artist) || (pAudio.getAttribute && pAudio.getAttribute('data-artist')) || '';
+                    const cover = (pAudio.dataset && pAudio.dataset.cover) || (pAudio.getAttribute && pAudio.getAttribute('data-cover')) || '';
+                    updateMediaSession(title, artist, cover);
+                    restored = true;
+                }
+            } catch (e) { console.warn('persistentPlayer restore failed', e); }
+        }
+
+        if (!restored) {
+            const savedSong = localStorage.getItem("currentSong");
+            if (savedSong) {
+                const { url, title, time, isPlaying } = JSON.parse(savedSong);
+                if (url && (!audioPlayer.src || audioPlayer.src !== url)) audioPlayer.src = url;
+                if (typeof time === 'number') audioPlayer.currentTime = time || 0;
+                if (isPlaying) audioPlayer.play().catch(() => addUserGestureAutoplay());
+                // Update metadata immediately from saved title/artist if present
+                updateMediaSession(title, audioPlayer.getAttribute('data-artist') || '', audioPlayer.getAttribute('data-cover') || '');
+            }
+        }
+    } catch (e) { console.warn('restore savedSong failed', e); }
+
+    // Reinforce Media Session metadata after other scripts run/initializations complete.
+    // Some in-page scripts may overwrite metadata during page bootstrap; reapply a few times and on focus.
+    function reapplyMediaSessionFromAudio() {
+        try {
+            if (!audioPlayer) return;
+            const title = (audioPlayer.dataset && audioPlayer.dataset.title) || (audioPlayer.getAttribute && audioPlayer.getAttribute('data-title')) || '';
+            const artist = (audioPlayer.dataset && audioPlayer.dataset.artist) || (audioPlayer.getAttribute && audioPlayer.getAttribute('data-artist')) || '';
+            const cover = (audioPlayer.dataset && audioPlayer.dataset.cover) || (audioPlayer.getAttribute && audioPlayer.getAttribute('data-cover')) || '';
+            if (title || artist || cover) updateMediaSession(title, artist, cover);
+        } catch (e) {}
+    }
+
+    setTimeout(reapplyMediaSessionFromAudio, 200);
+    setTimeout(reapplyMediaSessionFromAudio, 600);
+    setTimeout(reapplyMediaSessionFromAudio, 1200);
+    window.addEventListener('visibilitychange', function () { if (!document.hidden) reapplyMediaSessionFromAudio(); });
+    window.addEventListener('focus', reapplyMediaSessionFromAudio);
+
+    // Keep localStorage current and include artist/cover for cross-page restores
+    function persistState() {
+        try {
+            localStorage.setItem("currentSong", JSON.stringify({
+                url: audioPlayer.src,
+                title: (audioPlayer.getAttribute && audioPlayer.getAttribute("data-title")) || "Unknown Song",
+                artist: (audioPlayer.getAttribute && audioPlayer.getAttribute("data-artist")) || '',
+                cover: (audioPlayer.getAttribute && audioPlayer.getAttribute("data-cover")) || '',
+                time: audioPlayer.currentTime,
+                isPlaying: !audioPlayer.paused
+            }));
+        } catch (e) {}
+    }
+
     audioPlayer.addEventListener("play", () => {
-        updatePlaybackState(true);
+        persistState();
+        if ("mediaSession" in navigator) navigator.mediaSession.playbackState = 'playing';
     });
 
     audioPlayer.addEventListener("pause", () => {
-        updatePlaybackState(false);
+        persistState();
+        if ("mediaSession" in navigator) navigator.mediaSession.playbackState = 'paused';
     });
 
     audioPlayer.addEventListener("timeupdate", () => {
-        updatePlaybackState(audioPlayer.paused ? false : true);
-    });
-
-    function updatePlaybackState(isPlaying) {
-        localStorage.setItem("currentSong", JSON.stringify({
-            url: audioPlayer.src,
-            title: audioPlayer.getAttribute("data-title") || "Unknown Song",
-            time: audioPlayer.currentTime,
-            isPlaying: isPlaying
-        }));
-    }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const audioPlayer = document.getElementById("audioPlayer");
-
-    const savedSong = localStorage.getItem("currentSong");
-    if (savedSong) {
-        const { url, time, isPlaying } = JSON.parse(savedSong);
-        audioPlayer.src = url;
-        audioPlayer.currentTime = time || 0;
-        
-        if (isPlaying) {
-            audioPlayer.play();
+        persistState();
+        if ("mediaSession" in navigator && 'setPositionState' in navigator.mediaSession) {
+            try {
+                navigator.mediaSession.setPositionState({
+                    duration: audioPlayer.duration || 0,
+                    playbackRate: audioPlayer.playbackRate || 1,
+                    position: audioPlayer.currentTime || 0
+                });
+            } catch (e) {}
         }
-    }
-
-    audioPlayer.addEventListener("timeupdate", () => {
-        localStorage.setItem("currentSong", JSON.stringify({
-            url: audioPlayer.src,
-            time: audioPlayer.currentTime,
-            isPlaying: !audioPlayer.paused
-        }));
     });
+
 });
+
+// Note: The audioPlayer DOMContentLoaded wiring above centralizes playback state persistence
 

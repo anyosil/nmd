@@ -464,6 +464,7 @@ var storeLanguage = "en";
 
 <audio id="player" style="display: none;"></audio>
 
+<script src="persistent-player.js"></script>
 <script src="script.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -520,20 +521,65 @@ var storeLanguage = "en";
         return;
       }
 
-      const filtered = database.filter(song => {
-        return (
-          containsMatch(song.title, query) ||
-          containsMatch(song.album, query) ||
-          containsMatch(song.artist, query)
-        );
-      });
+            // Fuzzy search: combine normalized substring matching and Levenshtein distance.
+            function levenshtein(a, b) {
+                if (a === b) return 0;
+                if (a.length === 0) return b.length;
+                if (b.length === 0) return a.length;
+                a = a.toLowerCase();
+                b = b.toLowerCase();
+                const matrix = [];
+                for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+                for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+                for (let i = 1; i <= b.length; i++) {
+                    for (let j = 1; j <= a.length; j++) {
+                        if (b.charAt(i - 1) === a.charAt(j - 1)) matrix[i][j] = matrix[i - 1][j - 1];
+                        else matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1);
+                    }
+                }
+                return matrix[b.length][a.length];
+            }
+
+            function fuzzyMatchField(field, q) {
+                if (!field) return false;
+                const normField = field.toLowerCase();
+                const normQ = q.toLowerCase();
+                // quick substring check
+                if (normField.includes(normQ)) return true;
+                // adaptive threshold: allow more typos for longer queries
+                const qlen = normQ.length;
+                let threshold = 1;
+                if (qlen <= 4) threshold = 1;
+                else if (qlen <= 8) threshold = 2;
+                else threshold = 3;
+
+                // Check individual words too (helps with multi-word queries)
+                const words = normField.split(/\s+/);
+                for (let w of words) {
+                    if (levenshtein(w, normQ) <= threshold) return true;
+                }
+
+                // Also check whole field with a slightly larger allowance
+                return levenshtein(normField, normQ) <= Math.min(3, Math.max(1, Math.floor(qlen / 3)));
+            }
+
+            const filtered = database.filter(song => {
+                return (
+                    containsMatch(song.title, query) ||
+                    containsMatch(song.album, query) ||
+                    containsMatch(song.artist, query) ||
+                    fuzzyMatchField(song.title, query) ||
+                    fuzzyMatchField(song.album, query) ||
+                    fuzzyMatchField(song.artist, query)
+                );
+            });
 
       if (filtered.length === 0) {
         searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: gray;">No results found.</p>';
         return;
       }
 
-      filtered.forEach(song => {
+    filtered.forEach(song => {
         const card = document.createElement("div");
         card.style.border = "1px solid #ddd";
         card.style.borderRadius = "10px";
@@ -562,22 +608,45 @@ var storeLanguage = "en";
       });
 
       const playButtons = document.querySelectorAll(".play-btn");
-      playButtons.forEach(btn => {
-        btn.addEventListener("click", function () {
-          const url = this.getAttribute("data-url");
-          player.src = url;
-          player.play();
-          if ('mediaSession' in navigator) {
-            navigator.mediaSession.metadata = new MediaMetadata({
-              title: this.parentElement.querySelector("div:nth-child(1)").textContent,
-              artist: this.parentElement.querySelector("div:nth-child(2)").textContent,
-              album: this.parentElement.querySelector("div:nth-child(3)").textContent,
-              artwork: [
-                { src: this.parentElement.parentElement.querySelector("img").src, sizes: '512x512', type: 'image/jpeg' }
-              ]
-            });
-          }
-        });
+            playButtons.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const url = this.getAttribute("data-url");
+                    // Pause any other audio before playing search result
+                    if (typeof pauseAllAudio === 'function') try { pauseAllAudio(); } catch (e) {}
+
+                    // Set player src and metadata attributes so script.js can persist them
+                    player.src = url;
+                    try {
+                        player.setAttribute && player.setAttribute('data-title', this.parentElement.querySelector("div:nth-child(1)").textContent || '');
+                        player.setAttribute && player.setAttribute('data-artist', this.parentElement.querySelector("div:nth-child(2)").textContent || '');
+                        player.setAttribute && player.setAttribute('data-cover', this.parentElement.parentElement.querySelector("img").src || '');
+                    } catch (e) {}
+
+                    player.play().catch(() => {
+                        // Autoplay may be blocked — let the global handler request a gesture
+                        if (typeof addUserGestureAutoplay === 'function') addUserGestureAutoplay();
+                    });
+
+                    // Use central updateMediaSession when available (it sets a short lock)
+                    try {
+                        const t = this.parentElement.querySelector("div:nth-child(1)").textContent;
+                        const a = this.parentElement.querySelector("div:nth-child(2)").textContent;
+                        const c = this.parentElement.parentElement.querySelector("img").src;
+                        if (typeof updateMediaSession === 'function') {
+                            updateMediaSession(t, a, c);
+                        } else if ('mediaSession' in navigator) {
+                            // Fallback: only set if no recent msapi lock
+                            if (!(window.__msapiLock && (Date.now() - window.__msapiLock) < 2000)) {
+                                navigator.mediaSession.metadata = new MediaMetadata({
+                                    title: t,
+                                    artist: a,
+                                    album: this.parentElement.querySelector("div:nth-child(3)").textContent,
+                                    artwork: [{ src: c, sizes: '512x512', type: 'image/jpeg' }]
+                                });
+                            }
+                        }
+                    } catch (e) {}
+                });
       });
     }
 
@@ -596,8 +665,6 @@ var storeLanguage = "en";
                 </div>
             </div>
             
-    <script src="script.js"></script>  
-    
                     
 
 </div>           
@@ -705,8 +772,7 @@ var storeLanguage = "en";
             </div>
         </div>
 
-<script src="script.js"></script>
-
+<div class="panel res productBucket">
 <div class="panel res productBucket">
     <div class="hd"><div id="newreleases"></div>
         <h2>
@@ -746,6 +812,7 @@ var storeLanguage = "en";
             if (!songData) return;
     
             miniAudio.src = songData.url;
+            if (typeof pauseAllAudio === 'function') try { pauseAllAudio(); } catch (e) {}
             miniAudio.play();
             currentSongIndex = index;
     
@@ -921,10 +988,13 @@ nmStats.territory="in";nmStats.environment="prod";nmStats.language="en";
 
         if (songUrl) {
             console.log("Playing song from URL:", songUrl);
-            playSong(decodeURIComponent(songUrl), decodeURIComponent(songTitle), decodeURIComponent(songArtist), decodeURIComponent(songCover));
+            // playSong(title, artist, cover, url)
+            playSong(decodeURIComponent(songTitle), decodeURIComponent(songArtist), decodeURIComponent(songCover), decodeURIComponent(songUrl));
         }
     });
 </script>
+
+<script src="persistent-player.js"></script>
 
 </body>
 
