@@ -2941,7 +2941,7 @@ function playSong(title, artist, cover, url) {
 
 
 let currentIndex = 0; // Start with the first track in the database
-const audioPlayer = document.getElementById("audioPlayer"); // Get the audio player element
+ // Get the audio player element
 
 // Function to load and play the current track
 function loadTrack(index) {
@@ -3643,3 +3643,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
     });
 });
+
