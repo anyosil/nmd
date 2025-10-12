@@ -148,16 +148,15 @@ filteredSongs.forEach((song) => {
     searchResults.appendChild(li);
 });
 
-// ✅ Auto-play next song when the current one ends
-audioPlayer.onended = function () {
-    console.log("Song finished:", song.title);
-
-    const nextIndex = (currentIndex + 1) % allSongs.length; // Loops to the first song after the last
-    const nextSong = allSongs[nextIndex];
-
-    console.log("Next song:", nextSong.title);
-    playSong(nextSong.title); // Play the next song automatically
-};
+// ✅ Auto-play next song when the current one ends — only when standbyMode is enabled
+try {
+    audioPlayer.onended = function () {
+        try { if (localStorage.getItem('standbyMode') !== 'true') return; } catch (e) { return; }
+        const nextIndex = (currentIndex + 1) % allSongs.length; // Loops to the first song after the last
+        const nextSong = allSongs[nextIndex];
+        playSong(nextSong.title); // Play the next song automatically
+    };
+} catch (e) {}
 
 document.addEventListener("DOMContentLoaded", () => {
     const audioPlayer = document.getElementById("audioPlayer");
@@ -168,10 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const { url, title, time, isPlaying } = JSON.parse(savedSong);
         audioPlayer.src = url;
         audioPlayer.currentTime = time || 0;
-
-        if (isPlaying) {
-            audioPlayer.play();
-        }
+    try { if (isPlaying && localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') audioPlayer.play(); } catch (e) {}
     }
 
     // Update localStorage when song changes

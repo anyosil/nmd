@@ -749,7 +749,7 @@ var storeLanguage = "en";
                 <div id="shopWindow-bd">
                     
                     <div class="get-fla">
-                        <p>Symphonia! Now with More than 700 Music Files!</p>
+                        <p>Symphonia! Now with More than 12000 Music Files!</p>
                         
                         <a href="https://web.archive.org/web/20110612020852/http://music.ovi.com/in/installFlash.html" id="shopWindowFlash">&nbsp;</a>
                  
@@ -813,7 +813,7 @@ var storeLanguage = "en";
     
             miniAudio.src = songData.url;
             if (typeof pauseAllAudio === 'function') try { pauseAllAudio(); } catch (e) {}
-            miniAudio.play();
+            try { if (localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') miniAudio.play(); } catch (e) {}
             currentSongIndex = index;
     
             if ("mediaSession" in navigator) {
@@ -988,14 +988,63 @@ nmStats.territory="in";nmStats.environment="prod";nmStats.language="en";
 
         if (songUrl) {
             console.log("Playing song from URL:", songUrl);
-            // playSong(title, artist, cover, url)
-            playSong(decodeURIComponent(songTitle), decodeURIComponent(songArtist), decodeURIComponent(songCover), decodeURIComponent(songUrl));
+            // Only auto-play from URL if standby mode is enabled
+            try {
+                if (localStorage.getItem('standbyMode') === 'true') {
+                    // playSong(title, artist, cover, url)
+                    playSong(decodeURIComponent(songTitle), decodeURIComponent(songArtist), decodeURIComponent(songCover), decodeURIComponent(songUrl));
+                } else {
+                    console.log('standbyMode not enabled — skipping autoplay from URL');
+                }
+            } catch (e) { console.warn('Error checking standbyMode', e); }
         }
     });
 </script>
 
 <script src="persistent-player.js"></script>
-
+</script>
+<!-- Standby toggle button -->
+<style>
+    #standbyToggle {
+        position: fixed;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        border: none;
+        padding: 8px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 2000;
+        font-size: 13px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+</style>
+<button id="standbyToggle">Enter Standby</button>
+<script>
+    (function(){
+        const btn = document.getElementById('standbyToggle');
+        function updateText() {
+            const s = localStorage.getItem('standbyMode') === 'true';
+            btn.textContent = s ? 'Exit Standby' : 'Enter Standby';
+        }
+        updateText();
+        btn.addEventListener('click', function(){
+            const s = localStorage.getItem('standbyMode') === 'true';
+            if (!s) {
+                // enable standby and start shuffled playback
+                try { if (typeof startStandby === 'function') startStandby(); else console.warn('startStandby not available'); } catch(e){}
+                localStorage.setItem('standbyMode','true');
+                btn.textContent = 'Exit Standby';
+            } else {
+                // exit standby -> reload page
+                try { if (typeof stopStandby === 'function') stopStandby(); else window.location.reload(); } catch(e){ window.location.reload(); }
+            }
+        });
+    })();
+</script>
 </body>
 
 <footer>

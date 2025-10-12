@@ -48,9 +48,9 @@ function playSongAtIndex(index, startTime = 0) {
   const track = database[index];
   audio.src = track.url || track.file || ""; // adapt key name to your database
   audio.currentTime = startTime;
-  audio.play().catch(e => {
-    console.warn("Audio play failed:", e);
-  });
+  try {
+    if (localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') audio.play().catch(e => { console.warn("Audio play failed:", e); });
+  } catch (e) {}
   updateMediaSessionMetadata(track);
 
   // Save playback periodically (every 5 seconds)
@@ -63,7 +63,10 @@ function playSongAtIndex(index, startTime = 0) {
 function initPlayback() {
   const state = loadPlaybackState();
   if (state && state.trackIndex != null) {
-    playSongAtIndex(state.trackIndex, state.currentTime || 0);
+    // Only auto-resume when standbyMode enabled
+    try {
+      if (localStorage.getItem('standbyMode') === 'true') playSongAtIndex(state.trackIndex, state.currentTime || 0);
+    } catch (e) {}
   } else {
     // Default: play first track at start if you want auto play
     // playSongAtIndex(0, 0);

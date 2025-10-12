@@ -87,6 +87,7 @@
             let username = localStorage.getItem("loggedInUser");
 
             if (!username) {
+                console.error("User Records Not Found!")
                 alert("No user is signed in. Redirecting to register...");
                 window.location.href = "register.html";
                 return;

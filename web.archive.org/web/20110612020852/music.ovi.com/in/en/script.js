@@ -2751,8 +2751,7 @@ var database = {
         
 };
 
-// Single global audio player reference. We initialize it on DOMContentLoaded
-// to prefer an existing <audio id="audioPlayer"> element when present.
+
 var audioPlayer = null;
 let currentTrack = null;
 
@@ -2886,9 +2885,12 @@ function populateFeaturedMusic() {
     const featuredSections = ["top"];
     let allSongs = getAllSongs(database, featuredSections);
 
-    // Shuffle all songs and limit to 20
-    shuffleArray(allSongs);
-    let selectedSongs = allSongs.slice(0, 33); // Pick first 20
+    // Shuffle all songs and limit to 33
+    // shuffleArray may either mutate in-place or return a new shuffled array depending on which
+    // implementation version is present. Use its return value when available, otherwise fall
+    // back to the original array which may have been shuffled in-place.
+    const shuffled = shuffleArray(allSongs);
+    let selectedSongs = (Array.isArray(shuffled) ? shuffled : allSongs).slice(0, 30); // Pick first 33
 
     featuredSections.forEach(sectionId => {
         const section = document.getElementById(sectionId);
@@ -3036,6 +3038,50 @@ function playSong(title, artist, cover, url) {
     audioPlayer.onended = () => playNext();
 }
 
+// Utility: Fisher-Yates shuffle
+function shuffleArray(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+// Start standby shuffle playback. Creates window.__shuffledPlaylist and starts playing.
+function startStandby() {
+    try {
+        const flattened = Array.isArray(database) ? database : Object.values(database).flat();
+        if (!flattened || flattened.length === 0) return;
+        window.__shuffledPlaylist = shuffleArray(flattened);
+        window.__shuffledIndex = 0;
+    localStorage.setItem('standbyMode', 'true');
+    // session confirmation prevents stale localStorage from auto-starting without a recent user action
+    try { sessionStorage.setItem('standbyConfirmed', 'true'); } catch(e){}
+        const first = window.__shuffledPlaylist[0];
+        if (!audioPlayer) audioPlayer = document.getElementById('audioPlayer') || new Audio();
+        audioPlayer.src = first.url;
+        try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-title', first.title || ''); } catch(e){}
+        try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-artist', first.artist || ''); } catch(e){}
+        try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-cover', first.cover || ''); } catch(e){}
+        audioPlayer.play().catch(() => addUserGestureAutoplay());
+        updateMediaSession(first.title, first.artist, first.cover);
+    } catch (e) { console.warn('startStandby failed', e); }
+}
+
+function stopStandby() {
+    try {
+        localStorage.removeItem('standbyMode');
+        try { sessionStorage.removeItem('standbyConfirmed'); } catch(e){}
+        // reload page to return to normal behavior
+        window.location.reload();
+    } catch (e) { window.location.reload(); }
+}
+
+// Expose for page wiring
+window.startStandby = startStandby;
+window.stopStandby = stopStandby;
+
 
 let currentIndex = 0; // Start with the first track in the database
  // Get the audio player element
@@ -3089,6 +3135,23 @@ function loadTrack(index) {
 function playNext() {
     const flattened = Object.values(database).flat();
     if (!Array.isArray(flattened) || flattened.length === 0) return;
+    // If we're in standby shuffle mode, use the shuffledPlaylist if available
+    const standby = localStorage.getItem('standbyMode') === 'true';
+    if (standby && Array.isArray(window.__shuffledPlaylist) && window.__shuffledPlaylist.length) {
+        const idx = window.__shuffledIndex == null ? 0 : (window.__shuffledIndex + 1);
+        window.__shuffledIndex = idx % window.__shuffledPlaylist.length;
+        const track = window.__shuffledPlaylist[window.__shuffledIndex];
+        if (track && track.url) {
+            audioPlayer.src = track.url;
+            try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-title', track.title || ''); } catch(e){}
+            try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-artist', track.artist || ''); } catch(e){}
+            try { audioPlayer.setAttribute && audioPlayer.setAttribute('data-cover', track.cover || ''); } catch(e){}
+            audioPlayer.play().catch(() => addUserGestureAutoplay());
+            updateMediaSession(track.title, track.artist, track.cover);
+        }
+        return;
+    }
+
     currentIndex = (currentIndex + 1) % flattened.length; // Loop back to the start if at the end
     loadTrack(currentIndex);
 }
@@ -3848,7 +3911,11 @@ document.addEventListener("DOMContentLoaded", () => {
             ['data-title','data-artist','data-cover'].forEach(k => {
                 try { const v = audioPlayer.getAttribute && audioPlayer.getAttribute(k); if (v) domAudio.setAttribute(k, v); } catch (e) {}
             });
-            if (!audioPlayer.paused) domAudio.play().catch(() => {});
+            try {
+                if (!audioPlayer.paused && localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') {
+                    domAudio.play().catch(() => {});
+                }
+            } catch (e) {}
         } catch (e) { console.warn('audio adopt failed', e); }
         audioPlayer = domAudio;
     } else {
@@ -3872,7 +3939,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     // update metadata and state
                     try { audioPlayer.currentTime = pAudio.currentTime || 0; } catch (e) {}
-                    if (!pAudio.paused) audioPlayer.play().catch(() => addUserGestureAutoplay());
+                    // Only resume playback on restore when standby mode is enabled
+                    try {
+                        if (!pAudio.paused && localStorage.getItem('standbyMode') === 'true') {
+                            audioPlayer.play().catch(() => addUserGestureAutoplay());
+                        }
+                    } catch (e) {}
                     const title = (pAudio.dataset && pAudio.dataset.title) || (pAudio.getAttribute && pAudio.getAttribute('data-title')) || '';
                     // Use the persisted attributes from the adopted audio to populate Media Session
                     const artist = (pAudio.dataset && pAudio.dataset.artist) || (pAudio.getAttribute && pAudio.getAttribute('data-artist')) || '';
@@ -3889,7 +3961,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const { url, title, time, isPlaying } = JSON.parse(savedSong);
                 if (url && (!audioPlayer.src || audioPlayer.src !== url)) audioPlayer.src = url;
                 if (typeof time === 'number') audioPlayer.currentTime = time || 0;
-                if (isPlaying) audioPlayer.play().catch(() => addUserGestureAutoplay());
+                // Only auto-play saved song if standby mode is active
+                try {
+                    if (isPlaying && localStorage.getItem('standbyMode') === 'true') audioPlayer.play().catch(() => addUserGestureAutoplay());
+                } catch (e) {}
                 // Update metadata immediately from saved title/artist if present
                 updateMediaSession(title, audioPlayer.getAttribute('data-artist') || '', audioPlayer.getAttribute('data-cover') || '');
             }

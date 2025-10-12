@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (url) {
             audioPlayer.src = url;
             audioPlayer.currentTime = time || 0;
-            if (isPlaying) {
-                audioPlayer.play();
-            }
+            try {
+                if (isPlaying && localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') {
+                    audioPlayer.play();
+                }
+            } catch (e) {}
         }
 
         updateMediaSession(title, artist, cover);
@@ -99,8 +101,8 @@ let username = localStorage.getItem("loggedInUser");
         }
 
         const songData = flattenedSongs[songIndex];
-        audioPlayer.src = songData.url;
-        audioPlayer.play();
+    audioPlayer.src = songData.url;
+    try { if (localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true') audioPlayer.play(); } catch (e) {}
 
         // 📝 Save playback data
         savePlaybackState();

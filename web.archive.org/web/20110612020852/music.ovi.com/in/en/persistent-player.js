@@ -95,13 +95,20 @@
       // Determine paused from either paused flag or legacy isPlaying
       const paused = (typeof state.paused === 'boolean') ? state.paused : (typeof state.isPlaying === 'boolean' ? !state.isPlaying : true);
 
-      // Try to resume automatically if it was playing
-      if (!paused) {
-        const p = audio.play();
-        if (p && p.catch) p.catch(() => {
-          // autoplay rejected; we'll wait for user gesture. Nothing else to do.
-        });
-      }
+      // Try to resume automatically if it was playing AND the site is in standby mode
+      let actuallyPlaying = false;
+      try {
+  const wantPlay = !paused && localStorage.getItem('standbyMode') === 'true' && sessionStorage.getItem('standbyConfirmed') === 'true';
+        if (wantPlay) {
+          const p = audio.play();
+          if (p && p.catch) {
+            p.catch(() => {
+              // autoplay rejected; wait for user gesture.
+            });
+          }
+          actuallyPlaying = true;
+        }
+      } catch (e) {}
       // Update Media Session API where available so pages without the main script still show correct metadata
       try {
         if ('mediaSession' in navigator) {
@@ -118,7 +125,7 @@
               });
             } catch (e) {}
           }
-          navigator.mediaSession.playbackState = paused ? 'paused' : 'playing';
+          navigator.mediaSession.playbackState = actuallyPlaying ? 'playing' : 'paused';
           if ('setPositionState' in navigator.mediaSession) {
             try {
               navigator.mediaSession.setPositionState({
